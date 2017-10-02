@@ -5,7 +5,7 @@
 ## Introducción
 \par\noindent\rule{\textwidth}{0.4pt}  
 
-Las ciudades occidentales, sobre todo las europeas, han vivido en los últimos años una gran revolución. Millones de personas se agolpan en las grandes urbes en busca de trabajo y mejores condiciones de vida, lo que genera un extraordinario desarrollo, especialmente tecnológico e industrial. Desgraciadamente, este auge también supone un grandísimo desgaste en el medio ambiente. Miles y miles de vehículos y medios de transporte atoran las calles y avenidas, provocando una gran contaminación ambiental y acústica. Por eso, desde nuestra posición presentamos un proyecto revolucionario que ponga solución a medio y largo plazo a estos problemas: el uso regulado y efectivo de bicicletas públicas por toda la ciudad con un coste accesible para todos los bolsillos. En particular, nos centramos en una de las mayores capitales europeas: París. Pretendemos desarrollar un sistema de información robusto, capaz de gestionar todas las necesidades a nivel usuario e institucional que supone una ordenación de esta envergadura.  
+Las ciudades occidentales, sobre todo las europeas, han vivido en los últimos años una gran revolución. Millones de personas se agolpan en las grandes urbes en busca de trabajo y mejores condiciones de vida, lo que genera un extraordinario desarrollo, especialmente tecnológico e industrial. Desgraciadamente, este auge también supone un gran desgaste en el medio ambiente. Miles y miles de vehículos y medios de transporte atoran las calles y avenidas, provocando una gran contaminación ambiental y acústica. Por eso, desde nuestra posición presentamos un proyecto revolucionario que ponga solución a medio y largo plazo a estos problemas: el uso regulado y efectivo de bicicletas públicas por toda la ciudad con un coste accesible para todos los bolsillos. En particular, nos centramos en una de las mayores capitales europeas: París. Pretendemos desarrollar un sistema de información robusto, capaz de gestionar todas las necesidades a nivel usuario e institucional que supone una ordenación de esta envergadura.  
 
 
 ## Descripción del funcionamiento
@@ -28,6 +28,12 @@ Dividiremos el sistema en tres subsistemas independientes: gestión de usuarios 
 
 ### Gestión de usuarios
 
+En este modulo se realizaran las acciones sobre el sistema en las que interviene el usuario. Esto se materializa en una interfaz gráfica intuitiva para el usuario. A parte de poder recoger una bicicleta, un usuario tendrá la posibilidad de darse de alta en el servicio así como de baja. Con esta finalidad dispondrá de una pasarela de pago con la cual realizar los pagos. Por ultimo otra funcionalidad importante incluida en este modulo es la opción de notificar una avería.
+
 ### Mantenimiento y control de bicicletas
 
+Esta parte del servicio se encargara de todo lo relacionado al transito de bicicletas. Esto incluye gestionar la distribución de las bicis de acuerdo a su uso habitual. En esta gestión colabora la empresa de bicicletas que moverá las bicicletas. También es el encargado de llevar un contador del tiempo de uso del usuario. 
+
 ### Dispositivos
+
+Se trata del modulo mas interno recibirá los datos de la base de datos real del ayto. de París para conocer el estado de las estaciones. De esta forma podrá bloquear el uso de las bicicletas averiadas o no permitirá a un usuario moroso la utilización del servicio.

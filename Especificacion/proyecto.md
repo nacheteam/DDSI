@@ -28,12 +28,12 @@ Dividiremos el sistema en tres subsistemas independientes: gestión de usuarios 
 
 ### Gestión de usuarios
 
-En este modulo se realizaran las acciones sobre el sistema en las que interviene el usuario. Esto se materializa en una interfaz gráfica intuitiva para el usuario. A parte de poder recoger una bicicleta, un usuario tendrá la posibilidad de darse de alta en el servicio así como de baja. Con esta finalidad dispondrá de una pasarela de pago con la cual realizar los pagos. Por ultimo otra funcionalidad importante incluida en este modulo es la opción de notificar una avería.
+En este modulo se realizaran las acciones sobre el sistema en las que interviene el usuario. Esto se materializa en una interfaz gráfica intuitiva para el usuario. A parte de poder recoger una bicicleta, un usuario tendrá la posibilidad de darse de alta en el servicio así como de baja. Con esta finalidad dispondrá de una pasarela de pago con la cual realizar los pagos. Por último otra funcionalidad importante incluida en este modulo será la opción de notificar una avería.
 
 ### Mantenimiento y control de bicicletas
 
-Esta parte del servicio se encargara de todo lo relacionado al transito de bicicletas. Esto incluye gestionar la distribución de las bicis de acuerdo a su uso habitual. En esta gestión colabora la empresa de bicicletas que moverá las bicicletas. También es el encargado de llevar un contador del tiempo de uso del usuario. 
+Esta parte del servicio se encargara de todo lo relacionado al tránsito de bicicletas. Esto incluye gestionar la distribución de las mismas de acuerdo a su uso habitual. En esta gestión colabora la empresa de bicicletas que moverá las bicicletas. Así mismo este módulo se encargará de la solución de las averías de bicicletas de las que sean informados. Esto incluye su posterior reinserción en el parque móvil.
 
-### Dispositivos
+### Dispositivo central
 
-Se trata del modulo mas interno recibirá los datos de la base de datos real del ayto. de París para conocer el estado de las estaciones. De esta forma podrá bloquear el uso de las bicicletas averiadas o no permitirá a un usuario moroso la utilización del servicio.
+Este subsistema se encargará de la gestión del correcto funcionamiento del resto de módulos. Esto implica tener en cuenta las posibles infracciones que los usuarios puedan cometer así como controlar las notificaciones requeridas para los usuarios y el personal de mantenimiento. Este sistema no contará de interfaz con la que interactuar como los anteriores ya que será un módulo transparente para el resto de subsistemas.

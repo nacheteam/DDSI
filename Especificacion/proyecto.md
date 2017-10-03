@@ -28,11 +28,19 @@ Dividiremos el sistema en tres subsistemas independientes: gestión de usuarios 
 
 ### Gestión de usuarios
 
-En este modulo se realizaran las acciones sobre el sistema en las que interviene el usuario. Esto se materializa en una interfaz gráfica intuitiva para el usuario. A parte de poder recoger una bicicleta, un usuario tendrá la posibilidad de darse de alta en el servicio así como de baja. Con esta finalidad dispondrá de una pasarela de pago con la cual realizar los pagos. Por último otra funcionalidad importante incluida en este modulo será la opción de notificar una avería.
+Un usuario se da de alta en las máquinas de las estaciones. Accederá a la pantalla de "Nueva alta de usuario" y tendrá que rellenar toda su información. Por último, tendrá que tomarse una foto desde las cámaras integradas en dichas máquinas. Una vez confirmada la configuración personal, se imprimirá la tarjeta con la que el usuario opera en las estaciones. Por otra parte, en la interfaz principal, un usuario también podrá darse de baja. Sólo necesitará escribir su primer apellido y el DNI para efectuar la operación. La estación invalidará automáticamente la tarjeta.
+
+La última opción de la interfaz principal es el acceso a usuarios. Ahí, cualquier usuario accederá para ver su información personal, número de kms hechos y tiempo acumulado pedaleando, así como su tarifa en vigor y su historial de pagos. Si se retrasa un pago o se multa a un usuario por un mal uso, se le notificará automáticamente en esta sección y también a través de SMS y email. Si se persiste en el impago, la cuenta se bloqueará y el usuario no podrá sacar bicicletas. De igual forma, se da la posibilidad de cambiar a una tarifa con otro coste y condiciones.
+
+Cada vez que se saca o se estaciona una bicicleta con una tarjeta de cliente quedaran grabados todos los datos del momento y lugar.
 
 ### Mantenimiento y control de bicicletas
 
-Esta parte del servicio se encargará de todo lo relacionado al tránsito de bicicletas. Esto incluye gestionar la distribución de las mismas de acuerdo a su uso habitual. En esta gestión colabora la empresa de bicicletas que moverá las bicicletas. Así mismo este módulo se encargará de la solución de las averías de bicicletas de las que sean informados. Esto incluye su posterior reinserción en el parque móvil.
+El módulo de mantenimiento se encargará de orientar al personal de mantenimiento en su trabajo. El personal tiene como funciones el arreglo y revisión de bicicletas, mantenimiento de las estaciones de préstamo y distribución de bicicletas de una estación a otra.
+Cuando el sistema es notificado con la avería de alguna de las bicicletas éste debe avisar al personal de mantenimiento con la posición de la bicicleta para que puedan ir a recogerla para repararla. Este proceso incluye la gestión de la ocupación del taller. Si el taller está ocupado se deben llevar las bicicletas a un almacén para su posterior traslado. En cuanto a la revisión de las bicicletas se deberá efectuar una revisión mensual que incluye revisar la presión de las ruedas, engrasado de la bicicleta y una limpieza general. La revisión se hará de forma gradual durante la última semana del mes.  
+Si una estación de préstamo resulta dañada de algún modo los operarios serán notificados también para poder ir a repararla, para esto será necesario adjuntarles la posición de la estación. Cuando la incidencia se haya reparado se informará al sistema de ello.  
+Si hay alguna estación con un número demasiado elevado de bicicletas mientras que otras estaciones están escasas de las mismas los operarios deberán cargar algunas de las bicicletas entre estaciones. Esto se les notificará dando la estación que tiene demasiadas bicicletas, el número de bicicletas a retirar y la estación donde deben llevarse las sobrantes.  
+Así mismo si el personal tiene alguna incidencia (camión averiado, rotura imposible de arreglar en bicicletas o alguna incidencia no especificada) se notificará al sistema para que quede constancia del problema y se tenga en cuenta, si es necesario, para la gestión de las bicicletas.
 
 ### Dispositivo central
 

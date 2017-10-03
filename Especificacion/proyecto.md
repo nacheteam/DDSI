@@ -32,7 +32,7 @@ En este modulo se realizaran las acciones sobre el sistema en las que interviene
 
 ### Mantenimiento y control de bicicletas
 
-Esta parte del servicio se encargara de todo lo relacionado al tránsito de bicicletas. Esto incluye gestionar la distribución de las mismas de acuerdo a su uso habitual. En esta gestión colabora la empresa de bicicletas que moverá las bicicletas. Así mismo este módulo se encargará de la solución de las averías de bicicletas de las que sean informados. Esto incluye su posterior reinserción en el parque móvil.
+Esta parte del servicio se encargará de todo lo relacionado al tránsito de bicicletas. Esto incluye gestionar la distribución de las mismas de acuerdo a su uso habitual. En esta gestión colabora la empresa de bicicletas que moverá las bicicletas. Así mismo este módulo se encargará de la solución de las averías de bicicletas de las que sean informados. Esto incluye su posterior reinserción en el parque móvil.
 
 ### Dispositivo central
 

@@ -30,9 +30,13 @@ Dividiremos el sistema en tres subsistemas independientes: gestión de usuarios 
 
 Un usuario se da de alta en las máquinas de las estaciones. Accederá a la pantalla de "Nueva alta de usuario" y tendrá que rellenar toda su información. Por último, tendrá que tomarse una foto desde las cámaras integradas en dichas máquinas. Una vez confirmada la configuración personal, se imprimirá la tarjeta con la que el usuario opera en las estaciones. Por otra parte, en la interfaz principal, un usuario también podrá darse de baja. Sólo necesitará escribir su primer apellido y el DNI para efectuar la operación. La estación invalidará automáticamente la tarjeta.
 
+La última opción de la interfaz principal es el acceso a usuarios. Ahí, cualquier usuario accederá para ver su información personal, número de kms hechos y tiempo acumulado pedaleando, así como su tarifa en vigor y su historial de pagos. Si se retrasa un pago o se multa a un usuario por un mal uso, se le notificará automáticamente en esta sección y también a través de SMS y email. Si se persiste en el impago, la cuenta se bloqueará. y el usuario no podrá sacar bicicletas. De igual forma, se da la posibilidad de cambiar a una tarifa con otro coste y condiciones. Por último, será interesante la opinión de los usuarios y la posibilidad de que informen rápidamente de alguna incidencia, avería o desperfecto de las bicicletas. Para ello, podrán acceder a la pantalla de Cuestiones/Sugerencias y dentro, Averías/Opiniones. Cada una de esas opciones tendrá un formulario estándar dónde se podrá expresar cómodamente las incidencias para ser estudiadas por el sistema lo más rápido posible.
+
 La última opción de la interfaz principal es el acceso a usuarios. Ahí, cualquier usuario accederá para ver su información personal, número de kms hechos y tiempo acumulado pedaleando, así como su tarifa en vigor y su historial de pagos. Si se retrasa un pago o se multa a un usuario por un mal uso, se le notificará automáticamente en esta sección y también a través de SMS y email. Si se persiste en el impago, la cuenta se bloqueará y el usuario no podrá sacar bicicletas. De igual forma, se da la posibilidad de cambiar a una tarifa con otro coste y condiciones.
 
 Cada vez que se saca o se estaciona una bicicleta con una tarjeta de cliente quedaran grabados todos los datos del momento y lugar.
+
+
 
 ### Mantenimiento y control de bicicletas
 

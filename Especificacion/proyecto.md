@@ -38,7 +38,11 @@ Cada vez que se saca o se estaciona una bicicleta con una tarjeta de cliente que
 
 ### Mantenimiento y control de bicicletas
 
-Esta parte del servicio se encargará de todo lo relacionado al tránsito de bicicletas. Esto incluye gestionar la distribución de las mismas de acuerdo a su uso habitual. En esta gestión colabora la empresa de bicicletas que moverá las bicicletas. Así mismo este módulo se encargará de la solución de las averías de bicicletas de las que sean informados. Esto incluye su posterior reinserción en el parque móvil.
+El módulo de mantenimiento se encargará de orientar al personal de mantenimiento en su trabajo. El personal tiene como funciones el arreglo y revisión de bicicletas, mantenimiento de las estaciones de préstamo y distribución de bicicletas de una estación a otra.
+Cuando el sistema es notificado con la avería de alguna de las bicicletas éste debe avisar al personal de mantenimiento con la posición de la bicicleta para que puedan ir a recogerla para repararla. Este proceso incluye la gestión de la ocupación del taller. Si el taller está ocupado se deben llevar las bicicletas a un almacén para su posterior traslado. En cuanto a la revisión de las bicicletas se deberá efectuar una revisión mensual que incluye revisar la presión de las ruedas, engrasado de la bicicleta y una limpieza general. La revisión se hará de forma gradual durante la última semana del mes.  
+Si una estación de préstamo resulta dañada de algún modo los operarios serán notificados también para poder ir a repararla, para esto será necesario adjuntarles la posición de la estación. Cuando la incidencia se haya reparado se informará al sistema de ello.  
+Si hay alguna estación con un número demasiado elevado de bicicletas mientras que otras estaciones están escasas de las mismas los operarios deberán cargar algunas de las bicicletas entre estaciones. Esto se les notificará dando la estación que tiene demasiadas bicicletas, el número de bicicletas a retirar y la estación donde deben llevarse las sobrantes.  
+Así mismo si el personal tiene alguna incidencia (camión averiado, rotura imposible de arreglar en bicicletas o alguna incidencia no especificada) se notificará al sistema para que quede constancia del problema y se tenga en cuenta, si es necesario, para la gestión de las bicicletas.
 
 ### Dispositivo central
 

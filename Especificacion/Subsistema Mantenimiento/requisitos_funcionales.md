@@ -11,7 +11,6 @@
   \item{\bf{RF2.2:}} Revisión de las bicicletas.
     \begin{itemize}
       \item Descripción: El sistema debe mandar a revisión las bicicletas durante la última semana del mes. Se debe hacer de forma gradual. La revisión incluye la revisión de la presión de las ruedas, engrasado de la bicicleta y limpieza general.
-      \item Entrada: RD2.4
       \item Cambios producidos en la base de datos: RD2.5
     \end{itemize}
 \end{itemize}

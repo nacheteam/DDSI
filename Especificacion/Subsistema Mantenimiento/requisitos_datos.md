@@ -14,4 +14,12 @@
       \item Se marca esa bicicleta como inactiva en el sistema.
       \item El estado de la bicicleta pasa a ser: en reparación.
     \end{itemize}
+  \item{\bf{RD2.4}} Notificación de periodo de revisión de bicicletas:
+    \begin{itemize}
+      \item Cadena de caracteres con: "Revisión Bicicletas".
+    \end{itemize}
+  \item{\bf{RD2.5}} Datos modificados por la revisión de las bicicletas:  
+    \begin{itemize}
+      \item Las bicicletas trasladadas a revisión son marcadas como no disponibles.
+    \end{itemize}
 \end{itemize}

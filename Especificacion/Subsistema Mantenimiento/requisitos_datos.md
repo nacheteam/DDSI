@@ -18,4 +18,17 @@
     \begin{itemize}
       \item Las bicicletas trasladadas a revisión son marcadas como no disponibles.
     \end{itemize}
+  \item{\bf{RD2.5}} Datos de entrada para reparar una estación:
+    \begin{itemize}
+      \item Coordenadas con la posición de la estación a reparar.
+    \end{itemize}
+  \item{\bf{RD2.6}} Datos de salida tras reparar una estación averiada.
+    \begin{itemize}
+      \item Mensaje con información de la reparación. Cadena alfanumérica de 240 caracteres.
+      \item Coordenadas de la estación reparada.
+    \end{itemize}
+  \item{\bf{RD2.7}}
+    \begin{itemize}
+      \item La estación se marca como deshabilitada.
+    \end{itemize}
 \end{itemize}

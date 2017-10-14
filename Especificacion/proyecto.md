@@ -52,6 +52,7 @@ Este subsistema se encargará de la gestión del correcto funcionamiento del res
 
 Los servicios que ofrecerá al subsistema de usuario serán: proporcionar la pasarela de pago a los usuarios, establecer la sanción proporcional al tiempo extra que haya sido empleado y alterar el estado de un cliente a sancionado. La información recabada y el uso de los vehículos puede ser utilizado para establecer un análisis descriptivo del comportamiento de la población.
 
-En la gestión de bicicletas el dispositivo central añade en la base de datos información acerca del uso de las bicicletas y su localización. Estos últimos datos son estudiados con el interés de proporcionar una distribución adecuada al uso de los vehículos. La finalidad de esto ultimo es ofrecer un servicio funcional sin tener que aumentar el presupuesto destinado a los vehículos.
+En la gestión de bicicletas el dispositivo central añade en la base de datos información acerca del uso de las bicicletas y su localización. Estos últimos datos son estudiados con el interés de proporcionar una distribución adecuada al uso de los vehículos. La finalidad de esto ultimo es ofrecer un servicio funcional sin tener que aumentar el presupuesto destinado a los vehículos. El tiempo de uso de las distintas bicicletas lo controlan cada una de las estaciones.
 
 Estas dos funciones además incluyen un sistema de notificaciones a los usuarios para ser notificados de sanciones u otras incidencias y notificaciones para los de mantenimiento con la intención de avisarles de averías o reubicación de bicicletas.
+

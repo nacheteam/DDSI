@@ -36,6 +36,7 @@
     \begin{itemize}
       \item Estación con pocas bicicletas.
       \item Posibles estaciones con muchas bicicletas.
+      \item Número de bicicletas a trasladar.
     \end{itemize}
   \item{\bf{RD2.9}} Cambios producidos por el traslado de bicicletas.
     \begin{itemize}

@@ -20,4 +20,10 @@
       \item Salida: RD2.6
       \item Cambios producidos en la base de datos: RD2.7
     \end{itemize}
+  \item{\bf{RF2.4}} Traslado de bicicletas entre estaciones:
+    \begin{itemize}
+      \item Descripción: Cuando una estación tenga pocas bicicletas el sistema será notificado para proceder al traslado de bicicletas desde las estaciones que más tienen a las que menos.
+      \item Entrada: RD2.8
+      \item Cambios producidos en la base de datos: RD2.9
+    \end{itemize}
 \end{itemize}

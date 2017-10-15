@@ -27,8 +27,19 @@
       \item Mensaje con información de la reparación. Cadena alfanumérica de 240 caracteres.
       \item Coordenadas de la estación reparada.
     \end{itemize}
-  \item{\bf{RD2.7}}
+  \item{\bf{RD2.7}} Cambios producidos en la base de datos al reparar una estación.
     \begin{itemize}
-      \item La estación se marca como deshabilitada.
+      \item La estación se marca como deshabilitada durante la reparación.
+      \item Se vuelve a marcar como habilitada tras la reparación.
     \end{itemize}
+  \item{\bf{RD2.8}} Datos necesarios para el traslado de bicicletas.
+    \begin{itemize}
+      \item Estación con pocas bicicletas.
+      \item Posibles estaciones con muchas bicicletas.
+    \end{itemize}
+  \item{\bf{RD2.9}} Cambios producidos por el traslado de bicicletas.
+    \begin{itemize}
+      \item Se cambian las bicicletas de estación en la base de datos tras el traslado.
+    \end{itemize}
+
 \end{itemize}

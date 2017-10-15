@@ -26,4 +26,11 @@
       \item Entrada: RD2.8
       \item Cambios producidos en la base de datos: RD2.9
     \end{itemize}
+  \item{\bf{RF2.5}} Incidencia:
+    \begin{itemize}
+      \item Descripción: Cuando se produzca una incidencia de cualquier tipo (camión averiado, rotura imposible de arreglar o una incidencia no especificada) se notificará al sistema central del fallo.
+      \item Entrada: RD2.10
+      \item Salida: RD2.11
+      \item Cambios producidos en la base de datos: RD2.12
+    \end{itemize}
 \end{itemize}

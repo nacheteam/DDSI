@@ -42,5 +42,18 @@
     \begin{itemize}
       \item Se cambian las bicicletas de estación en la base de datos tras el traslado.
     \end{itemize}
-
+  \item{\bf{RD2.10}} Datos de entrada para una incidencia.
+    \begin{itemize}
+      \item Tipo de incidencia.
+      \item Descripción.
+    \end{itemize}
+  \item{\bf{RD2.11}} Salida tras una incidencia.
+    \begin{itemize}
+      \item Tipo de incidencia.
+      \item Descripción.
+    \end{itemize}
+  \item{\bf{RD2.12}} Cambios producidos por una incidencia.
+    \begin{itemize}
+      \item Cambios oportunos.
+    \end{itemize}
 \end{itemize}

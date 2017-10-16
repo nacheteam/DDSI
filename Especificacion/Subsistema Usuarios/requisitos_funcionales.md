@@ -27,5 +27,11 @@
     \begin{itemize}
       \item{\bf{Datos de entrada}} RD1.9
       \item{\bf{Almacenamiento y manejo}} RD1.10
+      \item{\bf{Datos de salida}} RD1.11
     \end{itemize}
+  \item{\bf{RF1.5}} Poner queja/reclamación/sugerencia.
+    \begin{itemize}
+      \item{\bf{Datos de entrada}} RD1.12
+      \item{\bf{Almacenamiento y manejo}}RD1.13
+      \item{\bf{Datos de salida}} RD1.14
 \end{itemize}

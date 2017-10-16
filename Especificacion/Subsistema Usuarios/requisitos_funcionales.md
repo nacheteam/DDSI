@@ -34,4 +34,5 @@
       \item{\bf{Datos de entrada}} RD1.12
       \item{\bf{Almacenamiento y manejo}}RD1.13
       \item{\bf{Datos de salida}} RD1.14
+    \end{itemize}
 \end{itemize}

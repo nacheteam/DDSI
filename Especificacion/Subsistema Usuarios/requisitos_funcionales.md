@@ -3,7 +3,7 @@
 
   - **RF1.1:** Dar de alta a un usuario.
 
-      * Descripción:Se crea un nuevo perfil en el sistemas para poder utilizar los servicios.
+      * Descripción: Se crea un nuevo perfil en el sistemas para poder utilizar los servicios.
       * Datos de entrada: RD1.1
       * Almacenamiento o manejo: RD1.2
       * Datos de salida: RD1.

@@ -13,10 +13,12 @@
     \begin{itemize}
       \item Se marca esa bicicleta como inactiva en el sistema.
       \item El estado de la bicicleta pasa a ser: en reparación.
+      \item Cuando se repara se cambia el estado a activa.
     \end{itemize}
   \item{\bf{RD2.4}} Datos modificados por la revisión de las bicicletas:  
     \begin{itemize}
       \item Las bicicletas trasladadas a revisión son marcadas como no disponibles.
+      \item Tras la revisión se actualiza la posición y el estado de las bicicletas.
     \end{itemize}
   \item{\bf{RD2.5}} Datos de entrada para reparar una estación:
     \begin{itemize}

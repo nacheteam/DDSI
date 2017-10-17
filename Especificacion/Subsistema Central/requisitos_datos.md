@@ -1,74 +1,56 @@
 # Requisitos de datos
   
-- **RD1.1** Identificador de una tarjeta de crédito
+- **RD3.1.1** Identificador de una tarjeta de crédito
       * Nombre y Apellidos (Cadena alfanumérica)
+      * Caducidad (cadena alfanumérica MM:AAAA posterior a la fecha actual)
+      * Numero de tarjeta (16 digitos respetando estandar VISA, MC ...)
+      * Numero de comprobación (3 digitos)
 
-      * Caducidad (cadena alfanumérica)
-
-            RS1.1.1Formato de fecha
-
-      * Numero de tarjeta
-
-      	    RS1.1.2 Formato de tarjeta
-
-      * Numero de comprobación
-
-- **RD1.2** Se guarda una copia de los datos de la tarjeta
+- **RD3.1.2** Se guarda una copia de los datos de la tarjeta
       * Nombre y Apellidos (Cadena alfanumérica)
-      * Caducidad (cadena alfanumérica)
-            RS1.2.1 Formato de fecha
-      * Numero de tarjeta
+      * Caducidad (cadena alfanumérica MM:AAAA posterior a la fecha actual)
+      * Numero de tarjeta (16 digitos respetando estandar VISA, MC ...)
+      * Numero de comprobación (3 digitos)
 
-- **RS1.2.2** Formato de tarjeta
-      * Numero de comprobación
-
-- **RD1.3** Identificador de usuario dado de alta en el sistema
+- **RD3.1.3** Identificador de usuario dado de alta en el sistema
       * Numero de usuario
 
-- **RD2.1** Identificador de usuario dado de alta en el sistema
+- **RD3.2.1** Identificador de usuario dado de alta en el sistema
       * Numero de usuario
 
-- **RD2.2** Tiempo de uso de la bicicleta
+- **RD3.2.2** Tiempo de uso de la bicicleta
       * Hora de salida
       * Hora de llegada
 
-- **RD2.3** Trayecto
+- **RD3.2.3** Trayecto
       * Estación de salida
       * Estación de llegada
 
 
-- **RD3.1** Identificador de usuario dado de alta en el sistema
+- **RD3.3.1** Identificador de usuario dado de alta en el sistema
       * Numero de usuario
 
-- **RD3.2** Tiempo asignado al usuario
+- **RD3.3.2** Tiempo asignado al usuario
       * Tiempo asignado al usuario (numero flotante)
 
-- **RD3.3** Tiempo empleado
+- **RD3.3.3** Tiempo empleado
       * Tiempo empleado por el usuario (numero flotante)
 
-- **RD3.4** Actualización estado usuario
+- **RD3.3.4** Actualización estado usuario
       * Estado usuario (SANCIONADO o NO SANCIONADO)
 
-- **RD4.1** Uso de las estaciones
+- **RD3.4.1** Uso de las estaciones
       * Informe de posiciones (tabla en formato universal)
 
-- **RD4.2** Fecha y hora
-      * Fecha y hora (cadena alfanumérica)
+- **RD3.4.2** Fecha y hora
+      * Fecha (cadena alfanumérica DD:MM:AAAA)
+      * Hora (cadena alfanumérica hh:mm:ss)
 
-      	     RS4.2.1 Formato de fecha
-
-      	     RS4.2.2 Formato de hora
-
-
-- **RD5.1** Identificador de bicicleta
+- **RD3.5.1** Identificador de bicicleta
       * Numero del chasis (Cadena alfanumérica)
       * Posicion
-      * Fecha y hora
+      * Fecha (cadena alfanumérica DD:MM:AAAA)
+      * Hora (cadena alfanumérica hh:mm:ss)
 
-      	     RS5.1.2 Formato de fecha
-
-	     RS5.1.3 Formato de hora
-
-
-- **RD5.2** Estado de la bicicleta
+- **RD3.5.2** Estado de la bicicleta
       * Estado de la bicicleta(AVERIADO o NO AVERIADO)

@@ -1,6 +1,5 @@
 # Requisitos funcionales
 
-
 - **RF1:** Proporcionar la pasarela de pago
 La pasarela de pago conectara al usuario con su banco para realizar el pago.
 
@@ -43,4 +42,4 @@ encontrar la distribución que las modela.
 La finalidad de este modulo es notificar la reubicación de bicicletas.
 
      - **RD5.1** Identificador de bicicleta
-     - **RD5.2** Estado de la bicicleta 
+     - **RD5.2** Estado de la bicicleta

@@ -1,5 +1,4 @@
 # Requisitos de Datos
-\par\noindent\rule{\textwidth}{0.8pt}  
 
   - **RD2.1:** Los datos de una bicicleta averiada:  
 

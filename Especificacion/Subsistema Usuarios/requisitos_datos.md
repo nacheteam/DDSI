@@ -1,6 +1,4 @@
 # Requisitos de datos
-par\noindent\rule{\textwidth}{0.8pt}
-
 
   - **RD1.1:** Datos básicos de un cliente:
 
@@ -16,7 +14,7 @@ par\noindent\rule{\textwidth}{0.8pt}
   - **RD1.2:** Misma información que en el RD1.1.
 
   - **RD1.3:** Cadena de caracteres dentro de la interfaz para informar de que se inscribió satisfactoriamente el nuevo usuario. Tarjeta impresa con los datos del usuario.
-  
+
   - **RD1.4** Primer apellido y DNI del usuario.
 
   - **RD1.5:** Toda la información comentada en RD1.1 asociada al usuario con primer apellido y DNI percibido en RD1.4.

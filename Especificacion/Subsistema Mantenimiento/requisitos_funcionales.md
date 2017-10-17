@@ -1,5 +1,4 @@
 # Requisitos Funcionales
-\par\noindent\rule{\textwidth}{0.8pt}  
 
   - **RF2.1:** Traslado de bicicletas al taller:    
 

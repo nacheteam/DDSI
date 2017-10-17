@@ -1,5 +1,4 @@
 # Requisitos funcionales
-\par\noindent\rule{\textwidth}{0.8pt}
 
   - **RF1.1:** Dar de alta a un usuario.
 

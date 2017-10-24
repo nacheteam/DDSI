@@ -15,6 +15,9 @@
 - **RD3.1.3** Identificador de usuario dado de alta en el sistema
       * Numero de usuario
 
+- **RD3.1.4** Fracaso o exito de la transaccion
+      * Exito o fracaso y su numero de error
+
 - **RD3.2.1** Identificador de usuario dado de alta en el sistema
       * Numero de usuario
 
@@ -26,6 +29,7 @@
       * Estación de salida
       * Estación de llegada
 
+- **RD3.2.4** Si el tiempo de uso es superior al contratado la salida del sistema reflejara que el usuario debe ser sancionado.
 
 - **RD3.3.1** Identificador de usuario dado de alta en el sistema
       * Numero de usuario

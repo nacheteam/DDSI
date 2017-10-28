@@ -28,12 +28,6 @@
 
 
 - **RF3.5:** Notificación de reubicación
-<<<<<<< HEAD
-     - Descripcion: La finalidad de este modulo es notificar la reubicación de bicicletas.
+     - Descripción: La finalidad de este modulo es notificar la reubicación de bicicletas.
      - Datos de entrada: **RD3.5.1**
      - Datos de salida **RD3.5.2**
-=======
-     - Descripción: La finalidad de este modulo es notificar la reubicación de bicicletas.
-     - Datos de entrada: **RD3.5.1** 
-     - Datos de salida **RD3.5.2** 
->>>>>>> c933c46785245d69b81af057ccfc90a445000df1

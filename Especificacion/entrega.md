@@ -268,51 +268,35 @@ Requisitos Funcionales
 Requisitos funcionales
 ======================
 
--   **RF3.1:** Proporcionar la pasarela de pago La pasarela de pago
-    conectara al usuario con su banco para realizar el pago.
+- **RF3.1:** Proporcionar la pasarela de pago
+      - Descripcion : La pasarela de pago conectara al usuario con su banco para realizar el pago.
+      - Datos de entrada: **RD3.1.1**
+      - Almacenamiento y manejo: **RD3.1.2**
+      - Datos de salida: **RD3.1.4**
 
-    -   **RD3.1.1:**Requiere los datos identificadores de una tarjeta
-        de credito.
-    -   **RD3.1.2:**El interior del sistema guardara una copia de la
-        misma si se acepta el pago.
-    -   **RD3.1.3:**El identificador del usuario que hace el pago
+- **RF3.2:** Controlar el tiempo de uso y trayecto de una bicicleta
+      - Descripcion: Este requisito funcional se encargara del control temporal y espacial de las bicicletas.
+      - Datos de entrada: **RD3.2.1**
+      - Almacenamiento y manejo: **RD3.2.2**
+      - Datos de salida: **RD3.2.3**
 
-La salida de este requisito funcional notificara el éxito o fracaso de
-la transacción.
+- **RF3.3:** Establecer la sanción proporcional al tiempo extra
+      - Descripcion: Cuando un usuario es sancionado el tiempo extra empleado se le notificara al
+requisito funcional.
+      - Datos de entrada: **RD3.3.1**
+      - Almacenamiento y manejo: **RD3.3.2**
 
--   **RF3.2:** Controlar el tiempo de uso y trayecto de una bicicleta
-    Este requisito funcional se encargara del control temporal y
-    espacial de las bicicletas.
+- **RF3.4:** Análisis estadístico de la distribución de bicicletas
+      - Descripcion: Se tratara de analizar descriptivamente la localización de las bicicletas para encontrar la distribución que las modela.
+      - Datos de entrada: **RD3.4.1**
+      - Almacenamiento y manejo: **RD3.4.2**
 
-    -   **RD3.2.1**El identificador del usuario que ha usado la
-        bicicleta
-    -   **RD3.2.2**El tiempo de uso de una bicicleta se almacena en la
-        base de datos.
-    -   **RD3.2.3**El trayecto se almacena en la base datos.
 
-Si el tiempo de uso es superior al contratado la salida del sistema
-reflejara que el usuario debe ser sancionado.
+- **RF3.5:** Notificación de reubicación
+     - Descripcion: La finalidad de este modulo es notificar la reubicación de bicicletas.
+     - Datos de entrada: **RD3.5.1**
+     - Datos de salida **RD3.5.2**
 
--   **RF3.3:** Establecer la sanción proporcional al tiempo extra Cuando
-    un usuario es sancionado el tiempo extra empleado se le notificara
-    al requisito funcional.
-
-    -   **RD3.3.1**Identificador de usuario.
-    -   **RD3.3.2**Tiempo asignado al usuario.
-    -   **RD3.3.3**Tiempo empleado.
-    -   **RD3.3.4**El usuario en la base de datos sera actualizado
-        a sancionado.
--   **RF3.4:** Análisis estadístico de la distribución de bicicletas Se
-    tratara de analizar descriptivamente la localización de las
-    bicicletas para encontrar la distribución que las modela.
-
-    -   **RD3.4.1** Uso de las estaciones
-    -   **RD3.4.2** Fecha y hora
--   **RF3.5:** Notificación de reubicación La finalidad de este modulo
-    es notificar la reubicación de bicicletas.
-
-    -   **RD3.5.1** Identificador de bicicleta
-    -   **RD3.5.2** Estado de la bicicleta
 
 Requisitos de datos
 ===================
@@ -423,48 +407,63 @@ Requisitos de Datos
 Requisitos de datos
 ===================
 
--   **RD3.1.1** Identificador de una tarjeta de crédito
-    -   Nombre y Apellidos (Cadena alfanumérica)
-    -   Caducidad (cadena alfanumérica MM:AAAA posterior a la
-        fecha actual)
-    -   Numero de tarjeta (16 digitos respetando estandar VISA, MC ...)
-    -   Numero de comprobación (3 digitos)
--   **RD3.1.2** Se guarda una copia de los datos de la tarjeta
-    -   Nombre y Apellidos (Cadena alfanumérica)
-    -   Caducidad (cadena alfanumérica MM:AAAA posterior a la
-        fecha actual)
-    -   Numero de tarjeta (16 digitos respetando estandar VISA, MC ...)
-    -   Numero de comprobación (3 digitos)
--   **RD3.1.3** Identificador de usuario dado de alta en el sistema
-    -   Numero de usuario
--   **RD3.2.1** Identificador de usuario dado de alta en el sistema
-    -   Numero de usuario
--   **RD3.2.2** Tiempo de uso de la bicicleta
-    -   Hora de salida
-    -   Hora de llegada
--   **RD3.2.3** Trayecto
-    -   Estación de salida
-    -   Estación de llegada
--   **RD3.3.1** Identificador de usuario dado de alta en el sistema
-    -   Numero de usuario
--   **RD3.3.2** Tiempo asignado al usuario
-    -   Tiempo asignado al usuario (numero flotante)
--   **RD3.3.3** Tiempo empleado
-    -   Tiempo empleado por el usuario (numero flotante)
--   **RD3.3.4** Actualización estado usuario
-    -   Estado usuario (SANCIONADO o NO SANCIONADO)
--   **RD3.4.1** Uso de las estaciones
-    -   Informe de posiciones (tabla en formato universal)
--   **RD3.4.2** Fecha y hora
-    -   Fecha (cadena alfanumérica DD:MM:AAAA)
-    -   Hora (cadena alfanumérica hh:mm:ss)
--   **RD3.5.1** Identificador de bicicleta
-    -   Numero del chasis (Cadena alfanumérica)
-    -   Posicion
-    -   Fecha (cadena alfanumérica DD:MM:AAAA)
-    -   Hora (cadena alfanumérica hh:mm:ss)
--   **RD3.5.2** Estado de la bicicleta
-    -   Estado de la bicicleta(AVERIADO o NO AVERIADO)
+- **RD3.1.1** Datos de entrada
+      * Numero de usuario
+      * Identificador de una tarjeta de crédito
+      * Nombre y Apellidos (Cadena alfanumérica)
+      * Caducidad (cadena alfanumérica MM:AAAA posterior a la fecha actual)
+      * Numero de tarjeta (16 digitos respetando estandar VISA, MC ...)
+      * Numero de comprobación (3 digitos)
+
+- **RD3.1.2** Se almacena una copia de los datos de la tarjeta
+      * Nombre y Apellidos (Cadena alfanumérica)
+      * Caducidad (cadena alfanumérica MM:AAAA posterior a la fecha actual)
+      * Numero de tarjeta (16 digitos respetando estandar VISA, MC ...)
+      * Numero de comprobación (3 digitos)
+
+- **RD3.1.3** Datos de salida
+      * Exito o fracaso de la transaccion y su numero de error
+
+- **RD3.2.1** Identificador de usuario dado de alta en el sistema
+      * Numero de usuario
+
+- **RD3.2.2** Se almacena el tiempo y trayecto de uso de la bicicleta
+      * Hora de salida
+      * Hora de llegada
+      * Estación de salida
+      * Estación de llegada
+
+- **RD3.2.3** Datos de salida
+      * Se muestra en pantalla si un usuario esta o no sancionado.
+
+- **RD3.3.1** Tiempo empleado
+      * Numero de usuario
+      * Tiempo empleado por el usuario (numero flotante)
+      * Tiempo asignado al usuario
+
+- **RD3.3.2** Actualización estado usuario
+      * Estado usuario (SANCIONADO o NO SANCIONADO)
+
+- **RD3.4.1** Uso de las estaciones
+      * Informe de posiciones (tabla en formato universal)
+
+- **RD3.4.2** Almacenamiento fecha y hora
+      * Fecha (cadena alfanumérica DD:MM:AAAA)
+      * Hora (cadena alfanumérica hh:mm:ss)
+      * Informe de posiciones (tabla en formato universal)
+
+- **RD3.5.1** Identificador de bicicleta
+      * Numero del chasis (Cadena alfanumérica)
+      * Posicion
+      * Fecha (cadena alfanumérica DD:MM:AAAA)
+      * Hora (cadena alfanumérica hh:mm:ss)
+
+- **RD3.5.2** Estado de la bicicleta
+      * Numero del chasis (Cadena alfanumérica)
+      * Posicion
+      * Fecha (cadena alfanumérica DD:MM:AAAA)
+      * Hora (cadena alfanumérica hh:mm:ss)      
+      * Estado de la bicicleta(AVERIADO o NO AVERIADO)
 
 Restricciones semánticas
 ========================

@@ -10,7 +10,6 @@
     - Descripción: Este requisito funcional se encargara del control temporal y espacial de las bicicletas.
     - Datos de entrada: **RD3.2.1**
     - Almacenamiento y manejo: **RD3.2.2**
-    - Datos de salida: **RD3.2.3**
 
 - **RF3.3:** Establecer la sanción proporcional al tiempo extra
     - Descripción: Cuando un usuario es sancionado el tiempo extra empleado se le notificara al requisito funcional.

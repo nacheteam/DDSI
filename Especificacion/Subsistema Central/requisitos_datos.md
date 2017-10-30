@@ -26,9 +26,6 @@
     - Estación de salida
     - Estación de llegada
 
-- **RD3.2.3** Datos de salida
-    - Se muestra en pantalla si un usuario esta o no sancionado.
-
 - **RD3.3.1** Tiempo empleado
     - Numero de usuario
     - Tiempo empleado por el usuario (numero flotante)

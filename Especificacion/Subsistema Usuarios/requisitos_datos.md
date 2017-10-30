@@ -25,7 +25,7 @@
 
   - **RD1.8:** Toda la información de RD1.1 sin la contraseña unida a los datos de uso de bicicletas del usuario (kms recorridos, tiempo acumulado, tarifa en vigor e historial de pagos).
 
-  - **RD1.9:** Datos de RD1.7 en una interfaz amigable para el usuario.
+  - **RD1.9:** Datos de RD1.8 en una interfaz amigable para el usuario.
 
   - **RD1.10:** Nueva tarifa que quiere el usuario.
 

@@ -1,5 +1,5 @@
 # Requisitos de datos
-  
+
 - **RD3.1.1** Datos de entrada
       - Numero de usuario
       - Identificador de una tarjeta de crédito
@@ -53,7 +53,8 @@
 
 - **RD3.5.2** Estado de la bicicleta
       - Numero del chasis (Cadena alfanumérica)
-      - Posición
+      - Posicion
       - Fecha (cadena alfanumérica DD:MM:AAAA)
-      - Hora (cadena alfanumérica hh:mm:ss)
+      - Hora (cadena alfanumérica hh:mm:ss)      
       - Estado de la bicicleta(AVERIADO o NO AVERIADO)
+

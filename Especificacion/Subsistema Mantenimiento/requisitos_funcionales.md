@@ -1,6 +1,6 @@
 # Requisitos Funcionales
 
-  - **RF2.1:** Traslado de bicicletas al taller:    
+  - **RF2.1:** Reparación bicicletas:    
 
       * Descripción: El sistema es notificado de que hay una bicicleta averiada en una estación concreta. Tras esto se deberá retirar la bicicleta de la circulación para llevar al taller libre correspondiente. Se informa del taller al que se ha mandado la bicicleta. Cuando esta es reparada se manda a la estación más conveniente.  
       * Entrada: RD2.1  

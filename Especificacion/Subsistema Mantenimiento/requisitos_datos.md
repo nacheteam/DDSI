@@ -2,10 +2,12 @@
 
   - **RD2.1:** Los datos de una bicicleta averiada:  
 
-      * Posición: Coordenadas de posición de la bicicleta.  
+      * Posición: Estación de la bicicleta.
+      * Código de identifiación de la bicicleta.
   - **RD2.2:** Taller al que se envía una bicicleta averiada:
 
       * Número de taller al que se envía la bicicleta.  
+      * Personal asignado a la reparación.
   - **RD2.3:** Datos modificados por trasladar una bicicleta al taller:  
 
       * Se marca esa bicicleta como inactiva en el sistema.  

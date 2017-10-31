@@ -16,7 +16,9 @@
   - **RD2.4:** Datos modificados por la revisión de las bicicletas:  
 
       * Las bicicletas trasladadas a revisión son marcadas como no disponibles.  
-      * Tras la revisión se actualiza la posición y el estado de las bicicletas.  
+      * Tras la revisión se actualiza la posición y el estado de las bicicletas.
+      * Código de operario.
+      * Código de bicicleta. 
   - **RD2.5:** Datos de entrada para reparar una estación:  
 
       * Coordenadas con la posición de la estación a reparar.  

@@ -18,10 +18,12 @@
       * Las bicicletas trasladadas a revisión son marcadas como no disponibles.  
       * Tras la revisión se actualiza la posición y el estado de las bicicletas.
       * Código de operario.
-      * Código de bicicleta. 
+      * Código de bicicleta.
   - **RD2.5:** Datos de entrada para reparar una estación:  
 
       * Coordenadas con la posición de la estación a reparar.  
+      * Código de la estación.
+      * Código del personal.
   - **RD2.6:** Datos de salida tras reparar una estación averiada.  
 
       * Mensaje con información de la reparación. Cadena alfanumérica de 240 caracteres.  

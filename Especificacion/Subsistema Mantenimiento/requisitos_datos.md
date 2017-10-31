@@ -34,7 +34,9 @@
       * Se vuelve a marcar como habilitada tras la reparación.  
   - **RD2.8:** Datos necesarios para el traslado de bicicletas.  
 
-      * Estación con pocas bicicletas.  
+      * Código estación con pocas bicicletas.  
+      * Códigos bicicletas.
+      * Código personal.
       * Posibles estaciones con muchas bicicletas.  
       * Número de bicicletas a trasladar.  
   - **RD2.9:** Cambios producidos por el traslado de bicicletas.  

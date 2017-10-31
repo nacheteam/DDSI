@@ -46,6 +46,8 @@
 
       * Tipo de incidencia.  
       * Descripción.  
+      * Código incidencia.
+      * Código operario.
   - **RD2.11:** Salida tras una incidencia.  
 
       * Tipo de incidencia.  

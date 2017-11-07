@@ -467,11 +467,11 @@ Restricciones semánticas
 
 ### Esquema F Armazón
 
-![Esquema F Armazón](../Analisis/Esquema\ f\ armazon/Esquema\ f\ armazon.jpg)
+![Esquema F Armazón](../Analisis/Esquema\ f\ armazon/Esquema\ F\ armazón.jpg)
 
 ### Esquema conceptual completo
 
-![Esquema conceptual completo](../Analisis\Esquema\ conceptual/esquema_conceptual.png)
+![Esquema conceptual completo](../Analisis/Esquema\ conceptual/esquema_conceptual.png)
 
 ### Subsistema Usuarios
 
@@ -496,7 +496,7 @@ Restricciones semánticas
 
 #### Esquemas externos
 
-![Esquemas externos](../Analisis/Subsistema\ Matenimiento/Esquema\ externo/esquema_externo.png)
+![Esquemas externos](../Analisis/Subsistema\ Mantenimiento/Esquema\ externo/esquema_externo.png)
 
 #### Esquema conceptual
 

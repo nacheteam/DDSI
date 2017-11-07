@@ -189,35 +189,40 @@ de averías o reubicación de bicicletas.
 Requisitos funcionales
 ======================
 
--   **RF1.1:** Dar de alta a un usuario.
+- **RF1.1:** Dar de alta a un usuario.
 
-    -   Descripción: Se crea un nuevo perfil en el sistemas para poder
-        utilizar los servicios.
-    -   Datos de entrada: RD1.1
-    -   Almacenamiento o manejo: RD1.2
-    -   Datos de salida: RD1.3
--   **RF1.2:** Dar de baja a un usuario.
+    * Descripción: Se crea un nuevo perfil en el sistemas para poder utilizar los servicios almacenando los datos del cliente.
+    * Datos de entrada: RD1.1
+    * Almacenamiento o manejo: RD1.2
+    * Datos de salida: RD1.3
 
-    -   Descripción: Se elimina el perfil y toda su información en
-        el sistema.
-    -   Datos de entrada: RD1.4
-    -   Almacenamiento o manejo: RD1.5
-    -   Datos de salida: RD1.6
--   **RF1.3:** Acceso de los usuarios al sistema.
 
-    -   Datos de entrada: RD1.7
-    -   Almacenamiento y manejo: RD1.8
-    -   Datos de salida: RD1.9
--   **RF1.4:** Cambiar tarifa de usuario.
+- **RF1.2:** Dar de baja a un usuario.
 
-    -   Datos de entrada: RD1.10
-    -   Almacenamiento y manejo: RD1.11
-    -   Datos de salida: RD1.12
--   **RF1.5:** Poner queja/reclamación/sugerencia.
+    * Descripción: Se elimina el perfil y toda su información en el sistema.
+    * Datos de entrada: RD1.4
+    * Almacenamiento o manejo: RD1.5
+    * Datos de salida: RD1.6
 
-    -   Datos de entrada: RD1.13
-    -   Almacenamiento y manejo: RD1.14
-    -   Datos de salida: RD1.15
+- **RF1.3:** Acceso de los usuarios al sistema.
+
+    * Datos de entrada: RD1.7
+    * Almacenamiento y manejo: RD1.8
+    * Datos de salida: RD1.9
+
+
+- **RF1.4:** Cambiar tarifa de usuario.
+
+    * Datos de entrada: RD1.10
+    * Almacenamiento y manejo: RD1.11
+    * Datos de salida: RD1.12
+
+- **RF1.5:** Poner queja/reclamación/sugerencia.
+
+    * Datos de entrada: RD1.13
+    * Almacenamiento y manejo: RD1.14
+    * Datos de salida: RD1.15
+
 
 Requisitos Funcionales
 ======================
@@ -248,207 +253,196 @@ Requisitos Funcionales
     * Descripción: Cuando se produzca una incidencia de cualquier tipo (camión averiado, rotura imposible de arreglar o una incidencia no especificada) se notificará al sistema central del fallo.  
     * Entrada: RD2.10  
     * Salida: RD2.11  
-    * Cambios producidos en la base de datos: RD2.12    
+    * Cambios producidos en la base de datos: RD2.12  
 
 Requisitos funcionales
 ======================
 
 - **RF3.1:** Proporcionar la pasarela de pago
-      - Descripcion : La pasarela de pago conectara al usuario con su banco para realizar el pago.
-      - Datos de entrada: **RD3.1.1**
-      - Almacenamiento y manejo: **RD3.1.2**
-      - Datos de salida: **RD3.1.4**
+    - Descripción : La pasarela de pago conectara al usuario con su banco para realizar el pago.
+    - Datos de entrada: **RD3.1.1**
+    - Almacenamiento y manejo: **RD3.1.2**
+    - Datos de salida: **RD3.1.3**
 
 - **RF3.2:** Controlar el tiempo de uso y trayecto de una bicicleta
-      - Descripcion: Este requisito funcional se encargara del control temporal y espacial de las bicicletas.
-      - Datos de entrada: **RD3.2.1**
-      - Almacenamiento y manejo: **RD3.2.2**
-      - Datos de salida: **RD3.2.3**
+    - Descripción: Este requisito funcional se encargara del control temporal y espacial de las bicicletas.
+    - Datos de entrada: **RD3.2.1**
+    - Almacenamiento y manejo: **RD3.2.2**
 
 - **RF3.3:** Establecer la sanción proporcional al tiempo extra
-      - Descripcion: Cuando un usuario es sancionado el tiempo extra empleado se le notificara al
-requisito funcional.
-      - Datos de entrada: **RD3.3.1**
-      - Almacenamiento y manejo: **RD3.3.2**
+    - Descripción: Cuando un usuario es sancionado el tiempo extra empleado se le notificara al requisito funcional.
+    - Datos de entrada: **RD3.3.1**
+    - Almacenamiento y manejo: **RD3.3.2**
 
 - **RF3.4:** Análisis estadístico de la distribución de bicicletas
-      - Descripcion: Se tratara de analizar descriptivamente la localización de las bicicletas para encontrar la distribución que las modela.
-      - Datos de entrada: **RD3.4.1**
-      - Almacenamiento y manejo: **RD3.4.2**
-
+    - Descripción: Se tratara de analizar descriptivamente la localización de las bicicletas para encontrar la distribución que las modela.
+    - Datos de entrada: **RD3.4.1**
+    - Almacenamiento y manejo: **RD3.4.2**
 
 - **RF3.5:** Notificación de reubicación
-     - Descripcion: La finalidad de este modulo es notificar la reubicación de bicicletas.
-     - Datos de entrada: **RD3.5.1**
-     - Datos de salida **RD3.5.2**
+    - Descripción: La finalidad de este modulo es notificar la reubicación de bicicletas.
+    - Datos de entrada: **RD3.5.1**
+    - Datos de salida **RD3.5.2**
 
 
 Requisitos de datos
 ===================
 
--   **RD1.1:** Datos básicos de un cliente:
+- **RD1.1:** Datos básicos de un cliente:
 
-    -   Nombre y apellidos.
-    -   DNI.
-    -   Edad.
-    -   Número de cuenta.
-    -   Email.
-    -   Tarifa (Elegir entre varias posibles)
-    -   Número de teléfono.
-    -   Contraseña
--   **RD1.2:** Misma información que en el RD1.1.
+    * Nombre y apellidos.
+    * DNI.
+    * Edad.
+    * Número de cuenta.
+    * Email.
+    * Tarifa (Elegir entre varias posibles)
+    * Número de teléfono.
+    * Contraseña
 
--   **RD1.3:** Cadena de caracteres dentro de la interfaz para informar
-    de que se inscribió satisfactoriamente el nuevo usuario. Tarjeta
-    impresa con los datos del usuario.
+- **RD1.2:** Misma información que en el RD1.1.
 
--   **RD1.4** Primer apellido y DNI del usuario.
+- **RD1.3:** Cadena de caracteres dentro de la interfaz para informar de que se inscribió satisfactoriamente el nuevo usuario. Tarjeta impresa con los datos del usuario.
 
--   **RD1.5:** Toda la información comentada en RD1.1 asociada al
-    usuario con primer apellido y DNI percibido en RD1.4.
+- **RD1.4** Primer apellido y DNI del usuario.
 
--   **RD1.5:** Cadena de caracteres dentro de la interfaz para informar
-    de que se dio de baja satisfactoriamente al usuario. Invalidación de
-    la tarjeta en el sistema.
+- **RD1.5:** Toda la información comentada en RD1.1 asociada al usuario con primer apellido y DNI percibido en RD1.4.
 
--   **RD1.6:** DNI sin letra y contraseña del usuario.
+- **RD1.6:** Cadena de caracteres dentro de la interfaz para informar de que se dio de baja satisfactoriamente al usuario. Invalidación de la tarjeta en el sistema.
 
--   **RD1.7:** Toda la información de RD1.1 sin la contraseña unida a
-    los datos de uso de bicicletas del usuario (kms recorridos, tiempo
-    acumulado, tarifa en vigor e historial de pagos).
+- **RD1.7:** DNI sin letra y contraseña del usuario.
 
--   **RD1.8:** Datos de RD1.7 en una interfaz amigable para el usuario.
+- **RD1.8:** Toda la información de RD1.1 sin la contraseña unida a los datos de uso de bicicletas del usuario (kms recorridos, tiempo acumulado, tarifa en vigor e historial de pagos).
 
--   **RD1.9:** Nueva tarifa que quiere el usuario.
+- **RD1.9:** Datos de RD1.8 en una interfaz amigable para el usuario.
 
--   **RD1.10:** Modificación en tablas de la tarifa correspondiente a
-    un cliente.
+- **RD1.10:** Nueva tarifa que quiere el usuario.
 
--   **RD1.11:** Mensaje que verifica el cambio de tarifa satisfactorio.
+- **RD1.11:** Modificación en tablas de la tarifa correspondiente a un cliente.
 
--   **RD1.12:** Tipo de escrito junto con la descripción en lenguaje
-    natural del mismo.
+- **RD1.12:** Mensaje que verifica el cambio de tarifa satisfactorio.
 
--   **RD1.13:** Almacenamiento de la información del RD1.12 en la
-    tabla adecuada.
+- **RD1.13:** Tipo de escrito junto con la descripción en lenguaje natural del mismo.
 
--   **RD1.14:** Mensaje para el usuario que verifica la
-    correcta finalización.
+- **RD1.14:** Almacenamiento de la información del RD1.12 en la tabla adecuada.
+
+- **RD1.15:** Mensaje para el usuario que verifica la correcta finalización.
+
 
 Requisitos de Datos
 ===================
 
--   **RD2.1:** Los datos de una bicicleta averiada:
+- **RD2.1:** Los datos de una bicicleta averiada:  
 
-    -   Posición: Coordenadas de posición de la bicicleta.\
--   **RD2.2:** Taller al que se envía una bicicleta averiada:
+    * Posición: Estación de la bicicleta.
+    * Código de identifiación de la bicicleta.
+- **RD2.2:** Taller al que se envía una bicicleta averiada:
 
-    -   Número de taller al que se envía la bicicleta.\
--   **RD2.3:** Datos modificados por trasladar una bicicleta al taller:
+    * Número de taller al que se envía la bicicleta.  
+    * Personal asignado a la reparación.
+- **RD2.3:** Datos modificados por trasladar una bicicleta al taller:  
 
-    -   Se marca esa bicicleta como inactiva en el sistema.\
-    -   El estado de la bicicleta pasa a ser: en reparación.\
-    -   Cuando se repara se cambia el estado a activa.\
--   **RD2.4:** Datos modificados por la revisión de las bicicletas:
+    * Se marca esa bicicleta como inactiva en el sistema.  
+    * El estado de la bicicleta pasa a ser: en reparación.  
+    * Cuando se repara se cambia el estado a activa.  
+- **RD2.4:** Datos modificados por la revisión de las bicicletas:  
 
-    -   Las bicicletas trasladadas a revisión son marcadas como no
-        disponibles.\
-    -   Tras la revisión se actualiza la posición y el estado de las
-        bicicletas.\
--   **RD2.5:** Datos de entrada para reparar una estación:
+    * Las bicicletas trasladadas a revisión son marcadas como no disponibles.  
+    * Tras la revisión se actualiza la posición y el estado de las bicicletas.
+    * Código de operario.
+    * Código de bicicleta.
+- **RD2.5:** Datos de entrada para reparar una estación:  
 
-    -   Coordenadas con la posición de la estación a reparar.\
--   **RD2.6:** Datos de salida tras reparar una estación averiada.
+    * Coordenadas con la posición de la estación a reparar.  
+    * Código de la estación.
+    * Código del personal.
+- **RD2.6:** Datos de salida tras reparar una estación averiada.  
 
-    -   Mensaje con información de la reparación. Cadena alfanumérica de
-        240 caracteres.\
-    -   Coordenadas de la estación reparada.\
--   **RD2.7:** Cambios producidos en la base de datos al reparar
-    una estación.
+    * Mensaje con información de la reparación. Cadena alfanumérica de 240 caracteres.  
+    * Coordenadas de la estación reparada.  
+- **RD2.7:** Cambios producidos en la base de datos al reparar una estación.  
 
-    -   La estación se marca como deshabilitada durante la reparación.\
-    -   Se vuelve a marcar como habilitada tras la reparación.\
--   **RD2.8:** Datos necesarios para el traslado de bicicletas.
+    * La estación se marca como deshabilitada durante la reparación.  
+    * Se vuelve a marcar como habilitada tras la reparación.  
+- **RD2.8:** Datos necesarios para el traslado de bicicletas.  
 
-    -   Estación con pocas bicicletas.\
-    -   Posibles estaciones con muchas bicicletas.\
-    -   Número de bicicletas a trasladar.\
--   **RD2.9:** Cambios producidos por el traslado de bicicletas.
+    * Código estación con pocas bicicletas.  
+    * Códigos bicicletas.
+    * Código personal.
+    * Posibles estaciones con muchas bicicletas.  
+    * Número de bicicletas a trasladar.  
+- **RD2.9:** Cambios producidos por el traslado de bicicletas.  
 
-    -   Se cambian las bicicletas de estación en la base de datos tras
-        el traslado.\
--   **RD2.10:** Datos de entrada para una incidencia.
+    * Se cambian las bicicletas de estación en la base de datos tras el traslado.  
+- **RD2.10:** Datos de entrada para una incidencia.  
 
-    -   Tipo de incidencia.\
-    -   Descripción.\
--   **RD2.11:** Salida tras una incidencia.
+    * Tipo de incidencia.  
+    * Descripción.  
+    * Código incidencia.
+    * Código operario.
+- **RD2.11:** Salida tras una incidencia.  
 
-    -   Tipo de incidencia.\
-    -   Descripción.\
--   **RD2.12:** Cambios producidos por una incidencia.
+    * Tipo de incidencia.  
+    * Descripción.  
+- **RD2.12:** Cambios producidos por una incidencia.  
 
-    -   Cambios oportunos.
+    * Cambios oportunos.
 
 Requisitos de datos
 ===================
 
 - **RD3.1.1** Datos de entrada
-      * Numero de usuario
-      * Identificador de una tarjeta de crédito
-      * Nombre y Apellidos (Cadena alfanumérica)
-      * Caducidad (cadena alfanumérica MM:AAAA posterior a la fecha actual)
-      * Numero de tarjeta (16 digitos respetando estandar VISA, MC ...)
-      * Numero de comprobación (3 digitos)
+    - Numero de usuario
+    - Identificador de una tarjeta de crédito
+    - Nombre y Apellidos (Cadena alfanumérica)
+    - Caducidad (cadena alfanumérica MM:AAAA posterior a la fecha actual)
+    - Numero de tarjeta (16 dígitos respetando estándar VISA, MC ...)
+    - Numero de comprobación (3 dígitos)
 
 - **RD3.1.2** Se almacena una copia de los datos de la tarjeta
-      * Nombre y Apellidos (Cadena alfanumérica)
-      * Caducidad (cadena alfanumérica MM:AAAA posterior a la fecha actual)
-      * Numero de tarjeta (16 digitos respetando estandar VISA, MC ...)
-      * Numero de comprobación (3 digitos)
+    - Nombre y Apellidos (Cadena alfanumérica)
+    - Caducidad (cadena alfanumérica MM:AAAA posterior a la fecha actual)
+    - Numero de tarjeta (16 dígitos respetando estándar VISA, MC ...)
+    - Numero de comprobación (3 dígitos)
 
 - **RD3.1.3** Datos de salida
-      * Exito o fracaso de la transaccion y su numero de error
+    - Éxito o fracaso de la transacción y su numero de error
 
 - **RD3.2.1** Identificador de usuario dado de alta en el sistema
-      * Numero de usuario
+    - Numero de usuario
 
 - **RD3.2.2** Se almacena el tiempo y trayecto de uso de la bicicleta
-      * Hora de salida
-      * Hora de llegada
-      * Estación de salida
-      * Estación de llegada
-
-- **RD3.2.3** Datos de salida
-      * Se muestra en pantalla si un usuario esta o no sancionado.
+    - Identificador de bicicleta
+    - Tiempo empleado
+    - Estación de llexgada
 
 - **RD3.3.1** Tiempo empleado
-      * Numero de usuario
-      * Tiempo empleado por el usuario (numero flotante)
-      * Tiempo asignado al usuario
+    - Numero de usuario
+    - Tiempo empleado por el usuario (numero flotante)
+    - Tiempo asignado al usuario
 
 - **RD3.3.2** Actualización estado usuario
-      * Estado usuario (SANCIONADO o NO SANCIONADO)
+    - Estado usuario (SANCIONADO o NO SANCIONADO)
 
 - **RD3.4.1** Uso de las estaciones
-      * Informe de posiciones (tabla en formato universal)
+    - Informe de posiciones (tabla en formato universal)
 
 - **RD3.4.2** Almacenamiento fecha y hora
-      * Fecha (cadena alfanumérica DD:MM:AAAA)
-      * Hora (cadena alfanumérica hh:mm:ss)
-      * Informe de posiciones (tabla en formato universal)
+    - Fecha (cadena alfanumérica DD:MM:AAAA)
+    - Hora (cadena alfanumérica hh:mm:ss)
+    - Informe de posiciones (tabla en formato universal)
 
 - **RD3.5.1** Identificador de bicicleta
-      * Numero del chasis (Cadena alfanumérica)
-      * Posicion
-      * Fecha (cadena alfanumérica DD:MM:AAAA)
-      * Hora (cadena alfanumérica hh:mm:ss)
+    - Numero del chasis (Cadena alfanumérica)
+    - Posición
+    - Fecha (cadena alfanumérica DD:MM:AAAA)
+    - Hora (cadena alfanumérica hh:mm:ss)
 
 - **RD3.5.2** Estado de la bicicleta
-      * Numero del chasis (Cadena alfanumérica)
-      * Posicion
-      * Fecha (cadena alfanumérica DD:MM:AAAA)
-      * Hora (cadena alfanumérica hh:mm:ss)      
-      * Estado de la bicicleta(AVERIADO o NO AVERIADO)
+    - Numero del chasis (Cadena alfanumérica)
+    - Posicion
+    - Fecha (cadena alfanumérica DD:MM:AAAA)
+    - Hora (cadena alfanumérica hh:mm:ss)      
+    - Estado de la bicicleta(AVERIADO o NO AVERIADO)
 
 Restricciones semánticas
 ========================
@@ -466,3 +460,59 @@ Restricciones semánticas
 ========================
 
 -   **RS3.1** tener tarjeta de credito
+
+### Esquema de caja negra
+
+![Esquema de caja negra](../Analisis/Caja\ negra/Esquema\ caja\ negra.jpeg)
+
+### Esquema F Armazón
+
+![Esquema F Armazón](../Analisis/Esquema\ f\ armazon/Esquema\ f\ armazon.jpg)
+
+### Esquema conceptual completo
+
+![Esquema conceptual completo](../Analisis\Esquema\ conceptual/esquema_conceptual.png)
+
+### Subsistema Usuarios
+
+#### Diagrama de flujo de datos
+
+![Diagrama de flujo de datos](../Analisis/Subsistema\ Usuarios/DFD\ Subsistema\ Usuarios.jpg)
+
+#### Esquemas externos
+
+![Esquemas externos](../Analisis/Subsistema\ Usuarios/esquemas-externos.png)
+
+#### Esquema conceptual
+
+![Esquema conceptual](../Analisis/Subsistema\ Usuarios/esquema-conceptual-su.png)
+
+
+### Subsistema Mantenimiento
+
+#### Diagrama de flujo de datos
+
+![Diagrama de flujo de datos](../Analisis/Subsistema\ Mantenimiento/Flujo\ de\ Datos/Diagrama\ de\ flujo\ de\ datos.jpg)
+
+#### Esquemas externos
+
+![Esquemas externos](../Analisis/Subsistema\ Matenimiento/Esquema\ externo/esquema_externo.png)
+
+#### Esquema conceptual
+
+![Esquema conceptual](../Analisis/Subsistema\ Mantenimiento/Esquema\ conceptual/esquema_conceptual.png)
+
+
+### Subsistema Central
+
+#### Diagrama de flujo de datos
+
+![Diagrama de flujo de datos](../Analisis/Subsistema\ Central/Subsistema\ central.jpeg)
+
+#### Esquemas externos
+
+![Esquemas externos](../Analisis/Subsistema\ Central/Esquema\ externo.jpeg)
+
+#### Esquema conceptual
+
+![Esquema conceptual](../Analisis/Subsistema\ Central/Esquema\ conceptual.jpeg)  

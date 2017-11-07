@@ -461,58 +461,27 @@ Restricciones semánticas
 
 -   **RS3.1** tener tarjeta de credito
 
-### Esquema de caja negra
 
 ![Esquema de caja negra](../Analisis/Caja\ negra/Esquema\ caja\ negra.jpeg)
 
-### Esquema F Armazón
-
 ![Esquema F Armazón](../Analisis/Esquema\ f\ armazon/Esquema\ F\ armazón.jpg)
-
-### Esquema conceptual completo
 
 ![Esquema conceptual completo](../Analisis/Esquema\ conceptual/esquema_conceptual.png)
 
-### Subsistema Usuarios
+![Diagrama de flujo de datos (Subsistema Usuarios)](../Analisis/Subsistema\ Usuarios/DFD\ Subsistema\ Usuarios.jpg)
 
-#### Diagrama de flujo de datos
+![Esquemas externos (Subsistema Usuarios)](../Analisis/Subsistema\ Usuarios/esquemas-externos.png)
 
-![Diagrama de flujo de datos](../Analisis/Subsistema\ Usuarios/DFD\ Subsistema\ Usuarios.jpg)
+![Esquema conceptual (Subsistema Usuarios)](../Analisis/Subsistema\ Usuarios/esquema-conceptual-su.png)
 
-#### Esquemas externos
+![Diagrama de flujo de datos (Subsistema Mantenimiento)](../Analisis/Subsistema\ Mantenimiento/Flujo\ de\ Datos/Diagrama\ de\ flujo\ de\ datos.jpg)
 
-![Esquemas externos](../Analisis/Subsistema\ Usuarios/esquemas-externos.png)
+![Esquemas externos (Subsistema Mantenimiento)](../Analisis/Subsistema\ Mantenimiento/Esquema\ externo/esquema_externo.png)
 
-#### Esquema conceptual
+![Esquema conceptual (Subsistema Mantenimiento)](../Analisis/Subsistema\ Mantenimiento/Esquema\ conceptual/esquema_conceptual.png)
 
-![Esquema conceptual](../Analisis/Subsistema\ Usuarios/esquema-conceptual-su.png)
+![Diagrama de flujo de datos (Subsistema Central)](../Analisis/Subsistema\ Central/Subsistema\ central.jpeg)
 
+![Esquemas externos (Subsistema Central)](../Analisis/Subsistema\ Central/Esquema\ externo.jpeg)
 
-### Subsistema Mantenimiento
-
-#### Diagrama de flujo de datos
-
-![Diagrama de flujo de datos](../Analisis/Subsistema\ Mantenimiento/Flujo\ de\ Datos/Diagrama\ de\ flujo\ de\ datos.jpg)
-
-#### Esquemas externos
-
-![Esquemas externos](../Analisis/Subsistema\ Mantenimiento/Esquema\ externo/esquema_externo.png)
-
-#### Esquema conceptual
-
-![Esquema conceptual](../Analisis/Subsistema\ Mantenimiento/Esquema\ conceptual/esquema_conceptual.png)
-
-
-### Subsistema Central
-
-#### Diagrama de flujo de datos
-
-![Diagrama de flujo de datos](../Analisis/Subsistema\ Central/Subsistema\ central.jpeg)
-
-#### Esquemas externos
-
-![Esquemas externos](../Analisis/Subsistema\ Central/Esquema\ externo.jpeg)
-
-#### Esquema conceptual
-
-![Esquema conceptual](../Analisis/Subsistema\ Central/Esquema\ conceptual.jpeg)  
+![Esquema conceptual (Subsistema Central)](../Analisis/Subsistema\ Central/Esquema\ conceptual.jpeg)  

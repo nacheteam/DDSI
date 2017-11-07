@@ -2,10 +2,12 @@
 
   - **RD2.1:** Los datos de una bicicleta averiada:  
 
-      * Posición: Coordenadas de posición de la bicicleta.  
+      * Posición: Estación de la bicicleta.
+      * Código de identifiación de la bicicleta.
   - **RD2.2:** Taller al que se envía una bicicleta averiada:
 
       * Número de taller al que se envía la bicicleta.  
+      * Personal asignado a la reparación.
   - **RD2.3:** Datos modificados por trasladar una bicicleta al taller:  
 
       * Se marca esa bicicleta como inactiva en el sistema.  
@@ -14,10 +16,14 @@
   - **RD2.4:** Datos modificados por la revisión de las bicicletas:  
 
       * Las bicicletas trasladadas a revisión son marcadas como no disponibles.  
-      * Tras la revisión se actualiza la posición y el estado de las bicicletas.  
+      * Tras la revisión se actualiza la posición y el estado de las bicicletas.
+      * Código de operario.
+      * Código de bicicleta.
   - **RD2.5:** Datos de entrada para reparar una estación:  
 
       * Coordenadas con la posición de la estación a reparar.  
+      * Código de la estación.
+      * Código del personal.
   - **RD2.6:** Datos de salida tras reparar una estación averiada.  
 
       * Mensaje con información de la reparación. Cadena alfanumérica de 240 caracteres.  
@@ -28,7 +34,9 @@
       * Se vuelve a marcar como habilitada tras la reparación.  
   - **RD2.8:** Datos necesarios para el traslado de bicicletas.  
 
-      * Estación con pocas bicicletas.  
+      * Código estación con pocas bicicletas.  
+      * Códigos bicicletas.
+      * Código personal.
       * Posibles estaciones con muchas bicicletas.  
       * Número de bicicletas a trasladar.  
   - **RD2.9:** Cambios producidos por el traslado de bicicletas.  
@@ -38,6 +46,8 @@
 
       * Tipo de incidencia.  
       * Descripción.  
+      * Código incidencia.
+      * Código operario.
   - **RD2.11:** Salida tras una incidencia.  
 
       * Tipo de incidencia.  

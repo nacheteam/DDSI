@@ -1,4 +1,4 @@
-# Requisitos de datos
+#Requisitos de datos
 
 - **RD3.1.1** Datos de entrada
     - Numero de usuario
@@ -21,10 +21,9 @@
     - Numero de usuario
 
 - **RD3.2.2** Se almacena el tiempo y trayecto de uso de la bicicleta
-    - Hora de salida
-    - Hora de llegada
-    - Estación de salida
-    - Estación de llegada
+    - Identificador de bicicleta
+    - Tiempo empleado
+    - Estación de llexgada
 
 - **RD3.3.1** Tiempo empleado
     - Numero de usuario

@@ -8,4 +8,4 @@
     - Escritura de la posición de la bicicleta una vez se ha terminado de reparar (nueva estación en la que está).
 
 * Traslado de bicicletas:
-    - Lectura de las posiciones de las bicicletas
+    - Escritura de las nuevas posiciones de las bicicletas.

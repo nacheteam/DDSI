@@ -11,7 +11,7 @@
     - Escritura de las nuevas posiciones de las bicicletas.
 
 * Revisión de bicicletas:
-    - Escritura de la nueva posición (taller) en la que está la bicicleta y de su estado en reparación.
+    - Escritura de la nueva posición (taller) en la que está la bicicleta y de su estado en revisión.
     - Escritura de la posición de la bicicleta una vez se ha terminado de revisar (nueva estación en la que está) y de su estado disponible.
 
 * Reparación de una estación de préstamo:

@@ -525,5 +525,23 @@ Restricciones semánticas
     - Escritura del estado en reparación de la estación.
     - Escritura del estado disponible de la estación una vez se ha reparado.
 
-
 ![Esquema de navegación Subsistema Mantenimiento](./Analisis/Subsistema\ Mantenimiento/Esquemas\ de\ navegacion/esquemas_navegacion.png)
+
+### Subsistema Central
+
+* Usuario
+    - Establecer sancion actualizando la base de datos usuario
+
+* Banco recibe pago
+    - Insertar en la tabla de pagos
+
+* Bicicleta llega a estacion
+    - Insertar llegada en la tabla
+
+* Analisis estadistico
+    - Leer datos de bicicletas
+
+* Reubicacion necesaria
+    - Actualizar la opcion de reubicacion de Bicicletas
+
+![Esquema de navegación Subsistema Central](./Analisis/Subsistema\ Central/esquemas_navegacion.jpeg)

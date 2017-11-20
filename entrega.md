@@ -462,26 +462,52 @@ Restricciones semánticas
 -   **RS3.1** tener tarjeta de credito
 
 
-![Esquema de caja negra](../Analisis/Caja\ negra/Esquema\ caja\ negra.jpeg)
+![Esquema de caja negra](./Analisis/Caja\ negra/Esquema\ caja\ negra.jpeg)
 
-![Esquema F Armazón](../Analisis/Esquema\ f\ armazon/Esquema\ F\ armazón.jpg)
+![Esquema F Armazón](./Analisis/Esquema\ f\ armazon/Esquema\ F\ armazón.jpg)
 
-![Esquema conceptual completo](../Analisis/Esquema\ conceptual/esquema_conceptual.png)
+![Esquema conceptual completo](./Analisis/Esquema\ conceptual/esquema_conceptual.png)
 
-![Diagrama de flujo de datos (Subsistema Usuarios)](../Analisis/Subsistema\ Usuarios/DFD\ Subsistema\ Usuarios.jpg)
+![Diagrama de flujo de datos (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/DFD\ Subsistema\ Usuarios.jpg)
 
-![Esquemas externos (Subsistema Usuarios)](../Analisis/Subsistema\ Usuarios/esquemas-externos.png)
+![Esquemas externos (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/esquemas-externos.png)
 
-![Esquema conceptual (Subsistema Usuarios)](../Analisis/Subsistema\ Usuarios/esquema-conceptual-su.png)
+![Esquema conceptual (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/esquema-conceptual-su.png)
 
-![Diagrama de flujo de datos (Subsistema Mantenimiento)](../Analisis/Subsistema\ Mantenimiento/Flujo\ de\ Datos/Diagrama\ de\ flujo\ de\ datos.jpg)
+![Diagrama de flujo de datos (Subsistema Mantenimiento)](./Analisis/Subsistema\ Mantenimiento/Flujo\ de\ Datos/Diagrama\ de\ flujo\ de\ datos.jpg)
 
-![Esquemas externos (Subsistema Mantenimiento)](../Analisis/Subsistema\ Mantenimiento/Esquema\ externo/esquema_externo.png)
+![Esquemas externos (Subsistema Mantenimiento)](./Analisis/Subsistema\ Mantenimiento/Esquema\ externo/esquema_externo.png)
 
-![Esquema conceptual (Subsistema Mantenimiento)](../Analisis/Subsistema\ Mantenimiento/Esquema\ conceptual/esquema_conceptual.png)
+![Esquema conceptual (Subsistema Mantenimiento)](./Analisis/Subsistema\ Mantenimiento/Esquema\ conceptual/esquema_conceptual.png)
 
-![Diagrama de flujo de datos (Subsistema Central)](../Analisis/Subsistema\ Central/Subsistema\ central.jpeg)
+![Diagrama de flujo de datos (Subsistema Central)](./Analisis/Subsistema\ Central/Subsistema\ central.jpeg)
 
-![Esquemas externos (Subsistema Central)](../Analisis/Subsistema\ Central/Esquema\ externo.jpeg)
+![Esquemas externos (Subsistema Central)](./Analisis/Subsistema\ Central/Esquema\ externo.jpeg)
 
-![Esquema conceptual (Subsistema Central)](../Analisis/Subsistema\ Central/Esquema\ conceptual.jpeg)  
+![Esquema conceptual (Subsistema Central)](./Analisis/Subsistema\ Central/Esquema\ conceptual.jpeg)  
+
+
+## Esquemas de navegación
+
+### Sistema de Mantenimiento
+
+* Incidencia:  
+    - Escritura en la base de datos de una incidencia.  
+
+* Reparación de bicicletas:
+    - Escritura de la nueva posición (taller) en la que está la bicicleta y de su estado en reparación.
+    - Escritura de la posición de la bicicleta una vez se ha terminado de reparar (nueva estación en la que está) y de su estado disponible.
+
+* Traslado de bicicletas:
+    - Escritura de las nuevas posiciones de las bicicletas.
+
+* Revisión de bicicletas:
+    - Escritura de la nueva posición (taller) en la que está la bicicleta y de su estado en revisión.
+    - Escritura de la posición de la bicicleta una vez se ha terminado de revisar (nueva estación en la que está) y de su estado disponible.
+
+* Reparación de una estación de préstamo:
+    - Escritura del estado en reparación de la estación.
+    - Escritura del estado disponible de la estación una vez se ha reparado.
+
+
+![Esquema de navegación Sistema Mantenimiento](./Analisis/Subsistema\ Mantenimiento/Esquemas\ de\ navegacion/esquemas_navegacion.png)

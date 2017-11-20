@@ -461,6 +461,7 @@ Restricciones semánticas
 
 -   **RS3.1** tener tarjeta de credito
 
+## Análisis
 
 ![Esquema de caja negra](./Analisis/Caja\ negra/Esquema\ caja\ negra.jpeg)
 

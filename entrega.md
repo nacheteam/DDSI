@@ -468,11 +468,11 @@ Restricciones semánticas
 
 ![Esquema conceptual completo](./Analisis/Esquema\ conceptual/esquema_conceptual.png)
 
-![Diagrama de flujo de datos (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/DFD\ Subsistema\ Usuarios.jpg)
+![Diagrama de flujo de datos (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/Diagrama\ Flujo\ Datos/DFD\ Subsistema\ Usuarios.jpg)
 
-![Esquemas externos (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/esquemas-externos.png)
+![Esquemas externos (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/Esquemas\ externos/esquemas-externos.png)
 
-![Esquema conceptual (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/esquema-conceptual-su.png)
+![Esquema conceptual (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/Esquema\ conceptual/esquema-conceptual-su.png)
 
 ![Diagrama de flujo de datos (Subsistema Mantenimiento)](./Analisis/Subsistema\ Mantenimiento/Flujo\ de\ Datos/Diagrama\ de\ flujo\ de\ datos.jpg)
 
@@ -489,7 +489,23 @@ Restricciones semánticas
 
 ## Esquemas de navegación
 
-### Sistema de Mantenimiento
+### Subsistema de Usuarios
+
+* Alta de usuario:  
+	- Escritura en la base de datos de los datos de un nuevo usuario: DNI, nombre, edad, nº de cuenta, email, tarifa, teléfono y contraseña.  
+
+* Baja de usuario:  
+	- Borrado de la base de datos de todos los datos el usuario identificado por su DNI.  
+
+* Cambiar tarifa:  
+	- Modificar en la base de datos el atributo tarifa de un usuario identificado por su DNI.  
+
+* Poner queja/reclamación/sugerencia:  
+	- El sistema escribe en la base de datos una nueva reclamación con el DNI del usuario, el código, el nombre de fichero dónde el usuario escribe y la fecha.  
+
+![Esquema de navegación Subsistem Usuarios](./Analisis/Subsistema\ Usuarios/Esquemas\ de\ navegacion/esquemas_navegacion.png)
+
+### Subsistema de Mantenimiento
 
 * Incidencia:  
     - Escritura en la base de datos de una incidencia.  
@@ -510,4 +526,4 @@ Restricciones semánticas
     - Escritura del estado disponible de la estación una vez se ha reparado.
 
 
-![Esquema de navegación Sistema Mantenimiento](./Analisis/Subsistema\ Mantenimiento/Esquemas\ de\ navegacion/esquemas_navegacion.png)
+![Esquema de navegación Subsistema Mantenimiento](./Analisis/Subsistema\ Mantenimiento/Esquemas\ de\ navegacion/esquemas_navegacion.png)

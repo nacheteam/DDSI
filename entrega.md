@@ -186,8 +186,7 @@ de averías o reubicación de bicicletas.
 - Ignacio Aguilera Martos: Subsistema 2 Gestión de Mantenimiento.
 - Diego Asterio de Zaballa: Subsistema 3 Central.  
 
-Requisitos funcionales
-======================
+#### Requisitos funcionales
 
 - **RF1.1:** Dar de alta a un usuario.
 
@@ -224,8 +223,7 @@ Requisitos funcionales
     * Datos de salida: RD1.15
 
 
-Requisitos Funcionales
-======================
+#### Requisitos Funcionales
 
 - **RF2.1:** Reparación bicicletas:    
 
@@ -255,8 +253,7 @@ Requisitos Funcionales
     * Salida: RD2.11  
     * Cambios producidos en la base de datos: RD2.12  
 
-Requisitos funcionales
-======================
+#### Requisitos funcionales
 
 - **RF3.1:** Proporcionar la pasarela de pago
     - Descripción : La pasarela de pago conectara al usuario con su banco para realizar el pago.
@@ -285,8 +282,7 @@ Requisitos funcionales
     - Datos de salida **RD3.5.2**
 
 
-Requisitos de datos
-===================
+#### Requisitos de datos
 
 - **RD1.1:** Datos básicos de un cliente:
 
@@ -328,8 +324,7 @@ Requisitos de datos
 - **RD1.15:** Mensaje para el usuario que verifica la correcta finalización.
 
 
-Requisitos de Datos
-===================
+#### Requisitos de Datos
 
 - **RD2.1:** Los datos de una bicicleta averiada:  
 
@@ -387,8 +382,7 @@ Requisitos de Datos
 
     * Cambios oportunos.
 
-Requisitos de datos
-===================
+#### Requisitos de datos
 
 - **RD3.1.1** Datos de entrada
     - Numero de usuario
@@ -444,8 +438,7 @@ Requisitos de datos
     - Hora (cadena alfanumérica hh:mm:ss)      
     - Estado de la bicicleta(AVERIADO o NO AVERIADO)
 
-Restricciones semánticas
-========================
+#### Restricciones semánticas
 
 -   **RS1.1:** En el RD1.1 asociado al RF1.1, la edad del nuevo usuario
     tendrá que ser mayor o igual que 14.
@@ -453,11 +446,7 @@ Restricciones semánticas
 -   **RS1.2:** En el RD1.1 asociado al RF1.1, el titular del número de
     cuenta no tiene por qué ser igual que el nuevo usuario.
 
-Restricciones Semánticas
-========================
-
-Restricciones semánticas
-========================
+#### Restricciones semánticas
 
 -   **RS3.1** tener tarjeta de credito
 

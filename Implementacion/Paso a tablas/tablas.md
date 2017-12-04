@@ -13,7 +13,7 @@ con el atributo CodigoPersonal llave externa de Personal NotNull.
 - ReparaBicicleta(\underline{CodigoBicicleta,CodigoPersonal},NumeroTaller)  
 con el atributo CodigoBicicleta llave externa Bicicleta NotNull.  
 con el atributo CodigoPersonal llave externa Personal NotNull.  
-- Traslada(\underline{CodigoBicicleta},CodigoPersonal,)  
+- Traslada(\underline{CodigoBicicleta},CodigoPersonal, EstacionPocasBicicletas,EstacionMuchasBicicletas,NumeroBicicletas)  
 con el atributo CodigoBicicleta llave externa de BIcicleta.  
 con el atributo CodigoPersonal llave externa de Personal NotNull.  
 - Revisa(\underline{CodigoBicicleta,CodigoPersonal})

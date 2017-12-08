@@ -19,11 +19,11 @@ def menu():
 def bicicletaAveriada(cursor):
     cod_bicicleta = int(raw_input("Introduzca el código de la bicicleta averiada:"))
     print("En reparación...\n")
-    cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta==" + str(cod_bicicleta))
+    cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta=='" + str(cod_bicicleta) +"';")
     for Posicion from cursor:
-        cursor.execute("UPDATE Bicicleta SET Estado='Reparacion', Posicion='Taller'")
+        cursor.execute("UPDATE Bicicleta SET Estado='Reparacion', Posicion='Taller';")
         time.sleep(3)
-        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion=" + str(Posicion))
+        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion='" + str(Posicion) + "';")
     print("¡Reparada!\n")
 
 # Función de mantenimiento.
@@ -42,4 +42,5 @@ def trasladoBicicletas(cursor):
 def notificacionIncidencia(cursor):
     tipo = raw_input("Introduzca el tipo de incidencia: ")
     descripcion = raw_input("Introduzca una descripción: ")
-    cursor.execute("INSERT INTO ")
+    cursor.execute("INSERT INTO Incidencias (CodigoIncidencia,Tipo,Descripcion) VALUES ('" + str(codigoSiguienteIncidencia) + "','" + str(tipo) + "','" + str(descripcion) + "';")
+    print("Notificación de la incidencia realizada.\n")

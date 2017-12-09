@@ -2,7 +2,6 @@ import mysql.connector as mariadb
 import time
 import random
 
-codigoSiguienteIncidencia = 0
 NUM_PERSONAL = 50
 NUM_TALLERES = 10
 
@@ -61,6 +60,7 @@ def trasladoBicicletas(cursor):
 
 # Función de notificación de una incidencia.
 def notificacionIncidencia(cursor):
+    codigoSiguienteIncidencia = raw_input("Introduzca el código de la incidencia: ")
     tipo = raw_input("Introduzca el tipo de incidencia: ")
     descripcion = raw_input("Introduzca una descripción: ")
     cursor.execute("INSERT INTO Incidencias (CodigoIncidencia,Tipo,Descripcion) VALUES ('" + str(codigoSiguienteIncidencia) + "','" + str(tipo) + "','" + str(descripcion) + "');")
@@ -68,4 +68,3 @@ def notificacionIncidencia(cursor):
     print("El mecánico que ha notificado la incidencia es: " + str(mecanico) + "\n")
     cursor.execute("INSERT INTO Pone (CodigoPersonal,CodigoReclamacion) VALUES ('" + str(mecanico) + "','" + str(codigoSiguienteIncidencia) + "');")
     print("Notificación de la incidencia realizada.\n")
-    codigoSiguienteIncidencia+=1

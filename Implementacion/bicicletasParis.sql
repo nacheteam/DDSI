@@ -360,10 +360,10 @@ CREATE TABLE `Usuario` (
   `DNI` char(9) NOT NULL,
   `Nombre` varchar(20) DEFAULT NULL,
   `Edad` varchar(3) DEFAULT NULL,
-  `NumeroCuenta` char(24) DEFAULT NULL,
+  `NumeroCuenta` int(24) DEFAULT NULL,
   `Email` varchar(20) DEFAULT NULL,
   `Tarifa` int(11) DEFAULT NULL,
-  `Telefono` varchar(13) DEFAULT NULL,
+  `Telefono` int(13) DEFAULT NULL,
   `Contrasena` varchar(20) DEFAULT NULL,
   `TiempoAsignado` int(11) DEFAULT NULL,
   `Sancionado` tinyint(1) DEFAULT NULL,
@@ -413,4 +413,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-12-09 16:28:08
+-- Dump completed on 2017-12-09 22:51:32

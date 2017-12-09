@@ -64,4 +64,7 @@ def notificacionIncidencia(cursor):
     tipo = raw_input("Introduzca el tipo de incidencia: ")
     descripcion = raw_input("Introduzca una descripción: ")
     cursor.execute("INSERT INTO Incidencias (CodigoIncidencia,Tipo,Descripcion) VALUES ('" + str(codigoSiguienteIncidencia) + "','" + str(tipo) + "','" + str(descripcion) + "');")
+    mecanico = random.randint(1,NUM_PERSONAL)
+    cursor.execute("INSERT INTO Pone (CodigoPersonal,CodigoReclamacion) VALUES ('" + str(mecanico) + "','" + str(codigoSiguienteIncidencia) + "');")
     print("Notificación de la incidencia realizada.\n")
+    codigoSiguienteIncidencia+=1

@@ -1,5 +1,7 @@
 CREATE DATABASE BicicletasParis ;
 
+USE BicicletasParis;
+
 CREATE TABLE Personal(
 CodigoPersonal INT,
 PRIMARY KEY(CodigoPersonal)

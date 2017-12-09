@@ -4,6 +4,7 @@ import random
 
 NUM_PERSONAL = 50
 NUM_TALLERES = 10
+NUM_BICICLETAS = 200
 
 # Devuelve un array con los mecánicos aleatorios.
 def mecanicosAleatorios(num_mecanicos):
@@ -35,9 +36,9 @@ def bicicletaAveriada(cursor):
     print("En reparación...\n")
     cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta=='" + str(cod_bicicleta) +"';")
     for Posicion from cursor:
-        cursor.execute("UPDATE Bicicleta SET Estado='Reparacion', Posicion='Taller';")
-        time.sleep(3)
-        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion='" + str(Posicion) + "';")
+        cursor.execute("UPDATE Bicicleta SET Estado='Reparacion', Posicion='Taller' WHERE CodigoBicicleta=='" + str(cod_bicicleta) + "';")
+        time.sleep(5)
+        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion='" + str(Posicion) + "' WHERE CodigoBicicleta=='" + str(cod_bicicleta) + "';")
     num_mecanicos = random.randint(1,5)
     codigos_mecanicos = mecanicosAleatorios(num_mecanicos)
     taller = random.randint(1,NUM_TALLERES)
@@ -48,7 +49,17 @@ def bicicletaAveriada(cursor):
 
 # Función de mantenimiento.
 def mantenimientoBicicletas(cursor):
-
+    tam_parte = NUM_BICICLETAS/5
+    for i in range(5):
+        posiciones=[]
+        for j in range(tam_parte*i,tam_parte*i-1):
+            cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta=='" + str(j) +"';")
+            for posicion from cursor:
+                posiciones.append(posicion)
+            cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='Taller' WHERE CodigoBicicleta=='" + str(j) + "';")
+        time.sleep(5)
+        for j in range(tam_parte*i,tam_parte*i-1):
+            cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='" + str(posiciones[j]) + "' WHERE CodigoBicicleta=='" + str(j) + "';")
 
 # Función de notificación de rotura de una estación de préstamo.
 def roturaEstacion(cursor):

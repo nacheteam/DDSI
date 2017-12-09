@@ -24,10 +24,21 @@ def nuevoUsuario():
     email = raw_input("Escriba su email.")
     tarifa = int(raw_input("Elija su tarifa. Tenemos: 1. Barata, 2. Cara, 3. Atraco."))
     telefono = int(raw_input("Escriba su telefono."))
-    contraseña = raw_input("Elija una nueva contraseña para su perfil.")
+    passw = raw_input("Elija una nueva contraseña para su perfil.")
+    sancionado = FALSE  
+    mariadb_connection = mariadb.connect(user='root', password='DDSI',database='BicicletasParis')
+    cursor = mariadb_connection.cursor()
+    cursor.execute("INSERT INTO Usuario VALUES(%s,%s,%i,%i,%s,%s,%i,%i,%i,%s,)",(dni,nombre,edad,num_cuenta,email,tarifa,telefono,passw,sancionado))
+    mariadb_connection.commit()
 
 #Acceso a la base de datos y vista de la información del usuario
 def accesoPerfil():
+    dni=raw_input("Introduce tu user (DNI).")
+    passw=raw_input("Introduce tu contraseña")
+    mariadb_connection = mariadb.connect(user='root', password='DDSI',database='BicicletasParis')
+    cursor = mariadb_connection.cursor()
+    cursor.execute("SELECT * FROM Usuario WHERE DNI=%s HAVING Contrasena=%s",(dni,passw))
+
 
 # Borrado de las tuplas dadas por un usuario
 def bajaUsuario(dni):

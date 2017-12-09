@@ -117,8 +117,8 @@ FOREIGN KEY DNI, Entidad
 );
 
 CREATE TABLE Pone(
-DNI CHAR(9) NOT NULL,
+CodigoPersonal INT NOT NULL,
 CodigoReclamacion INT,
 PRIMARY KEY CodigoReclamacion,
-FOREIGN KEY CodigoReclamacion, DNI,
+FOREIGN KEY CodigoReclamacion, CodigoPersonal,
 );

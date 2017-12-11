@@ -25,7 +25,7 @@ def nuevoUsuario():
     tarifa = int(raw_input("Elija su tarifa. Tenemos: 1. Barata, 2. Cara, 3. Atraco."))
     telefono = int(raw_input("Escriba su telefono."))
     passw = raw_input("Elija una nueva contraseña para su perfil.")
-    sancionado = FALSE  
+    sancionado = FALSE
     mariadb_connection = mariadb.connect(user='root', password='DDSI',database='BicicletasParis')
     cursor = mariadb_connection.cursor()
     cursor.execute("INSERT INTO Usuario VALUES(%s,%s,%i,%i,%s,%s,%i,%i,%i,%s,)",(dni,nombre,edad,num_cuenta,email,tarifa,telefono,passw,sancionado))
@@ -38,7 +38,3 @@ def accesoPerfil():
     mariadb_connection = mariadb.connect(user='root', password='DDSI',database='BicicletasParis')
     cursor = mariadb_connection.cursor()
     cursor.execute("SELECT * FROM Usuario WHERE DNI=%s HAVING Contrasena=%s",(dni,passw))
-
-
-# Borrado de las tuplas dadas por un usuario
-def bajaUsuario(dni):

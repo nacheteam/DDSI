@@ -75,20 +75,23 @@ def bicicletaAveriada(cursor,db_connection):
 
 # Función de mantenimiento.
 def mantenimientoBicicletas(cursor,db_connection):
-    tam_parte = NUM_BICICLETAS/5
+    tam_parte = int(NUM_BICICLETAS/5)
+    print("Comienza el mantenimiento de las bicicletas.\n")
+    posiciones=[]
     for i in range(5):
-        posiciones=[]
-        for j in range(tam_parte*i,tam_parte*i-1):
-            cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta='" + str(j) +"';")
+        print("Mantenimiento.... " + str(int((i/4)*100)) + "%\n")
+        for j in range(tam_parte*i,tam_parte*(i+1)):
+            cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta=" + str(j) +";")
             db_connection.commit()
             for posicion in cursor:
-                posiciones.append(posicion)
-            cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='Taller' WHERE CodigoBicicleta='" + str(j) + "';")
+                posiciones.append(posicion[0])
+            cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='Taller' WHERE CodigoBicicleta=" + str(j) + ";")
             db_connection.commit()
         time.sleep(5)
-        for j in range(tam_parte*i,tam_parte*i-1):
-            cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='" + str(posiciones[j]) + "' WHERE CodigoBicicleta='" + str(j) + "';")
+        for j in range(tam_parte*i,tam_parte*(i+1)):
+            cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='" + str(posiciones[j]) + "' WHERE CodigoBicicleta=" + str(j) + ";")
             db_connection.commit()
+    print("Fin del mantenimiento de las bicicletas.\n")
 
 # Función de notificación de rotura de una estación de préstamo.
 def roturaEstacion(cursor,db_connection):

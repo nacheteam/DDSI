@@ -1,8 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 ################################################################################
 ##                        Módulos importados                                  ##
 ################################################################################
 
-import mysql.connector as mariadb
+import MySQLdb as mariadb
 import time
 import random
 
@@ -46,16 +49,16 @@ def menu():
     print("2: Notificación de rotura de una estación de préstamo.\n")
     print("3: Notificación de traslado de bicicletas entre estaciones.\n")
     print("4: Notificación de una incidencia.\n")
-    opcion = int(raw_input("Opción: "))
+    opcion = int(input("Opción: "))
     return opcion
 
 # Función de bicicleta averiada.
 def bicicletaAveriada(cursor,db_connection):
-    cod_bicicleta = int(raw_input("Introduzca el código de la bicicleta averiada:"))
+    cod_bicicleta = int(input("Introduzca el código de la bicicleta averiada:"))
     print("En reparación...\n")
     cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta='" + str(cod_bicicleta) +"';")
     db_connection.commit()
-    for Posicion from cursor:
+    for Posicion in cursor:
         cursor.execute("UPDATE Bicicleta SET Estado='Reparacion', Posicion='Taller' WHERE CodigoBicicleta='" + str(cod_bicicleta) + "';")
         db_connection.commit()
         time.sleep(5)
@@ -78,7 +81,7 @@ def mantenimientoBicicletas(cursor,db_connection):
         for j in range(tam_parte*i,tam_parte*i-1):
             cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta='" + str(j) +"';")
             db_connection.commit()
-            for posicion from cursor:
+            for posicion in cursor:
                 posiciones.append(posicion)
             cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='Taller' WHERE CodigoBicicleta='" + str(j) + "';")
             db_connection.commit()
@@ -89,10 +92,10 @@ def mantenimientoBicicletas(cursor,db_connection):
 
 # Función de notificación de rotura de una estación de préstamo.
 def roturaEstacion(cursor,db_connection):
-    num_estacion = raw_input("Introduzca el número de la estación rota: ")
+    num_estacion = input("Introduzca el número de la estación rota: ")
     cursor.execute("SELECT Posicion FROM Estacion WHERE CodigoEstacion=" + str(num_estacion))
     db_connection.commit()
-    for Posicion from cursor:
+    for Posicion in cursor:
         cursor.execute("UPDATE Estacion SET Estado='Reparación', Posicion='" + str(Posicion) + "' WHERE CodigoEstacion='" + str(num_estacion) + "';")
         db_connection.commit()
         time.sleep(5)
@@ -106,9 +109,9 @@ def roturaEstacion(cursor,db_connection):
 
 # Función de traslado de bicicletas entre estaciones.
 def trasladoBicicletas(cursor,db_connection):
-    estacion_pocas = raw_input("Introduzca el número de la estación con pocas bicicletas: ")
-    estacion_muchas = raw_input("Introduzca el número de la estación con muchas bicicletas: ")
-    numero_bicicletas = raw_input("Introduzca el número de bicicletas a trasladar: ")
+    estacion_pocas = input("Introduzca el número de la estación con pocas bicicletas: ")
+    estacion_muchas = input("Introduzca el número de la estación con muchas bicicletas: ")
+    numero_bicicletas = input("Introduzca el número de bicicletas a trasladar: ")
     cursor.execute("SELECT CodigoBicicleta FROM Bicicleta WHERE Posicion='" + str(estacion_muchas) + "';")
     db_connection.commit()
     rango = numero_bicicletas if len(cursor)>numero_bicicletas else len(cursor)
@@ -122,9 +125,9 @@ def trasladoBicicletas(cursor,db_connection):
 
 # Función de notificación de una incidencia.
 def notificacionIncidencia(cursor,db_connection):
-    codigoSiguienteIncidencia = raw_input("Introduzca el código de la incidencia: ")
-    tipo = raw_input("Introduzca el tipo de incidencia: ")
-    descripcion = raw_input("Introduzca una descripción: ")
+    codigoSiguienteIncidencia = input("Introduzca el código de la incidencia: ")
+    tipo = input("Introduzca el tipo de incidencia: ")
+    descripcion = input("Introduzca una descripción: ")
     cursor.execute("INSERT INTO Incidencias (CodigoIncidencia,Tipo,Descripcion) VALUES ('" + str(codigoSiguienteIncidencia) + "','" + str(tipo) + "','" + str(descripcion) + "');")
     mecanico = random.randint(1,NUM_PERSONAL)
     print("El mecánico que ha notificado la incidencia es: " + str(mecanico) + "\n")
@@ -138,17 +141,19 @@ def notificacionIncidencia(cursor,db_connection):
 ################################################################################
 
 def main():
-    mariadb_connection = mariadb.connect(user='root', password='DDSI', database='BicicletasParis')
+    mariadb_connection = mariadb.connect(user='root', passwd='DDSI', db='BicicletasParis')
     cursor = mariadb_connection.cursor()
     while True:
         opcion = menu()
         if opcion==0:
             bicicletaAveriada(cursor,mariadb_connection)
-        else if opcion==1:
+        elif opcion==1:
             mantenimientoBicicletas(cursor,mariadb_connection)
-        else if opcion==2:
+        elif opcion==2:
             roturaEstacion(cursor,mariadb_connection)
-        else if opcion==3:
+        elif opcion==3:
             trasladoBicicletas(cursor,mariadb_connection)
         else:
             notificacionIncidencia(cursor,mariadb_connection)
+
+main()

@@ -54,15 +54,15 @@ def menu():
 
 # Función de bicicleta averiada.
 def bicicletaAveriada(cursor,db_connection):
-    cod_bicicleta = int(input("Introduzca el código de la bicicleta averiada:"))
+    cod_bicicleta = int(input("Introduzca el código de la bicicleta averiada: "))
     print("En reparación...\n")
-    cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta='" + str(cod_bicicleta) +"';")
+    cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta=" + str(cod_bicicleta) +";")
     db_connection.commit()
     for Posicion in cursor:
-        cursor.execute("UPDATE Bicicleta SET Estado='Reparacion', Posicion='Taller' WHERE CodigoBicicleta='" + str(cod_bicicleta) + "';")
+        cursor.execute("UPDATE Bicicleta SET Estado='Reparacion',Posicion='Taller' WHERE CodigoBicicleta=" + str(cod_bicicleta) + ";")
         db_connection.commit()
         time.sleep(5)
-        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion='" + str(Posicion) + "' WHERE CodigoBicicleta='" + str(cod_bicicleta) + "';")
+        cursor.execute("UPDATE Bicicleta SET Estado='Disponible',Posicion='" + str(Posicion[0]) + "' WHERE CodigoBicicleta=" + str(cod_bicicleta) + ";")
         db_connection.commit()
     num_mecanicos = random.randint(1,5)
     codigos_mecanicos = mecanicosAleatorios(num_mecanicos)

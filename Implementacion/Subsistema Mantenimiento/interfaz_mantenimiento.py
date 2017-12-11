@@ -138,3 +138,17 @@ def notificacionIncidencia(cursor,db_connection):
 ################################################################################
 
 def main():
+    mariadb_connection = mariadb.connect(user='root', password='DDSI', database='BicicletasParis')
+    cursor = mariadb_connection.cursor()
+    while True:
+        opcion = menu()
+        if opcion==0:
+            bicicletaAveriada(cursor,mariadb_connection)
+        else if opcion==1:
+            mantenimientoBicicletas(cursor,mariadb_connection)
+        else if opcion==2:
+            roturaEstacion(cursor,mariadb_connection)
+        else if opcion==3:
+            trasladoBicicletas(cursor,mariadb_connection)
+        else:
+            notificacionIncidencia(cursor,mariadb_connection)

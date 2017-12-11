@@ -117,15 +117,21 @@ def trasladoBicicletas(cursor,db_connection):
     estacion_pocas = input("Introduzca el número de la estación con pocas bicicletas: ")
     estacion_muchas = input("Introduzca el número de la estación con muchas bicicletas: ")
     numero_bicicletas = input("Introduzca el número de bicicletas a trasladar: ")
-    cursor.execute("SELECT CodigoBicicleta FROM Bicicleta WHERE Posicion='" + str(estacion_muchas) + "';")
+    cursor.execute("SELECT CodigoBicicleta FROM Bicicleta WHERE Posicion=" + str(estacion_muchas) + ";")
     db_connection.commit()
-    rango = numero_bicicletas if len(cursor)>numero_bicicletas else len(cursor)
     mecanicos = mecanicosAleatorios(random.randint(1,10))
-    for i in range(rango):
-        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion='" + str(estacion_pocas) + "' WHERE CodigoBicicleta='" + str(cursor[i]) + "';")
+    i=0
+    bicicletas = []
+    for bicicleta in cursor:
+        bicicletas.append(bicicleta[0])
+        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion='" + str(estacion_pocas) + "' WHERE CodigoBicicleta=" + str(bicicleta[0]) + ";")
         for mecanico in mecanicos:
-            cursor.execute("INSERT INTO Traslada (CodigoBicicleta,CodigoPersonal,EstacionPocasBicicletas,EstacionMuchasBicicletas,NumeroBicicletas) VALUES ('" + str(cursor[i]) + "','" + str(mecanico) + "','" + str(estacion_pocas) + "','" + str(estacion_muchas) + "','" + str(numero_bicicletas) + "');")
+            cursor.execute("INSERT INTO Traslada (CodigoBicicleta,CodigoPersonal,EstacionPocasBicicletas,EstacionMuchasBicicletas,NumeroBicicletas) VALUES ('" + str(bicicleta[0]) + "','" + str(mecanico) + "','" + str(estacion_pocas) + "','" + str(estacion_muchas) + "','" + str(numero_bicicletas) + "');")
+        i+=1
+        if i==int(numero_bicicletas)-1:
+            break
     db_connection.commit()
+    print("Las bicicletas trasladadas son: " + str(bicicletas) + "\n")
 
 
 # Función de notificación de una incidencia.

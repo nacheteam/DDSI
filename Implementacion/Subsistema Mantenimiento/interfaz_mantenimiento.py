@@ -1,12 +1,24 @@
+################################################################################
+##                        Módulos importados                                  ##
+################################################################################
+
 import mysql.connector as mariadb
 import time
 import random
+
+################################################################################
+##                        Variables globales                                  ##
+################################################################################
 
 NUM_PERSONAL = 50
 NUM_TALLERES = 10
 NUM_BICICLETAS = 200
 MENSAJES_REPARACION_ESTACIONES = ["Hemos reparado la estación con éxito.", "La vida es dura, no siempre se tiene lo que se quiere.",
                                     "Quizás se rompa otro día pero no será mi culpa.", "Vaya follón hemos liado Manolo."]
+
+################################################################################
+##                       Funciones auxiliares                                 ##
+################################################################################
 
 # Devuelve un array con los mecánicos aleatorios.
 def mecanicosAleatorios(num_mecanicos):
@@ -118,3 +130,11 @@ def notificacionIncidencia(cursor,db_connection):
     cursor.execute("INSERT INTO Pone (CodigoPersonal,CodigoReclamacion) VALUES ('" + str(mecanico) + "','" + str(codigoSiguienteIncidencia) + "');")
     db_connection.commit()
     print("Notificación de la incidencia realizada.\n")
+
+
+################################################################################
+##                                Main                                        ##
+################################################################################
+
+def main():
+    

@@ -23,6 +23,10 @@ MENSAJES_REPARACION_ESTACIONES = ["Hemos reparado la estación con éxito.", "La
 ##                       Funciones auxiliares                                 ##
 ################################################################################
 
+# Limpia la pantalla lo suficiente.
+def limpiaPantalla():
+    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+
 # Devuelve un array con los mecánicos aleatorios.
 def mecanicosAleatorios(num_mecanicos):
     candidatos = list(range(NUM_PERSONAL))
@@ -155,6 +159,7 @@ def main():
     mariadb_connection = mariadb.connect(user='root', passwd='DDSI', db='BicicletasParis')
     cursor = mariadb_connection.cursor()
     while True:
+        limpiaPantalla()
         opcion = menu()
         if opcion==0:
             bicicletaAveriada(cursor,mariadb_connection)
@@ -166,5 +171,6 @@ def main():
             trasladoBicicletas(cursor,mariadb_connection)
         else:
             notificacionIncidencia(cursor,mariadb_connection)
+        time.sleep(3)
 
 main()

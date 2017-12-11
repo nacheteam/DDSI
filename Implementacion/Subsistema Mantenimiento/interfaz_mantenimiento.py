@@ -5,6 +5,8 @@ import random
 NUM_PERSONAL = 50
 NUM_TALLERES = 10
 NUM_BICICLETAS = 200
+MENSAJES_REPARACION_ESTACIONES = ["Hemos reparado la estación con éxito.", "La vida es dura, no siempre se tiene lo que se quiere.",
+                                    "Quizás se rompa otro día pero no será mi culpa.", "Vaya follón hemos liado Manolo."]
 
 # Devuelve un array con los mecánicos aleatorios.
 def mecanicosAleatorios(num_mecanicos):
@@ -16,6 +18,10 @@ def mecanicosAleatorios(num_mecanicos):
         mecanicos.append(candidatos[num])
         limite-=1
     return mecanicos
+
+# Devuelve un mensaje de reparación aleatorio.
+def mensajeReparacion():
+    return MENSAJES_REPARACION_ESTACIONES[random.randint(0,len(MENSAJES_REPARACION_ESTACIONES)-1)]
 
 
 # Función de menú.
@@ -35,6 +41,7 @@ def bicicletaAveriada(cursor,db_connection):
     cod_bicicleta = int(raw_input("Introduzca el código de la bicicleta averiada:"))
     print("En reparación...\n")
     cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta=='" + str(cod_bicicleta) +"';")
+    db_connection.commit()
     for Posicion from cursor:
         cursor.execute("UPDATE Bicicleta SET Estado='Reparacion', Posicion='Taller' WHERE CodigoBicicleta=='" + str(cod_bicicleta) + "';")
         db_connection.commit()
@@ -57,6 +64,7 @@ def mantenimientoBicicletas(cursor,db_connection):
         posiciones=[]
         for j in range(tam_parte*i,tam_parte*i-1):
             cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta=='" + str(j) +"';")
+            db_connection.commit()
             for posicion from cursor:
                 posiciones.append(posicion)
             cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='Taller' WHERE CodigoBicicleta=='" + str(j) + "';")
@@ -68,6 +76,19 @@ def mantenimientoBicicletas(cursor,db_connection):
 
 # Función de notificación de rotura de una estación de préstamo.
 def roturaEstacion(cursor,db_connection):
+    num_estacion = raw_input("Introduzca el número de la estación rota: ")
+    cursor.execute("SELECT Posicion FROM Estacion WHERE CodigoEstacion==" + str(num_estacion))
+    db_connection.commit()
+    for Posicion from cursor:
+        cursor.execute("UPDATE Estacion SET Estado='Reparación', Posicion='" + str(Posicion) + "' WHERE CodigoEstacion=='" + str(num_estacion) + "';")
+        db_connection.commit()
+        time.sleep(5)
+        cursor.execute("UPDATE Estacion SET Estado='Disponible', Posicion='" + str(Posicion) + "' WHERE CodigoEstacion=='" + str(num_estacion) + "';")
+        db_connection.commit()
+    mecanicos = mecanicosAleatorios(random.randint(1,5))
+    for mecanico in mecanicos:
+        cursor.execute("INSERT INTO ReparaEstacion (CodigoEstacion,CodigoPersonal,MensajeReparacion) VALUES ('" + str(num_estacion) + "','" + str(mecanico) + "','" + str(mensajeReparacion()) + "');")
+    db_connection.commit()
 
 
 # Función de traslado de bicicletas entre estaciones.

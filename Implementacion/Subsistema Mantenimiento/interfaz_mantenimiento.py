@@ -31,6 +31,7 @@ def mecanicosAleatorios(num_mecanicos):
         limite-=1
     return mecanicos
 
+
 # Devuelve un mensaje de reparación aleatorio.
 def mensajeReparacion():
     return MENSAJES_REPARACION_ESTACIONES[random.randint(0,len(MENSAJES_REPARACION_ESTACIONES)-1)]
@@ -52,13 +53,13 @@ def menu():
 def bicicletaAveriada(cursor,db_connection):
     cod_bicicleta = int(raw_input("Introduzca el código de la bicicleta averiada:"))
     print("En reparación...\n")
-    cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta=='" + str(cod_bicicleta) +"';")
+    cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta='" + str(cod_bicicleta) +"';")
     db_connection.commit()
     for Posicion from cursor:
-        cursor.execute("UPDATE Bicicleta SET Estado='Reparacion', Posicion='Taller' WHERE CodigoBicicleta=='" + str(cod_bicicleta) + "';")
+        cursor.execute("UPDATE Bicicleta SET Estado='Reparacion', Posicion='Taller' WHERE CodigoBicicleta='" + str(cod_bicicleta) + "';")
         db_connection.commit()
         time.sleep(5)
-        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion='" + str(Posicion) + "' WHERE CodigoBicicleta=='" + str(cod_bicicleta) + "';")
+        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion='" + str(Posicion) + "' WHERE CodigoBicicleta='" + str(cod_bicicleta) + "';")
         db_connection.commit()
     num_mecanicos = random.randint(1,5)
     codigos_mecanicos = mecanicosAleatorios(num_mecanicos)
@@ -75,27 +76,27 @@ def mantenimientoBicicletas(cursor,db_connection):
     for i in range(5):
         posiciones=[]
         for j in range(tam_parte*i,tam_parte*i-1):
-            cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta=='" + str(j) +"';")
+            cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta='" + str(j) +"';")
             db_connection.commit()
             for posicion from cursor:
                 posiciones.append(posicion)
-            cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='Taller' WHERE CodigoBicicleta=='" + str(j) + "';")
+            cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='Taller' WHERE CodigoBicicleta='" + str(j) + "';")
             db_connection.commit()
         time.sleep(5)
         for j in range(tam_parte*i,tam_parte*i-1):
-            cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='" + str(posiciones[j]) + "' WHERE CodigoBicicleta=='" + str(j) + "';")
+            cursor.execute("UPDATE Bicicleta SET Estado='Mantenimiento', Posicion='" + str(posiciones[j]) + "' WHERE CodigoBicicleta='" + str(j) + "';")
             db_connection.commit()
 
 # Función de notificación de rotura de una estación de préstamo.
 def roturaEstacion(cursor,db_connection):
     num_estacion = raw_input("Introduzca el número de la estación rota: ")
-    cursor.execute("SELECT Posicion FROM Estacion WHERE CodigoEstacion==" + str(num_estacion))
+    cursor.execute("SELECT Posicion FROM Estacion WHERE CodigoEstacion=" + str(num_estacion))
     db_connection.commit()
     for Posicion from cursor:
-        cursor.execute("UPDATE Estacion SET Estado='Reparación', Posicion='" + str(Posicion) + "' WHERE CodigoEstacion=='" + str(num_estacion) + "';")
+        cursor.execute("UPDATE Estacion SET Estado='Reparación', Posicion='" + str(Posicion) + "' WHERE CodigoEstacion='" + str(num_estacion) + "';")
         db_connection.commit()
         time.sleep(5)
-        cursor.execute("UPDATE Estacion SET Estado='Disponible', Posicion='" + str(Posicion) + "' WHERE CodigoEstacion=='" + str(num_estacion) + "';")
+        cursor.execute("UPDATE Estacion SET Estado='Disponible', Posicion='" + str(Posicion) + "' WHERE CodigoEstacion='" + str(num_estacion) + "';")
         db_connection.commit()
     mecanicos = mecanicosAleatorios(random.randint(1,5))
     for mecanico in mecanicos:
@@ -108,12 +109,12 @@ def trasladoBicicletas(cursor,db_connection):
     estacion_pocas = raw_input("Introduzca el número de la estación con pocas bicicletas: ")
     estacion_muchas = raw_input("Introduzca el número de la estación con muchas bicicletas: ")
     numero_bicicletas = raw_input("Introduzca el número de bicicletas a trasladar: ")
-    cursor.execute("SELECT CodigoBicicleta FROM Bicicleta WHERE Posicion=='" + str(estacion_muchas) + "';")
+    cursor.execute("SELECT CodigoBicicleta FROM Bicicleta WHERE Posicion='" + str(estacion_muchas) + "';")
     db_connection.commit()
     rango = numero_bicicletas if len(cursor)>numero_bicicletas else len(cursor)
     mecanicos = mecanicosAleatorios(random.randint(1,10))
     for i in range(rango):
-        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion='" + str(estacion_pocas) + "' WHERE CodigoBicicleta=='" + str(cursor[i]) + "';")
+        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion='" + str(estacion_pocas) + "' WHERE CodigoBicicleta='" + str(cursor[i]) + "';")
         for mecanico in mecanicos:
             cursor.execute("INSERT INTO Traslada (CodigoBicicleta,CodigoPersonal,EstacionPocasBicicletas,EstacionMuchasBicicletas,NumeroBicicletas) VALUES ('" + str(cursor[i]) + "','" + str(mecanico) + "','" + str(estacion_pocas) + "','" + str(estacion_muchas) + "','" + str(numero_bicicletas) + "');")
     db_connection.commit()
@@ -137,4 +138,3 @@ def notificacionIncidencia(cursor,db_connection):
 ################################################################################
 
 def main():
-    

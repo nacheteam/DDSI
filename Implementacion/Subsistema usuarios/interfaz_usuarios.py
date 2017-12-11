@@ -57,25 +57,22 @@ def accesoPerfil():
             cursor.execute("UPDATE Usuario SET NumeroCuenta='" + str(nuevo_num_cuenta= + "' WHERE DNI='" + str(dni) + "';")
         elif cambio_dato==1:
             nuevo_email = raw_input("Introduzca su nuevo email.\n")
-            cursor.execute("UPDATE Usuario SET Email='" + str(email) + "' WHERE DNI='" + str(dni) + "';")
-
+            cursor.execute("UPDATE Usuario SET Email='" + str(nuevo_email) + "' WHERE DNI='" + str(dni) + "';")
         elif cambio_dato==2:
             nueva_tarifa = raw_input("Elija su tarifa. Tenemos: 1. Barata, 2. Cara, 3. Atraco.\n")
             cursor.execute("UPDATE Usuario SET Tarifa='" + str(nueva_tarifa) + "' WHERE DNI='" + str(dni) + "';")
-
         elif cambio_dato==3:
             nuevo_tlf = raw_input("Escriba su teléfono\.n")
             cursor.execute("UPDATE Usuario SET Telefono='" + str(nuevo_tlf) + "' WHERE DNI='" + str(dni) + "';")
-
     elif opcion=="1":
         print("Gracias por utilizar nuestro sistema. Confiamos que vuelva a nuestra compañía pronto")
         cursor.execute("DELETE FROM Usuario where DNI=%s",(dni))
-
     elif opcion=="2":
         print("¡Hasta pronto!")
         exit()
-
     elif opcion="3":
         reclamacion = raw_input("Escriba su reclamación. Esperamos arreglar cualquier problema lo antes posible:")
         num = cursor.execute("SELECT COUNT * FROM Reclamacion;")
-        cursor.execute("INSERT INTO Reclamacion VALUES('" + str(num) + "','Reclamación" + str(num) + "','" + str(reclamacion) + "';"")
+        cursor.execute("INSERT INTO Reclamacion VALUES('" + str(num) + "','Reclamación" + str(num) + "','" + str(reclamacion) + "';")
+
+main()

@@ -260,9 +260,9 @@ DROP TABLE IF EXISTS `ReparaEstacion`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ReparaEstacion` (
   `CodigoEstacion` int(11) NOT NULL,
-  `CodigoBicicleta` int(11) NOT NULL,
+  `CodigoPersonal` int(11) NOT NULL,
   `MensajeReparacion` varchar(140) DEFAULT NULL,
-  PRIMARY KEY (`CodigoEstacion`,`CodigoBicicleta`)
+  PRIMARY KEY (`CodigoEstacion`,`CodigoPersonal`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -413,4 +413,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-12-09 22:51:32
+-- Dump completed on 2017-12-11 10:39:58

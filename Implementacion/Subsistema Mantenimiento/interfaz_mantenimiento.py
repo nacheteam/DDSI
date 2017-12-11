@@ -93,6 +93,18 @@ def roturaEstacion(cursor,db_connection):
 
 # Función de traslado de bicicletas entre estaciones.
 def trasladoBicicletas(cursor,db_connection):
+    estacion_pocas = raw_input("Introduzca el número de la estación con pocas bicicletas: ")
+    estacion_muchas = raw_input("Introduzca el número de la estación con muchas bicicletas: ")
+    numero_bicicletas = raw_input("Introduzca el número de bicicletas a trasladar: ")
+    cursor.execute("SELECT CodigoBicicleta FROM Bicicleta WHERE Posicion=='" + str(estacion_muchas) + "';")
+    db_connection.commit()
+    rango = numero_bicicletas if len(cursor)>numero_bicicletas else len(cursor)
+    mecanicos = mecanicosAleatorios(random.randint(1,10))
+    for i in range(rango):
+        cursor.execute("UPDATE Bicicleta SET Estado='Disponible', Posicion='" + str(estacion_pocas) + "' WHERE CodigoBicicleta=='" + str(cursor[i]) + "';")
+        for mecanico in mecanicos:
+            cursor.execute("INSERT INTO Traslada (CodigoBicicleta,CodigoPersonal,EstacionPocasBicicletas,EstacionMuchasBicicletas,NumeroBicicletas) VALUES ('" + str(cursor[i]) + "','" + str(mecanico) + "','" + str(estacion_pocas) + "','" + str(estacion_muchas) + "','" + str(numero_bicicletas) + "');")
+    db_connection.commit()
 
 
 # Función de notificación de una incidencia.

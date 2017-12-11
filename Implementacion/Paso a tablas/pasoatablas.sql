@@ -85,7 +85,7 @@ PRIMARY KEY(CodigoBicicleta, CodigoPersonal)
 
 CREATE TABLE ReparaEstacion(
 CodigoEstacion INT REFERENCES Estacion(CodigoEstacion),
-CodigoBicicleta INT REFERENCES Bicicleta(CodigoBicicleta),
+CodigoPersonal INT REFERENCES Personal(CodigoPersonal),
 MensajeReparacion VARCHAR(140),
 PRIMARY KEY(CodigoEstacion, CodigoBicicleta)
 );

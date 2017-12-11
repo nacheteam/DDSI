@@ -99,15 +99,17 @@ def roturaEstacion(cursor,db_connection):
     cursor.execute("SELECT Posicion FROM Estacion WHERE CodigoEstacion=" + str(num_estacion))
     db_connection.commit()
     for Posicion in cursor:
-        cursor.execute("UPDATE Estacion SET Estado='Reparación', Posicion='" + str(Posicion) + "' WHERE CodigoEstacion='" + str(num_estacion) + "';")
+        cursor.execute("UPDATE Estacion SET Estado='Reparación', Posicion='" + str(Posicion[0]) + "' WHERE CodigoEstacion='" + str(num_estacion) + "';")
         db_connection.commit()
         time.sleep(5)
-        cursor.execute("UPDATE Estacion SET Estado='Disponible', Posicion='" + str(Posicion) + "' WHERE CodigoEstacion='" + str(num_estacion) + "';")
+        cursor.execute("UPDATE Estacion SET Estado='Disponible', Posicion='" + str(Posicion[0]) + "' WHERE CodigoEstacion='" + str(num_estacion) + "';")
         db_connection.commit()
     mecanicos = mecanicosAleatorios(random.randint(1,5))
     for mecanico in mecanicos:
         cursor.execute("INSERT INTO ReparaEstacion (CodigoEstacion,CodigoPersonal,MensajeReparacion) VALUES ('" + str(num_estacion) + "','" + str(mecanico) + "','" + str(mensajeReparacion()) + "');")
     db_connection.commit()
+    print("Estación reparada.\n")
+    print("Los mecánicos que la han reparado tienen códigos: " + str(mecanicos))
 
 
 # Función de traslado de bicicletas entre estaciones.

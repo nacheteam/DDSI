@@ -3,7 +3,7 @@
 - Personal(\underline{CodigoPersonal})  
 - Incidencia(\underline{CodigoIncidencia},Tipo,Descripcion)  
 - Bicicleta(\underline{CodigoBicicleta},Posicion,Estado)  
-- Estacion(\underline{CodigoEstacion}, Estado, Posicion)  
+- Estacion(\underline{Posición}, Estado)  
 - Banco(\underline{Entidad})  
 - Reclamacion(\underline{CodigoReclamacion}, NombreArchivo, Fecha)  
 - Usuario(\underline{DNI}, Nombre, Edad, NumeroCuenta, Email, Tarifa, Telefono, Contraseña, TiempoAsignado, Sancionado)  
@@ -19,7 +19,7 @@ con el atributo CodigoPersonal llave externa de Personal NotNull.
 - Revisa(\underline{CodigoBicicleta,CodigoPersonal})
 con el atributo CodigoBicicleta llave externa Bicicleta.  
 con el atributo CodigoPersonal llave externa Personal.  
-- ReparaEstacion(\underline{CodigoEstacion,CodigoPersonal},MensajeReparacion)  
+- ReparaEstacion(\underline{CodigoEstacion,CodigoPersonal,Fecha},MensajeReparacion)  
 con el atributo CodigoEstacion llave externa de Estación.  
 con el atributo CodigoPersonal llave externa de Personal.  
 - Sanciona(\underline{DNI,CodigoBicleta,CodigoEstacion})  

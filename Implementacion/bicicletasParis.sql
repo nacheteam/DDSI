@@ -93,10 +93,9 @@ DROP TABLE IF EXISTS `Estacion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Estacion` (
-  `CodigoEstacion` int(11) NOT NULL,
+  `Posicion` varchar(140) NOT NULL,
   `Estado` varchar(140) DEFAULT NULL,
-  `Posicion` varchar(140) DEFAULT NULL,
-  PRIMARY KEY (`CodigoEstacion`)
+  PRIMARY KEY (`Posicion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -106,7 +105,7 @@ CREATE TABLE `Estacion` (
 
 LOCK TABLES `Estacion` WRITE;
 /*!40000 ALTER TABLE `Estacion` DISABLE KEYS */;
-INSERT INTO `Estacion` VALUES (0,'Activa','Pos0'),(1,'Activa','Pos1'),(2,'Activa','Pos2'),(3,'Activa','Pos3'),(4,'Activa','Pos4'),(5,'Activa','Pos5'),(6,'Activa','Pos6'),(7,'Activa','Pos7'),(8,'Activa','Pos8'),(9,'Activa','Pos9'),(10,'Activa','Pos10'),(11,'Activa','Pos11'),(12,'Activa','Pos12'),(13,'Activa','Pos13'),(14,'Activa','Pos14'),(15,'Activa','Pos15'),(16,'Activa','Pos16'),(17,'Activa','Pos17'),(18,'Activa','Pos18'),(19,'Activa','Pos19'),(20,'Activa','Pos20'),(21,'Activa','Pos21'),(22,'Activa','Pos22'),(23,'Activa','Pos23'),(24,'Activa','Pos24'),(25,'Activa','Pos25'),(26,'Activa','Pos26'),(27,'Activa','Pos27'),(28,'Activa','Pos28'),(29,'Activa','Pos29');
+INSERT INTO `Estacion` VALUES ('Pos0','Activa'),('Pos1','Activa'),('Pos10','Activa'),('Pos11','Activa'),('Pos12','Activa'),('Pos13','Activa'),('Pos14','Activa'),('Pos15','Activa'),('Pos16','Activa'),('Pos17','Activa'),('Pos18','Activa'),('Pos19','Activa'),('Pos2','Activa'),('Pos20','Activa'),('Pos21','Activa'),('Pos22','Activa'),('Pos23','Activa'),('Pos24','Activa'),('Pos25','Activa'),('Pos26','Activa'),('Pos27','Activa'),('Pos28','Activa'),('Pos29','Activa'),('Pos3','Activa'),('Pos4','Activa'),('Pos5','Activa'),('Pos6','Activa'),('Pos7','Activa'),('Pos8','Activa'),('Pos9','Activa');
 /*!40000 ALTER TABLE `Estacion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -262,7 +261,8 @@ CREATE TABLE `ReparaEstacion` (
   `CodigoEstacion` int(11) NOT NULL,
   `CodigoPersonal` int(11) NOT NULL,
   `MensajeReparacion` varchar(140) DEFAULT NULL,
-  PRIMARY KEY (`CodigoEstacion`,`CodigoPersonal`)
+  `Fecha` varchar(140) NOT NULL,
+  PRIMARY KEY (`CodigoEstacion`,`CodigoPersonal`,`Fecha`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -413,4 +413,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-12-11 19:45:06
+-- Dump completed on 2017-12-12 19:22:00

@@ -8,7 +8,7 @@ F = {CodigoIncidencia->Tipo, CodigoIncidencia->Descripción}
 
 ## Tabla Bicicleta
 Si la bicicleta está rota entonces la posición es el taller y si está disponible la posición es una estación.  
-F = {CodigoBicicleta->Posicion, CodigoBicicleta->Estado, Estado->Posicion}  
+F = {CodigoBicicleta->Posicion, CodigoBicicleta->Estado}  
 
 ## Tabla Estación
 Solo hay una estación en una posición.  
@@ -30,19 +30,19 @@ F = {CodigoIncidencia->CodigoPersonal}
 F = {CodigoBicicleta CodigoPersonal->NumeroTaller}  
 
 ## Tabla traslada
-F = {CodigoBicicleta->EstacionMuchasBicicletas, EstacionMuchasBicicletas->NumeroBicicletas, CodigoBicicleta NumeroBicicletas EstacionMuchasBicicletas->EstacionPocasBicicletas}  
+F = {CodigoBicicleta->EstacionMuchasBicicletas}  
 
 ## Tabla Revisa
 Pos eso.   
 
 ## Tabla ReparaEstacion   
-F = {CodigoEstacion CodigoPersonal->MensajeReparacion}  
+F = {}  
 
 ## Tabla Sanciona  
 Pos eso.  
 
 ## Tabla Utiliza  
-F = {DNI CodigoBicicleta->TiempoEmpleado}  
+F = {}  
 
 ## Tabla RecibePago  
 F = {DNI->Entidad}  

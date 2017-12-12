@@ -36,7 +36,7 @@ F = {CodigoBicicleta->EstacionMuchasBicicletas}
 Pos eso.   
 
 ## Tabla ReparaEstacion   
-F = {}  
+F = {CodigoEstacion CodigoPersonal Fecha->MensajeReparacion}  
 
 ## Tabla Sanciona  
 Pos eso.  

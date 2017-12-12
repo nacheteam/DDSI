@@ -19,7 +19,7 @@ con el atributo CodigoPersonal llave externa de Personal NotNull.
 - Revisa(\underline{CodigoBicicleta,CodigoPersonal})
 con el atributo CodigoBicicleta llave externa Bicicleta.  
 con el atributo CodigoPersonal llave externa Personal.  
-- ReparaEstacion(\underline{CodigoEstacion,CodigoPersonal},MensajeReparacion)  
+- ReparaEstacion(\underline{CodigoEstacion,CodigoPersonal,Fecha},MensajeReparacion)  
 con el atributo CodigoEstacion llave externa de Estación.  
 con el atributo CodigoPersonal llave externa de Personal.  
 - Sanciona(\underline{DNI,CodigoBicleta,CodigoEstacion})  

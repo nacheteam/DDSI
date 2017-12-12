@@ -4,22 +4,24 @@
 
 
 import MySQLdb as mariadb
-tarifas = [45,60,90]
+tiempo_asignado = [45,60,90]
 
 # Función del menú principal
 def main():
     print("Bienvenido a la Estación de Usuarios de Bicicletas en París. \n")
+    mariadb_connection = mariadb.connect(user='root', passwd='DDSI',db='BicicletasParis')
+    cursor = mariadb_connection.cursor()
     print("Escoja una opción de las siguientes:\n")
     print("0: Darse de alta como nuevo usuario.\n")
     print("1: Acceso a su perfil")
     opcion = int(input("Opción: "))
     if opcion==0:
-        nuevoUsuario()
+        nuevoUsuario(cursor,mariadb_connection)
     else:
-        accesoPerfil()
+        accesoPerfil(cursor,mariadb_connection)
 
 # Función para dar de alta un nuevo usuario
-def nuevoUsuario():
+def nuevoUsuario(cursor,db_connection):
     print("Preparado para crear nuevo usuario.\n")
     dni = input("Escriba su DNI (será su user para entrar)\n")
     nombre = input("Escriba su nombre completo.\n")
@@ -30,19 +32,16 @@ def nuevoUsuario():
     telefono = int(input("Escriba su telefono.\n"))
     passw = input("Elija una nueva contraseña para su perfil.\n")
     sancionado = 0
-    mariadb_connection = mariadb.connect(user='root', passwd='DDSI',db='BicicletasParis')
-    cursor = mariadb_connection.cursor()
-    cursor.execute("INSERT INTO Usuario VALUES('" + str(dni) + "','" + str(nombre) + "','" + str(edad) + "','" + str(num_cuenta) + "','" + str(email) + "','" + str(tarifas[tarifa])+"','" + str(tarifa) + "','" + str(telefono) + "','" + str(passw) + "','" +  + str(sancionado) + "');")
-    mariadb_connection.commit()
+    cursor.execute("INSERT INTO Usuario VALUES('" + str(dni) + "','" + str(nombre) + "','" + str(edad) + "','" + str(num_cuenta) + "','" + str(email) + "','" + str(tarifa) + "','" + str(telefono) + "','" + str(passw) + "','" + str(tiempo_asignado[tarifa] + "','" + str(sancionado) + "');")
+    db_connection.commit()
+    print("Se dio de alta al nuevo usuario correctamente.\n")
 
 
 
 ## Intento de indentación adecuada
-def accesoPerfil():
+def accesoPerfil(cursor, db_connection):
     dni=input("Introduzca user (DNI).\n")
     passw=input("Introduzca contraseña.\n")
-    mariadb_connection = mariadb.connect(user='root',passwd='DDSI',db='BicicletasParis')
-    cursor = mariadb_connection.cursor()
     cursor.execute("SELECT * FROM Usuario WHERE DNI=%s HAVING Contrasena=%s",(dni,passw))
     for dni,nombre,edad,num_cuenta,email,tarifa,telefono,sancionado in cursor:
         print("PERFIL DE USUARIO EN LA COMPAÑÍA BicicletasParis\n")
@@ -80,5 +79,6 @@ def accesoPerfil():
         reclamacion=input("Escriba su reclamación. Esperamos arreglar cualquier problema lo antes posible:\n")
         num=cursor.execute("SELECT COUNT * FROM Reclamacion;")
         cursor.execute("INSERT INTO Reclamacion VALUES('" + str(num) + "', 'Reclamacion" + str(num) + "','" + str(reclamacion) + "';")
+    db_connection.commit()
 
 main()

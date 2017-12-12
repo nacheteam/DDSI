@@ -21,7 +21,7 @@ Pos eso.
 F = {CodigoReclamacion->NombreArchivo, CodigoReclamacion->Fecha}  
 
 ## Tabla Usuario
-F = {DNI->Nombre, DNI->Edad, DNI->NumeroCuenta, DNI->Tarifa, DNI->Telefono, DNI->TiempoAsignado, DNI->Sancionado, Tarifa->TiempoAsignado, DNI->KmsRecorridos}  
+F = {DNI->Nombre, DNI->Edad, DNI->NumeroCuenta, DNI-> Email, DNI->Tarifa, DNI->Telefono, DNI->TiempoAsignado, DNI->Sancionado, Tarifa->TiempoAsignado, DNI->KmsRecorridos}  
 
 ## Tabla Comunica
 F = {CodigoIncidencia->CodigoPersonal}  

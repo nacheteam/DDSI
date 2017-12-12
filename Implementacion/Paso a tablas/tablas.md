@@ -6,7 +6,9 @@
 - Estacion(\underline{Posición}, Estado)  
 - Banco(\underline{Entidad})  
 - Reclamacion(\underline{CodigoReclamacion}, NombreArchivo, Fecha)  
-- Usuario(\underline{DNI}, Nombre, Edad, NumeroCuenta, Email, Tarifa, Telefono, Contraseña, TiempoAsignado, Sancionado,KmsRecorridos)  
+- Usuario(\underline{DNI}, Nombre, Edad, NumeroCuenta, Email, Tarifa, Telefono, Contraseña, Sancionado,KmsRecorridos)  
+con atributo Tarifa NotNull
+- TarifasTiempo(\underline{Tarifa}, TiempoAsignado)  
 - Comunica(\underline{CodigoIncidencia},CodigoPersonal)  
 con el atributo CodigoIncidencia llave externa de Incidencia.  
 con el atributo CodigoPersonal llave externa de Personal NotNull.  

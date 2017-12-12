@@ -22,10 +22,9 @@ PRIMARY KEY(CodigoBicicleta)
 );
 
 CREATE TABLE Estacion(
-CodigoEstacion INT,
-Estado VARCHAR(140),
 Posicion VARCHAR(140),
-PRIMARY KEY(CodigoEstacion)
+Estado VARCHAR(140),
+PRIMARY KEY(Posicion)
 );
 
 CREATE TABLE Banco(

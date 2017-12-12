@@ -12,7 +12,7 @@ F = {CodigoBicicleta->Posicion, CodigoBicicleta->Estado}
 
 ## Tabla Estación
 Solo hay una estación en una posición.  
-F = {CodigoEstacion->Estado, CodigoEstacion->Posicion, Posicion->CodigoEstacion}  
+F = {Posición->Estado}  
 
 ## Tabla Banco
 Pos eso.  

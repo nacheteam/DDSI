@@ -3,7 +3,7 @@
 - Personal(\underline{CodigoPersonal})  
 - Incidencia(\underline{CodigoIncidencia},Tipo,Descripcion)  
 - Bicicleta(\underline{CodigoBicicleta},Posicion,Estado)  
-- Estacion(\underline{CodigoEstacion}, Estado, Posicion)  
+- Estacion(\underline{Posición}, Estado)  
 - Banco(\underline{Entidad})  
 - Reclamacion(\underline{CodigoReclamacion}, NombreArchivo, Fecha)  
 - Usuario(\underline{DNI}, Nombre, Edad, NumeroCuenta, Email, Tarifa, Telefono, Contraseña, TiempoAsignado, Sancionado)  

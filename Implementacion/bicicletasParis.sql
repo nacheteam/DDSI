@@ -324,6 +324,30 @@ LOCK TABLES `Sanciona` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `TarifasTiempo`
+--
+
+DROP TABLE IF EXISTS `TarifasTiempo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `TarifasTiempo` (
+  `Tarifa` int(11) NOT NULL,
+  `TiempoAsignado` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Tarifa`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `TarifasTiempo`
+--
+
+LOCK TABLES `TarifasTiempo` WRITE;
+/*!40000 ALTER TABLE `TarifasTiempo` DISABLE KEYS */;
+INSERT INTO `TarifasTiempo` VALUES (0,45),(1,60),(2,90);
+/*!40000 ALTER TABLE `TarifasTiempo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Traslada`
 --
 
@@ -360,13 +384,13 @@ CREATE TABLE `Usuario` (
   `DNI` char(9) NOT NULL,
   `Nombre` varchar(20) DEFAULT NULL,
   `Edad` varchar(3) DEFAULT NULL,
-  `NumeroCuenta` int(24) DEFAULT NULL,
+  `NumeroCuenta` int(11) DEFAULT NULL,
   `Email` varchar(20) DEFAULT NULL,
   `Tarifa` int(11) DEFAULT NULL,
   `Telefono` int(13) DEFAULT NULL,
   `Contrasena` varchar(20) DEFAULT NULL,
-  `TiempoAsignado` int(11) DEFAULT NULL,
   `Sancionado` tinyint(1) DEFAULT NULL,
+  `KmRecorridos` int(11) DEFAULT NULL,
   PRIMARY KEY (`DNI`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -413,4 +437,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-12-12 19:22:00
+-- Dump completed on 2017-12-12 23:48:40

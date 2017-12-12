@@ -42,7 +42,7 @@ F = {CodigoEstacion CodigoPersonal Fecha->MensajeReparacion}
 Pos eso.  
 
 ## Tabla Utiliza  
-F = {}  
+F = {DNI,CódigoBicicleta -> TiempoEmpleado}  
 
 ## Tabla RecibePago  
 F = {DNI->Entidad}  

@@ -6,7 +6,6 @@
 import MySQLdb as mariadb
 import time
 import random
-tiempo_asignado = [45,60,90]
 
 # Función del menú principal
 def main():
@@ -36,7 +35,10 @@ def nuevoUsuario(cursor,db_connection):
     passw = input("Elija una nueva contraseña para su perfil.\n")
     sancionado = 0
     km_recorridos=0
-    cursor.execute("INSERT INTO Usuario VALUES('" + str(dni) + "','" + str(nombre) + "','" + str(edad) + "','" + str(num_cuenta) + "','" + str(email) + "','" + str(tarifa) + "','" + str(telefono) + "','" + str(passw) + "','" + str(tiempo_asignado[tarifa]) + "','" + str(sancionado) + "','" + str(km_recorridos) + "');")
+    cursor.execute("SELECT * FROM TarifasTiempo WHERE Tarifa='" + str(tarifa) + "';")
+    for aux in cursor:
+        tiempo_asignado=aux[1]
+    cursor.execute("INSERT INTO Usuario VALUES('" + str(dni) + "','" + str(nombre) + "','" + str(edad) + "','" + str(num_cuenta) + "','" + str(email) + "','" + str(tarifa) + "','" + str(telefono) + "','" + str(passw) + "','" + str(tiempo_asignado) + "','" + str(sancionado) + "','" + str(km_recorridos) + "');")
     db_connection.commit()
     print("Se dio de alta al nuevo usuario correctamente.\n")
 
@@ -65,7 +67,10 @@ def accesoPerfil(cursor,db_connection):
             elif cambio_dato=="2":
                 nueva_tarifa=int(input("Elija su tarifa. Tenemos: 1. Barata, 2. Cara, 3. Atraco.\n"))
                 cursor.execute("UPDATE Usuario SET Tarifa='" + str(nueva_tarifa) + "'WHERE DNI='" + str(dni) + "';")
-                cursor.execute("UPDATE Usuario SET TiempoAsignado='" + str(tiempo_asignado[nueva_tarifa]) + "'WHERE DNI='" + str(dni) + "';")
+                cursor.execute("SELECT * FROM TarifasTiempo WHERE Tarifa='" + str(nueva_tarifa) + "';")
+                for aux in cursor:
+                    tiempo_asignado=aux[1]
+                cursor.execute("UPDATE Usuario SET TiempoAsignado='" + str(tiempo_asignado) + "'WHERE DNI='" + str(dni) + "';")
                 print("Nueva tarifa asignada.\n")
             elif cambio_dato=="3":
                 nuevo_tlf=input("Escriba su teléfono.\n")

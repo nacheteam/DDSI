@@ -5,6 +5,7 @@
 
 import MySQLdb as mariadb
 import time
+import random
 tiempo_asignado = [45,60,90]
 
 # Función del menú principal
@@ -34,7 +35,8 @@ def nuevoUsuario(cursor,db_connection):
     telefono = int(input("Escriba su telefono.\n"))
     passw = input("Elija una nueva contraseña para su perfil.\n")
     sancionado = 0
-    cursor.execute("INSERT INTO Usuario VALUES('" + str(dni) + "','" + str(nombre) + "','" + str(edad) + "','" + str(num_cuenta) + "','" + str(email) + "','" + str(tarifa) + "','" + str(telefono) + "','" + str(passw) + "','" + str(tiempo_asignado[tarifa]) + "','" + str(sancionado) + "');")
+    km_recorridos=0
+    cursor.execute("INSERT INTO Usuario VALUES('" + str(dni) + "','" + str(nombre) + "','" + str(edad) + "','" + str(num_cuenta) + "','" + str(email) + "','" + str(tarifa) + "','" + str(telefono) + "','" + str(passw) + "','" + str(tiempo_asignado[tarifa]) + "','" + str(sancionado) + "','" + str(km_recorridos) + "');")
     db_connection.commit()
     print("Se dio de alta al nuevo usuario correctamente.\n")
 
@@ -94,6 +96,7 @@ def accesoPerfil(cursor,db_connection):
                 print("Número de teléfono asociado: " + str(it[6]))
                 print("Tiempo asignado: " + str(it[8]))
                 print("¿Sancionado? (0==No, 1==Si) " + str(it[9]))
+                print("Kms recorridos: " + str(random.randrange(1,100)))
         db_connection.commit()
 
 main()

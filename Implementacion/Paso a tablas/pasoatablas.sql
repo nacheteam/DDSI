@@ -44,7 +44,7 @@ CREATE TABLE Usuario(
 DNI CHAR(9),
 Nombre VARCHAR(20),
 Edad VARCHAR(3),
-NumeroCuenta INT(24),
+NumeroCuenta INT,
 Email VARCHAR(20),
 Tarifa INT,
 Telefono INT(13),

@@ -48,10 +48,15 @@ Email VARCHAR(20),
 Tarifa INT,
 Telefono INT(13),
 Contrasena VARCHAR(20),
-TiempoAsignado INT,
 Sancionado BOOLEAN,
 KmRecorridos INT,
 PRIMARY KEY(DNI)
+);
+
+CREATE TABLE TarifasTiempo(
+Tarifa INT,
+TiempoAsignado INT,
+PRIMARY KEY(Tarifa)
 );
 
 CREATE TABLE Comunica(

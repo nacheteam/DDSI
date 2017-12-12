@@ -51,6 +51,7 @@ Telefono INT(13),
 Contrasena VARCHAR(20),
 TiempoAsignado INT,
 Sancionado BOOLEAN,
+KmRecorridos INT,
 PRIMARY KEY(DNI)
 );
 

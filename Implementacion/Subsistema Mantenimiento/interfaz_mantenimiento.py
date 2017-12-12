@@ -99,18 +99,19 @@ def mantenimientoBicicletas(cursor,db_connection):
 
 # Función de notificación de rotura de una estación de préstamo.
 def roturaEstacion(cursor,db_connection):
-    num_estacion = input("Introduzca el número de la estación rota: ")
-    cursor.execute("SELECT Posicion FROM Estacion WHERE CodigoEstacion=" + str(num_estacion))
+    posicion = input("Introduzca la posición de la estación rota: ")
+    fecha = input("Introduzca la fecha: ")
+    #cursor.execute("SELECT Posicion FROM Estacion WHERE CodigoEstacion=" + str(posicion))
+    #db_connection.commit()
+    #for Posicion in cursor:
+    cursor.execute("UPDATE Estacion SET Estado='Reparación' + "' WHERE Posicion='" + str(posicion) + "';")
     db_connection.commit()
-    for Posicion in cursor:
-        cursor.execute("UPDATE Estacion SET Estado='Reparación', Posicion='" + str(Posicion[0]) + "' WHERE CodigoEstacion='" + str(num_estacion) + "';")
-        db_connection.commit()
-        time.sleep(5)
-        cursor.execute("UPDATE Estacion SET Estado='Disponible', Posicion='" + str(Posicion[0]) + "' WHERE CodigoEstacion='" + str(num_estacion) + "';")
-        db_connection.commit()
+    time.sleep(5)
+    cursor.execute("UPDATE Estacion SET Estado='Disponible' + "' WHERE Posicion='" + str(posicion) + "';")
+    db_connection.commit()
     mecanicos = mecanicosAleatorios(random.randint(1,5))
     for mecanico in mecanicos:
-        cursor.execute("INSERT INTO ReparaEstacion (CodigoEstacion,CodigoPersonal,MensajeReparacion) VALUES ('" + str(num_estacion) + "','" + str(mecanico) + "','" + str(mensajeReparacion()) + "');")
+        cursor.execute("INSERT INTO ReparaEstacion (CodigoEstacion,CodigoPersonal,MensajeReparacion,Fecha) VALUES ('" + str(posicion) + "','" + str(mecanico) + "','" + str(mensajeReparacion()) + "','" + str(fecha) + "');")
     db_connection.commit()
     print("Estación reparada.\n")
     print("Los mecánicos que la han reparado tienen códigos: " + str(mecanicos))

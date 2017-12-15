@@ -13,6 +13,7 @@ import random
 ##                        Variables globales                                  ##
 ################################################################################
 
+CODIGO_REPARACION_ESTACION = 0
 NUM_PERSONAL = 50
 NUM_TALLERES = 10
 NUM_BICICLETAS = 200
@@ -108,10 +109,11 @@ def roturaEstacion(cursor,db_connection):
     db_connection.commit()
     mecanicos = mecanicosAleatorios(random.randint(1,5))
     for mecanico in mecanicos:
-        cursor.execute("INSERT INTO ReparaEstacion (CodigoEstacion,CodigoPersonal,MensajeReparacion,Fecha) VALUES ('" + str(posicion) + "','" + str(mecanico) + "','" + str(mensajeReparacion()) + "','" + str(fecha) + "');")
+        cursor.execute("INSERT INTO ReparaEstacion (CodigoEstacion,CodigoPersonal,MensajeReparacion,CodReparacionEstacion) VALUES ('" + str(posicion) + "','" + str(mecanico) + "','" + str(mensajeReparacion()) + "','" + str(CODIGO_REPARACION_ESTACION) + "');")
     db_connection.commit()
     print("Estación reparada.\n")
     print("Los mecánicos que la han reparado tienen códigos: " + str(mecanicos))
+    CODIGO_REPARACION_ESTACION+=1
 
 
 # Función de traslado de bicicletas entre estaciones.

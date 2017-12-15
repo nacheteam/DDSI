@@ -92,8 +92,8 @@ CREATE TABLE ReparaEstacion(
 CodigoEstacion INT REFERENCES Estacion(CodigoEstacion),
 CodigoPersonal INT REFERENCES Personal(CodigoPersonal),
 MensajeReparacion VARCHAR(140),
-Fecha VARCHAR(140),
-PRIMARY KEY(CodigoEstacion, CodigoPersonal, Fecha)
+CodReparacionEstacion VARCHAR(140),
+PRIMARY KEY(CodigoEstacion, CodigoPersonal, CodReparacionEstacion)
 );
 
 CREATE TABLE Sanciona(

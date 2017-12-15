@@ -25,7 +25,7 @@ MENSAJES_REPARACION_ESTACIONES = ["Hemos reparado la estación con éxito.", "La
 
 # Limpia la pantalla lo suficiente.
 def limpiaPantalla():
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 
 # Devuelve un array con los mecánicos aleatorios.
 def mecanicosAleatorios(num_mecanicos):
@@ -101,13 +101,10 @@ def mantenimientoBicicletas(cursor,db_connection):
 def roturaEstacion(cursor,db_connection):
     posicion = input("Introduzca la posición de la estación rota: ")
     fecha = input("Introduzca la fecha: ")
-    #cursor.execute("SELECT Posicion FROM Estacion WHERE CodigoEstacion=" + str(posicion))
-    #db_connection.commit()
-    #for Posicion in cursor:
-    cursor.execute("UPDATE Estacion SET Estado='Reparación' + "' WHERE Posicion='" + str(posicion) + "';")
+    cursor.execute("UPDATE Estacion SET Estado='Reparación'" + "' WHERE Posicion='" + str(posicion) + "';")
     db_connection.commit()
     time.sleep(5)
-    cursor.execute("UPDATE Estacion SET Estado='Disponible' + "' WHERE Posicion='" + str(posicion) + "';")
+    cursor.execute("UPDATE Estacion SET Estado='Disponible'" + "' WHERE Posicion='" + str(posicion) + "';")
     db_connection.commit()
     mecanicos = mecanicosAleatorios(random.randint(1,5))
     for mecanico in mecanicos:

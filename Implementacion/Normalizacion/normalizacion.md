@@ -22,3 +22,15 @@ F = {CodigoIncidencia->CodigoPersonal}
 - 3FN: no hay dependencias transitivas, por lo que está en 3FN.  
 
 - FNBC: sólo aparecen claves candidatas a la izquierda y además en CodigoPersonal no está incluida ninguna clave candidata, por lo que está en FNBC.
+
+
+## Tabla ReparaEstacion
+Atributos: CodigoEstacion, CodigoPersonal, CodReparacionBicicleta, MensajeReparacion.  
+Clave: CodigoEstacion, CodigoPersonal, CodReparacionBicicleta.  
+F = {CodigoEstacion CodigoPersonal CodReparacionEstacion->MensajeReparacion}  
+
+- 2FN: los atributos que forman la clave (los únicos primos) determinan de forma completa a MensajeReparacion, por lo que está en segunda forma normal.  
+
+- 3FN: no hay dependencias transitivas, luego está en 3FN.  
+
+- FNBC: sólo aparecen claves candidatas a la izquierda y además no hay ninguna clave candidata incluida en la parte derecha de la única dependencia que hay, por lo tanto está en FNBC.

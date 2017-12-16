@@ -5,17 +5,34 @@ Atributos: CodigoIncidencia, Tipo, Descripción.
 Clave: CodigoIncidencia.  
 F = {CodigoIncidencia->Tipo, CodigoIncidencia->Descripción}  
 
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
 - 2FN: está claro que la tabla está en 2FN ya que el único atributo primo es CodigoIncidencia y este determina de forma completa a Tipo y Descripción.  
 
 - 3FN: está en tercera forma normal porque no tiene ninguna dependencia transitiva.  
 
 - FNBC: todas las relaciones tienen a la izquierda una clave candidata y además todos los atributos que aparecen a la derecha no están contenidos en la clave, por lo que está en FNBC.  
 
+## Tabla Reclamacion  
+Atributos: CodigoReclamacion, NombreArchivo, Fecha.
+Clave: CodigoReclamacion.
+F = {CodigoReclamacion->NombreArchivo, CodigoReclamacion->Fecha}
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: NombreArchivo y Fecha son atributos no primos y ninguno de ellos
+lo determina un subconjunto de la PK.
+
+- 3FN: Todos los atributos dependen de claves candidatas. No hay atributos que dependan de atributos no-primos.
+
+- FNBC: Para las dos relaciones funcionales la condicion CodigoReclamacion es superclave se verifica.
 
 ## Tabla Comunica  
 Atributos: CodigoIncidencia, CodigoPersonal.  
 Clave: CodigoIncidencia.  
 F = {CodigoIncidencia->CodigoPersonal}  
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
 
 - 2FN: el único atibuto primo que hay es CodigoIncidencia y éste determina de forma completa a CodigoPersonal, luego está en 2FN.  
 
@@ -23,11 +40,19 @@ F = {CodigoIncidencia->CodigoPersonal}
 
 - FNBC: sólo aparecen claves candidatas a la izquierda y además en CodigoPersonal no está incluida ninguna clave candidata, por lo que está en FNBC.
 
+## Tabla ReparaBicicleta
+Atributos: CodigoBicicleta, CodigoPersonal, NumeroTaller
+Clave: CodigoBicicletaCodigoPersonal
+F = {CodigoBicicletaCodigoPersonal -> NumeroTaller}
+
+- 1FN 
 
 ## Tabla ReparaEstacion
 Atributos: CodigoEstacion, CodigoPersonal, CodReparacionBicicleta, MensajeReparacion.  
 Clave: CodigoEstacion, CodigoPersonal, CodReparacionBicicleta.  
 F = {CodigoEstacion CodigoPersonal CodReparacionEstacion->MensajeReparacion}  
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
 
 - 2FN: los atributos que forman la clave (los únicos primos) determinan de forma completa a MensajeReparacion, por lo que está en segunda forma normal.  
 
@@ -41,8 +66,24 @@ Atributos: Posición, Estado.
 Clave: Posición.  
 F = {Posición->Estado}  
 
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
 - 2FN: Posición determina de forma completa a Estado, luego está en 2FN.  
 
 - 3FN: no hay dependencias transitivas, luego está en 3FN.  
 
 - FNBC: sólo aparecen claves candidatas a la izquierda y además no hay ninguna clave candidata incluida en la parte derecha de la única dependencia que hay, por lo tanto está en FNBC.
+
+
+## Tabla RecibePago
+Atributos: DNI, Entidad.
+Clave: DNI
+F = {DNI -> Entidad}
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: El unico atributo no primo Entidad no depende de ningun subconjunto de una clave candidata.
+
+- 3FN: Todos los atributos de la tabla estan determinados por atributos de las claves candidatas.
+
+- FNBC: DNI es superclave de la relacion.

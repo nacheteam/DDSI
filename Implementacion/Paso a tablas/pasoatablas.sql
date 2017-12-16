@@ -93,7 +93,7 @@ CodigoEstacion INT REFERENCES Estacion(CodigoEstacion),
 CodigoPersonal INT REFERENCES Personal(CodigoPersonal),
 MensajeReparacion VARCHAR(140),
 CodReparacionEstacion VARCHAR(140),
-PRIMARY KEY(CodigoEstacion, CodigoPersonal, CodReparacionEstacion)
+PRIMARY KEY(CodigoPersonal, CodReparacionEstacion)
 );
 
 CREATE TABLE Sanciona(

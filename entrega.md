@@ -470,11 +470,11 @@ de averías o reubicación de bicicletas.
 
 ![Esquema conceptual (Subsistema Mantenimiento)](./Analisis/Subsistema\ Mantenimiento/Esquema\ conceptual/esquema_conceptual.png)
 
-![Diagrama de flujo de datos (Subsistema Central)](./Analisis/Subsistema\ Central/Subsistema\ central.jpeg)
+![Diagrama de flujo de datos (Subsistema Central)](./Analisis/Subsistema\ Central/Subsistema\ central.png)
 
-![Esquemas externos (Subsistema Central)](./Analisis/Subsistema\ Central/Esquema\ externo.jpeg)
+![Esquemas externos (Subsistema Central)](./Analisis/Subsistema\ Central/Esquema\ externo.png)
 
-![Esquema conceptual (Subsistema Central)](./Analisis/Subsistema\ Central/Esquema\ conceptual.jpeg)  
+![Esquema conceptual (Subsistema Central)](./Analisis/Subsistema\ Central/Esquema\ conceptual.png)  
 
 
 ## Esquemas de navegación
@@ -534,4 +534,4 @@ de averías o reubicación de bicicletas.
 * Reubicacion necesaria
     - Actualizar la opcion de reubicacion de Bicicletas
 
-![Esquema de navegación Subsistema Central](./Analisis/Subsistema\ Central/esquemas_navegacion.jpeg)
+![Esquema de navegación Subsistema Central](./Analisis/Subsistema\ Central/esquemas_navegacion.png)

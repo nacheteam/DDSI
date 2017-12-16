@@ -42,7 +42,7 @@ PRIMARY KEY(CodigoReclamacion)
 CREATE TABLE Usuario(
 DNI CHAR(9),
 Nombre VARCHAR(20),
-Edad VARCHAR(3),
+Edad INT,
 NumeroCuenta INT,
 Email VARCHAR(20),
 Tarifa INT,

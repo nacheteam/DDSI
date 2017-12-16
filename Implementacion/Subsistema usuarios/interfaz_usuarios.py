@@ -6,6 +6,7 @@
 import MySQLdb as mariadb
 import time
 import random
+import sys
 
 # Función del menú principal
 def main():
@@ -36,7 +37,10 @@ def nuevoUsuario(cursor,db_connection):
     sancionado = 0
     km_recorridos=0
     cursor.execute("INSERT INTO Usuario VALUES('" + str(dni) + "','" + str(nombre) + "','" + str(edad) + "','" + str(num_cuenta) + "','" + str(email) + "','" + str(tarifa) + "','" + str(telefono) + "','" + str(passw) + "','"  + str(sancionado) + "','" + str(km_recorridos) + "');")
-    db_connection.commit()
+    try:
+        db_connection.commit()
+    except:
+        print("Error")
     print("Se dio de alta al nuevo usuario correctamente.\n")
 
 

@@ -34,3 +34,15 @@ F = {CodigoEstacion CodigoPersonal CodReparacionEstacion->MensajeReparacion}
 - 3FN: no hay dependencias transitivas, luego está en 3FN.  
 
 - FNBC: sólo aparecen claves candidatas a la izquierda y además no hay ninguna clave candidata incluida en la parte derecha de la única dependencia que hay, por lo tanto está en FNBC.
+
+
+## Tabla Estacion
+Atributos: Posición, Estado.  
+Clave: Posición.  
+F = {Posición->Estado}  
+
+- 2FN: Posición determina de forma completa a Estado, luego está en 2FN.  
+
+- 3FN: no hay dependencias transitivas, luego está en 3FN.  
+
+- FNBC: sólo aparecen claves candidatas a la izquierda y además no hay ninguna clave candidata incluida en la parte derecha de la única dependencia que hay, por lo tanto está en FNBC.

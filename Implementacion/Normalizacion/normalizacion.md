@@ -34,18 +34,37 @@ F = {CodigoIncidencia->CodigoPersonal}
 
 - 1FN: El dominio de cada atributo contiene solo valores atomicos.
 
-- 2FN: el único atibuto primo que hay es CodigoIncidencia y éste determina de forma completa a CodigoPersonal, luego está en 2FN.  
+- 2FN: El único atibuto primo que hay es CodigoIncidencia y éste determina de forma completa a CodigoPersonal, luego está en 2FN.  
 
-- 3FN: no hay dependencias transitivas, por lo que está en 3FN.  
+- 3FN: No hay dependencias transitivas, por lo que está en 3FN.  
 
-- FNBC: sólo aparecen claves candidatas a la izquierda y además en CodigoPersonal no está incluida ninguna clave candidata, por lo que está en FNBC.
+- FNBC: Sólo aparecen claves candidatas a la izquierda y además en CodigoPersonal no está incluida ninguna clave candidata, por lo que está en FNBC.
 
 ## Tabla ReparaBicicleta
-Atributos: CodigoBicicleta, CodigoPersonal, NumeroTaller
+Atributos: CodReparacionEstacion, CodigoBicicleta, CodigoPersonal, NumeroTaller
 Clave: CodigoBicicletaCodigoPersonal
-F = {CodigoBicicletaCodigoPersonal -> NumeroTaller}
+F = {CodReparacionEstacionCodigoBicicletaCodigoPersonal -> NumeroTaller}
 
-- 1FN 
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: El unico atributo no-primo que hay es NumeroTaller y no hay ningun subconjunto de una clave candidata que lo determine.
+
+- 3FN: No hay dependencias transitivas y por tanto todos los atributos dependen directamente de claves candidatas.
+
+- FNBC: CodReparacionEstacionCodigoBicicletaCodigoPersonal es una superclave.
+
+## Tabla Traslada
+Atributos: CodigoTraslado, CodigoBicicleta, CodigoPersonal, EstacionPocasBicicletas, EstacionMuchasBicicletas, NumeroBicicletas.
+Clave: CodigoTraslado, CodigoBicicleta
+F = {CodigoTrasladoCodigoBicicleta->EstacionMuchasBicicletas,CodigoTrasladoCodigoBicicleta->EstacionPocasBicicletas,CodigoTrasladoCodigoBicicleta->CodigoPersonal,CodigoTrasladoCodigoBicicleta->NumBicicletas}
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: Los atributos no-primos no dependen nunca de un subconjunto de alguna clave candidata
+
+- 3FN: No hay dependencias transitivas por lo que no hay ningun atributo que dependa de un atributo no-primo
+
+-FNBC: A la izquierda de cada relacion hay siempre una superclave.
 
 ## Tabla ReparaEstacion
 Atributos: CodigoEstacion, CodigoPersonal, CodReparacionBicicleta, MensajeReparacion.  

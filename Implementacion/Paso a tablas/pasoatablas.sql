@@ -69,10 +69,11 @@ CREATE TABLE ReparaBicicleta(
 CodigoBicicleta INT NOT NULL REFERENCES Bicicleta(CodigoBicicleta),
 CodigoPersonal INT NOT NULL REFERENCES Personal(CodigoPersonal),
 NumeroTaller INT,
-PRIMARY KEY(CodigoBicicleta, CodigoPersonal)
+CodReparacionBicicleta VARCHAR(140),
+PRIMARY KEY(CodReparacionBicicleta, CodigoBicicleta, CodigoPersonal)
 );
 
-CREATE TABLE Traslada(
+CREATE TABLE Llega(
 CodigoBicicleta INT REFERENCES Bicicleta(CodigoBicicleta),
 CodigoPersonal INT NOT NULL REFERENCES Personal(CodigoPersonal),
 EstacionPocasBicicletas INT,

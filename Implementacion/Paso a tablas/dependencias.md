@@ -27,10 +27,10 @@ F = {DNI->Nombre, DNI->Edad, DNI->NumeroCuenta, DNI-> Email, DNI->Tarifa, DNI->T
 F = {CodigoIncidencia->CodigoPersonal}  
 
 ## Tabla ReparaBicicleta
-F = {CodigoBicicleta CodigoPersonal->NumeroTaller}  
+F = {CodReparacionBicicletaCodigoBicicletaCodigoPersonal->NumeroTaller}  
 
 ## Tabla traslada
-F = {CodigoBicicleta->EstacionMuchasBicicletas}  
+F = {CodigoTrasladoCodigoBicicleta->EstacionMuchasBicicletas,CodigoTrasladoCodigoBicicleta->EstacionPocasBicicletas,CodigoTrasladoCodigoBicicleta->CodigoPersonal,CodigoTrasladoCodigoBicicleta->NumBicicletas}  
 
 ## Tabla Revisa
 Pos eso.   

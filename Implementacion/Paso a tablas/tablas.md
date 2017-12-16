@@ -12,10 +12,10 @@ con atributo Tarifa NotNull
 - Comunica(\underline{CodigoIncidencia},CodigoPersonal)  
 con el atributo CodigoIncidencia llave externa de Incidencia.  
 con el atributo CodigoPersonal llave externa de Personal NotNull.  
-- ReparaBicicleta(\underline{CodigoBicicleta,CodigoPersonal},NumeroTaller)  
+- ReparaBicicleta(\underline{CodReparacionBicicleta,CodigoBicicleta,CodigoPersonal},NumeroTaller)  
 con el atributo CodigoBicicleta llave externa Bicicleta NotNull.  
 con el atributo CodigoPersonal llave externa Personal NotNull.  
-- Traslada(\underline{CodigoBicicleta},CodigoPersonal, EstacionPocasBicicletas,EstacionMuchasBicicletas,NumeroBicicletas)  
+- Traslada(\underline{CodigoTraslado,CodigoBicicleta},CodigoPersonal, EstacionPocasBicicletas,EstacionMuchasBicicletas,NumeroBicicletas)  
 con el atributo CodigoBicicleta llave externa de BIcicleta.  
 con el atributo CodigoPersonal llave externa de Personal NotNull.  
 - Revisa(\underline{CodigoBicicleta,CodigoPersonal})
@@ -24,7 +24,7 @@ con el atributo CodigoPersonal llave externa Personal.
 - ReparaEstacion(\underline{CodigoPersonal,CodReparacionEstacion},MensajeReparacion,CodigoEstacion)  
 con el atributo CodigoEstacion llave externa de Estación.  
 con el atributo CodigoPersonal llave externa de Personal.  
-- Sanciona(\underline{DNI,CodigoBicleta,CodigoEstacion})  
+- Llega(\underline{DNI,CodigoBicleta,CodigoEstacion})  
 con el atributo DNI llave externa de Usuario.  
 con el atributo CodigoBicicleta llave externa de Bicicleta.  
 con el atributo CodigoEstacion llave externa de Estacion.  

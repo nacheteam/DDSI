@@ -456,7 +456,7 @@ de averías o reubicación de bicicletas.
 
 ![Esquema F Armazón](./Analisis/Esquema\ f\ armazon/Esquema\ F\ armazón.jpg)
 
-![Esquema conceptual completo](./Analisis/Esquema\ conceptual/esquema_conceptual.jpeg)
+![Esquema conceptual completo](./Analisis/Esquema\ conceptual/esquema_conceptual.png)
 
 ![Diagrama de flujo de datos (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/Diagrama\ Flujo\ Datos/DFD\ Subsistema\ Usuarios.jpg)
 

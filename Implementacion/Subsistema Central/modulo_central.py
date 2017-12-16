@@ -19,7 +19,7 @@ class SistemaCentral:
 
     def CiclistaLlega(self, DNI, CodigoBicicleta, CodigoEstacion, TiempoEmpleado):
         try:
-            cursor.execute('INSERT INTO Sanciona (DNI,CodigoBicicleta,CodigoEstacion) VALUES (%s,%s,%s)',(DNI,CodigoBicicleta,CodigoEstacion))
+            cursor.execute('INSERT INTO Llega (DNI,CodigoBicicleta,CodigoEstacion) VALUES (%s,%s,%s)',(DNI,CodigoBicicleta,CodigoEstacion))
         except mariadb.Error as error:
             print( "Error: {}".format(error) )
 

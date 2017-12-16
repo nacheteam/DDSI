@@ -36,12 +36,15 @@ def nuevoUsuario(cursor,db_connection):
     passw = input("Elija una nueva contraseña para su perfil.\n")
     sancionado = 0
     km_recorridos=0
-    cursor.execute("INSERT INTO Usuario VALUES('" + str(dni) + "','" + str(nombre) + "','" + str(edad) + "','" + str(num_cuenta) + "','" + str(email) + "','" + str(tarifa) + "','" + str(telefono) + "','" + str(passw) + "','"  + str(sancionado) + "','" + str(km_recorridos) + "');")
+    error=0
     try:
-        db_connection.commit()
+        cursor.execute("INSERT INTO Usuario VALUES('" + str(dni) + "','" + str(nombre) + "','" + str(edad) + "','" + str(num_cuenta) + "','" + str(email) + "','" + str(tarifa) + "','" + str(telefono) + "','" + str(passw) + "','"  + str(sancionado) + "','" + str(km_recorridos) + "');")
     except:
-        print("Error")
-    print("Se dio de alta al nuevo usuario correctamente.\n")
+        print("No se pudo dar de alta al usuario por tener menos de 14 años")
+        error=1
+    if error == 0:
+        db_connection.commit()
+        print("Se dio de alta al nuevo usuario correctamente.\n")
 
 
 

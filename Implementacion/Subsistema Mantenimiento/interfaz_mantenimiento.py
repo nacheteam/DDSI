@@ -59,6 +59,7 @@ def menu():
 
 # Función de bicicleta averiada.
 def bicicletaAveriada(cursor,db_connection):
+    err=False
     cod_bicicleta = int(input("Introduzca el código de la bicicleta averiada: "))
     print("En reparación...\n")
     cursor.execute("SELECT Posicion FROM Bicicleta WHERE CodigoBicicleta=" + str(cod_bicicleta) +";")
@@ -72,11 +73,16 @@ def bicicletaAveriada(cursor,db_connection):
     num_mecanicos = random.randint(1,5)
     codigos_mecanicos = mecanicosAleatorios(num_mecanicos)
     taller = random.randint(1,NUM_TALLERES)
-    print("Los mecánicos que han reparado la bicicleta tienen los códigos: " + str(codigos_mecanicos) + "\n")
-    for mecanico in codigos_mecanicos:
-        cursor.execute("INSERT INTO ReparaBicicleta (CodigoBicicleta,CodigoPersonal,NumeroTaller) VALUES ('" + str(cod_bicicleta) + "','" + str(mecanico) + "','" + str(taller) + "');")
+    try:
+        for mecanico in codigos_mecanicos:
+            cursor.execute("INSERT INTO ReparaBicicleta (CodigoBicicleta,CodigoPersonal,NumeroTaller) VALUES ('" + str(cod_bicicleta) + "','" + str(mecanico) + "','" + str(taller) + "');")
+    except mariadb.Error as error:
+        print("Hubo un fallo en su inserción, probablemente el código de la bicicleta o el personal no existe.")
+        err = True
     db_connection.commit()
-    print("¡Reparada!\n")
+    if not err:
+        print("Los mecánicos que han reparado la bicicleta tienen los códigos: " + str(codigos_mecanicos) + "\n")
+        print("¡Reparada!\n")
 
 # Función de mantenimiento.
 def mantenimientoBicicletas(cursor,db_connection):

@@ -73,7 +73,7 @@ CodReparacionBicicleta VARCHAR(140),
 PRIMARY KEY(CodReparacionBicicleta, CodigoBicicleta, CodigoPersonal)
 );
 
-CREATE TABLE Llega(
+CREATE TABLE Traslada(
 CodigoBicicleta INT REFERENCES Bicicleta(CodigoBicicleta),
 CodigoPersonal INT NOT NULL REFERENCES Personal(CodigoPersonal),
 EstacionPocasBicicletas INT,
@@ -97,7 +97,7 @@ CodReparacionEstacion VARCHAR(140),
 PRIMARY KEY(CodigoPersonal, CodReparacionEstacion)
 );
 
-CREATE TABLE Sanciona(
+CREATE TABLE Llega(
 DNI CHAR(9) REFERENCES Usuario(DNI),
 CodigoEstacion INT REFERENCES Estacion(CodigoEstacion),
 CodigoBicicleta INT REFERENCES Bicicleta(CodigoBicicleta),

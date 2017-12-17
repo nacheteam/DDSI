@@ -134,6 +134,30 @@ LOCK TABLES `Incidencias` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `Llega`
+--
+
+DROP TABLE IF EXISTS `Llega`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Llega` (
+  `DNI` char(9) NOT NULL,
+  `CodigoEstacion` int(11) NOT NULL,
+  `CodigoBicicleta` int(11) NOT NULL,
+  PRIMARY KEY (`DNI`,`CodigoEstacion`,`CodigoBicicleta`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Llega`
+--
+
+LOCK TABLES `Llega` WRITE;
+/*!40000 ALTER TABLE `Llega` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Llega` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Personal`
 --
 
@@ -237,7 +261,8 @@ CREATE TABLE `ReparaBicicleta` (
   `CodigoBicicleta` int(11) NOT NULL,
   `CodigoPersonal` int(11) NOT NULL,
   `NumeroTaller` int(11) DEFAULT NULL,
-  PRIMARY KEY (`CodigoBicicleta`,`CodigoPersonal`)
+  `CodReparacionBicicleta` varchar(140) NOT NULL,
+  PRIMARY KEY (`CodReparacionBicicleta`,`CodigoBicicleta`,`CodigoPersonal`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -263,10 +288,12 @@ BEFORE INSERT ON ReparaBicicleta
 FOR EACH ROW
 BEGIN
     IF (NEW.CodigoBicicleta<0 OR NEW.CodigoBicicleta>199) THEN
-        SIGNAL SQLSTATE '45100' SET MESSAGE_TEXT =  "Código de bicicleta fuera de los límites [0,199]";
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT='Código de bicicleta fuera de los límites [0,199]';
     END IF;
     IF (NEW.CodigoPersonal<0 OR NEW.CodigoPersonal>29) THEN
-        SIGNAL SQLSTATE '45101' SET MESSAGE_TEXT =  "Código de personal fuera de los límites [0,29]";
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT='Código de personal fuera de los límites [0,29]';
     END IF;
 END */;;
 DELIMITER ;
@@ -325,30 +352,6 @@ LOCK TABLES `Revisa` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `Sanciona`
---
-
-DROP TABLE IF EXISTS `Sanciona`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Sanciona` (
-  `DNI` char(9) NOT NULL,
-  `CodigoEstacion` int(11) NOT NULL,
-  `CodigoBicicleta` int(11) NOT NULL,
-  PRIMARY KEY (`DNI`,`CodigoEstacion`,`CodigoBicicleta`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Sanciona`
---
-
-LOCK TABLES `Sanciona` WRITE;
-/*!40000 ALTER TABLE `Sanciona` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Sanciona` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `TarifasTiempo`
 --
 
@@ -380,12 +383,13 @@ DROP TABLE IF EXISTS `Traslada`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `Traslada` (
+  `CodigoTraslado` int(11) NOT NULL,
   `CodigoBicicleta` int(11) NOT NULL,
   `CodigoPersonal` int(11) NOT NULL,
   `EstacionPocasBicicletas` int(11) DEFAULT NULL,
   `EstacionMuchasBicicletas` int(11) DEFAULT NULL,
   `NumeroBicicletas` int(11) DEFAULT NULL,
-  PRIMARY KEY (`CodigoBicicleta`,`CodigoPersonal`)
+  PRIMARY KEY (`CodigoTraslado`,`CodigoBicicleta`,`CodigoPersonal`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -484,4 +488,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-12-16 13:46:55
+-- Dump completed on 2017-12-17 18:48:45

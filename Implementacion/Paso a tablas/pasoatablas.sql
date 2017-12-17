@@ -91,11 +91,11 @@ PRIMARY KEY(CodigoBicicleta, CodigoPersonal)
 );
 
 CREATE TABLE ReparaEstacion(
-CodigoEstacion INT REFERENCES Estacion(CodigoEstacion),
+Posicion VARCHAR(140) REFERENCES Estacion(Posicion),
 CodigoPersonal INT REFERENCES Personal(CodigoPersonal),
 MensajeReparacion VARCHAR(140),
 CodReparacionEstacion VARCHAR(140),
-PRIMARY KEY(CodigoPersonal, CodReparacionEstacion)
+PRIMARY KEY(CodReparacionEstacion, Posicion, CodigoPersonal)
 );
 
 CREATE TABLE Llega(

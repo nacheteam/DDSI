@@ -1,0 +1,2 @@
+INSERT INTO Usuario (DNI,Nombre,Edad,NumeroCuenta,Email,Tarifa,Telefono,Contrasena,Sancionado,KmRecorridos) VALUES ('77397016S', 'Diego Asterio de Zaballa', '21', '23456', 'diegoasterio.z@gmail.com', '0', '0034697271661', 'ddsi', 'TRUE', '0');
+INSERT INTO Usuario (DNI,Nombre,Edad,NumeroCuenta,Email,Tarifa,Telefono,Contrasena,Sancionado,KmRecorridos) VALUES ('77380234S', 'Luis Baldo', '21', '23456', 'bandolero@gmail.com', '0', '0034697271661', 'ddsi', 'TRUE', '0');

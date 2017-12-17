@@ -74,12 +74,13 @@ PRIMARY KEY(CodReparacionBicicleta, CodigoBicicleta, CodigoPersonal)
 );
 
 CREATE TABLE Traslada(
+CodigoTraslado INT,
 CodigoBicicleta INT REFERENCES Bicicleta(CodigoBicicleta),
 CodigoPersonal INT NOT NULL REFERENCES Personal(CodigoPersonal),
 EstacionPocasBicicletas INT,
 EstacionMuchasBicicletas INT,
 NumeroBicicletas INT,
-PRIMARY KEY(CodigoBicicleta, CodigoPersonal)
+PRIMARY KEY(CodigoTraslado,CodigoBicicleta, CodigoPersonal)
 );
 
 CREATE TABLE Revisa(

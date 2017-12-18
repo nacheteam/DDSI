@@ -535,3 +535,11 @@ de averías o reubicación de bicicletas.
     - Actualizar la opcion de reubicacion de Bicicletas
 
 ![Esquema de navegación Subsistema Central](./Analisis/Subsistema\ Central/esquemas_navegacion.png)
+
+## Paso a Tablas
+
+
+
+## Normalización
+
+## Disparadores

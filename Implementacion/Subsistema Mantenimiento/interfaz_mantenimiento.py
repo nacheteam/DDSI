@@ -107,11 +107,11 @@ def bicicletaAveriada(cursor,db_connection):
     try:
         for mecanico in codigos_mecanicos:
             cursor.execute("INSERT INTO ReparaBicicleta (CodigoBicicleta,CodigoPersonal,NumeroTaller,CodReparacionBicicleta) VALUES ('" + str(cod_bicicleta) + "','" + str(mecanico) + "','" + str(taller) + "','" + str(CODIGO_REPARACION_BICICLETA) + "');")
+            db_connection.commit()
     except mariadb.Error as error:
-        if cod_bicicleta not in range(0,199):
+        if cod_bicicleta not in range(0,200):
             print("Hubo un fallo en su inserción, probablemente el código de la bicicleta o el personal no existe.")
             err = True
-    db_connection.commit()
     if not err:
         print("Los mecánicos que han reparado la bicicleta tienen los códigos: " + str(codigos_mecanicos) + "\n")
         print("¡Reparada!\n")

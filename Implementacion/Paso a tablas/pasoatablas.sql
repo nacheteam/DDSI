@@ -41,13 +41,13 @@ PRIMARY KEY(CodigoReclamacion)
 
 CREATE TABLE Usuario(
 DNI CHAR(9),
-Nombre VARCHAR(20),
+Nombre VARCHAR(140),
 Edad INT,
 NumeroCuenta INT,
-Email VARCHAR(20),
+Email VARCHAR(140),
 Tarifa INT,
-Telefono INT(13),
-Contrasena VARCHAR(20),
+Telefono INT,
+Contrasena VARCHAR(140),
 Sancionado BOOLEAN,
 KmRecorridos INT,
 PRIMARY KEY(DNI)

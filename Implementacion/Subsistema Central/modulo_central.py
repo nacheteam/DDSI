@@ -8,7 +8,7 @@ class SistemaCentral:
         self.connection = mariadb.connect(host='localhost',
                                           user = self.user,
                                           passwd = self.password,
-                                          database = 'BicicletasParis')
+                                          db = 'BicicletasParis')
         self.cursor = self.connection.cursor()
 
     def checkSancion(self,DNI, TiempoEmpleado):
@@ -19,8 +19,8 @@ class SistemaCentral:
             tiempo = self.cursor.fetchone()[0]
         except mariadb.Error as error:
             print( "Error: {}".format(error) )
-            
-        if tiempo > TiempoEmpleado:
+
+        if tiempo < TiempoEmpleado:
             return True
         else:
             return False
@@ -37,7 +37,7 @@ class SistemaCentral:
 
     def SancionarUsuario(self, DNI):
         try:
-            self.cursor.execute("UPDATE Usuario SET Sancionado = TRUE WHERE DNI='{}'".format(DNI))
+            self.cursor.execute("UPDATE Usuario SET Sancionado = '1' WHERE DNI='{}'".format(DNI))
             self.connection.commit()
         except mariadb.Error as error:
             print( "Error: {}".format(error) )
@@ -56,10 +56,10 @@ class SistemaCentral:
         except mariadb.Error as error:
             print( "Error: {}".format(error) )
         self.connection.commit()
-    
+
     def AnalizarEstadisticamente(self):
         try:
-            self.cursor.execute("SELECT CodigoBicicleta FROM Bicicleta WHERE Estado='Activa'")
+            self.cursor.execute("SELECT CodigoBicicleta FROM Bicicleta WHERE Estado='Disponible'")
             self.connection.commit()
         except mariadb.Error as error:
             print( "Error: {}".format(error) )
@@ -68,7 +68,9 @@ class SistemaCentral:
                 self.SetReubicacion(CodigoBicicleta[0])
 
     def ReubicacionNecesaria(self,CodigoBicicleta):
-        return bool(random.getrandbits(1))
+        if random.randint(0,10) < 1:
+            return True
+        return False
 
     def RecibirPago(self,DNI,Entidad):
         try:
@@ -76,5 +78,3 @@ class SistemaCentral:
             self.connection.commit()
         except mariadb.Error as error:
             print( "Error: {}".format(error) )
-
-    

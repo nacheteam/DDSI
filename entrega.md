@@ -1,3 +1,9 @@
+---
+header-includes:
+ - \usepackage{graphicx}
+ - \usepackage{float}
+---
+
 Sistema de información para la gestión de bicicletas públicas en París.
 =======================================================================
 
@@ -446,35 +452,69 @@ de averías o reubicación de bicicletas.
 -   **RS1.2:** En el RD1.1 asociado al RF1.1, el titular del número de
     cuenta no tiene por qué ser igual que el nuevo usuario.
 
-#### Restricciones semánticas
-
--   **RS3.1** tener tarjeta de credito
-
 ## Análisis
 
-![Esquema de caja negra](./Analisis/Caja\ negra/Esquema\ caja\ negra.jpeg)
 
-![Esquema F Armazón](./Analisis/Esquema\ f\ armazon/Esquema\ F\ armazón.jpg)
+\begin{figure}[H]
+    \includegraphics[scale=0.45]{./Imagenes/Esquema_caja_negra.jpeg}
+    \caption{Esquema caja negra}
+\end{figure}
 
-![Esquema conceptual completo](./Analisis/Esquema\ conceptual/esquema_conceptual.png)
 
-![Diagrama de flujo de datos (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/Diagrama\ Flujo\ Datos/DFD\ Subsistema\ Usuarios.jpg)
+\begin{figure}[H]
+    \includegraphics[scale=0.42]{./Imagenes/Esquema_F_armazon.jpg}
+    \caption{Esquema F armazón}
+\end{figure}
 
-![Esquemas externos (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/Esquemas\ externos/esquemas-externos.png)
+\begin{figure}[H]
+    \includegraphics[scale=0.43]{./Imagenes/esquema_conceptual.png}
+    \caption{Esquema conceptual completo}
+\end{figure}
 
-![Esquema conceptual (Subsistema Usuarios)](./Analisis/Subsistema\ Usuarios/Esquema\ conceptual/esquema-conceptual-su.png)
+\begin{figure}[H]
+    \includegraphics[scale=0.5]{./Imagenes/DFD_Usuarios.jpg}
+    \caption{Diagrama de flujo de datos Usuarios}
+\end{figure}
 
-![Diagrama de flujo de datos (Subsistema Mantenimiento)](./Analisis/Subsistema\ Mantenimiento/Flujo\ de\ Datos/Diagrama\ de\ flujo\ de\ datos.jpg)
+\begin{figure}[H]
+    \includegraphics[scale=0.35]{./Imagenes/esquemas_externos_usuario.png}
+    \caption{Esquemas externos de Usuario}
+\end{figure}
 
-![Esquemas externos (Subsistema Mantenimiento)](./Analisis/Subsistema\ Mantenimiento/Esquema\ externo/esquema_externo.png)
+\begin{figure}[H]
+    \includegraphics[scale=0.43]{./Imagenes/esquema_conceptual_usuario.png}
+    \caption{Esquema conceptual Usuario}
+\end{figure}
 
-![Esquema conceptual (Subsistema Mantenimiento)](./Analisis/Subsistema\ Mantenimiento/Esquema\ conceptual/esquema_conceptual.png)
+\begin{figure}[H]
+    \includegraphics[scale=0.45]{./Imagenes/Diagrama_flujo_datos_mantenimiento.jpg}
+    \caption{Diagrama de flujo de datos Mantenimiento}
+\end{figure}
 
-![Diagrama de flujo de datos (Subsistema Central)](./Analisis/Subsistema\ Central/Subsistema\ central.png)
+\begin{figure}[H]
+    \includegraphics[scale=0.23]{./Imagenes/esquema_externo_mantenimiento.png}
+    \caption{Esquemas externos Mantenimiento}
+\end{figure}
 
-![Esquemas externos (Subsistema Central)](./Analisis/Subsistema\ Central/Esquema\ externo.png)
+\begin{figure}[H]
+    \includegraphics[scale=0.43]{./Imagenes/esquema_conceptual_mantenimiento.png}
+    \caption{Esquema conceptual Mantenimiento}
+\end{figure}
 
-![Esquema conceptual (Subsistema Central)](./Analisis/Subsistema\ Central/Esquema\ conceptual.png)  
+\begin{figure}[H]
+    \includegraphics[scale=0.43]{./Imagenes/Subsistema_central_flujo_datos.png}
+    \caption{Diagrama de flujo de datos Central}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[scale=0.37]{./Imagenes/Esquema_externo_central.png}
+    \caption{Esquemas externos Central}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[scale=0.5]{./Imagenes/Esquema_conceptual_central.png}
+    \caption{Esquema conceptual Central}
+\end{figure}
 
 
 ## Esquemas de navegación
@@ -493,8 +533,12 @@ de averías o reubicación de bicicletas.
 * Poner queja/reclamación/sugerencia:  
 	- El sistema escribe en la base de datos una nueva reclamación con el DNI del usuario, el código, el nombre de fichero dónde el usuario escribe y la fecha.  
 
-![Esquema de navegación Subsistem Usuarios](./Analisis/Subsistema\ Usuarios/Esquemas\ de\ navegacion/esquemas_navegacion.png)
+\begin{figure}[H]
+    \includegraphics[scale=0.48]{./Imagenes/esquemas_navegacion_usuario.png}
+    \caption{Esquemas navegación Usuario}
+\end{figure}
 
+\newpage
 ### Subsistema de Mantenimiento
 
 * Incidencia:  
@@ -515,7 +559,11 @@ de averías o reubicación de bicicletas.
     - Escritura del estado en reparación de la estación.
     - Escritura del estado disponible de la estación una vez se ha reparado.
 
-![Esquema de navegación Subsistema Mantenimiento](./Analisis/Subsistema\ Mantenimiento/Esquemas\ de\ navegacion/esquemas_navegacion.png)
+
+\begin{figure}[H]
+    \includegraphics[scale=0.4]{./Imagenes/esquemas_navegacion_mantenimiento.png}
+    \caption{Esquemas navegación Mantenimiento}
+\end{figure}
 
 ### Subsistema Central
 
@@ -534,4 +582,274 @@ de averías o reubicación de bicicletas.
 * Reubicacion necesaria
     - Actualizar la opcion de reubicacion de Bicicletas
 
-![Esquema de navegación Subsistema Central](./Analisis/Subsistema\ Central/esquemas_navegacion.png)
+\begin{figure}[H]
+    \includegraphics[scale=0.425]{./Imagenes/esquemas_navegacion_central.png}
+    \caption{Esquemas navegación Central}
+\end{figure}
+
+## Paso a Tablas
+
+- Personal(\underline{CodigoPersonal})  
+- Incidencia(\underline{CodigoIncidencia},Tipo,Descripcion)  
+- Bicicleta(\underline{CodigoBicicleta},Posicion,Estado)  
+- Estacion(\underline{Posición}, Estado)  
+- Banco(\underline{Entidad})  
+- Reclamacion(\underline{CodigoReclamacion}, NombreArchivo, Fecha)  
+- Usuario(\underline{DNI}, Nombre, Edad, NumeroCuenta, Email, Tarifa, Telefono, Contraseña, Sancionado,KmsRecorridos, TiempoAsignado)  
+con atributo Tarifa NotNull
+- Comunica(\underline{CodigoIncidencia},CodigoPersonal)  
+con el atributo CodigoIncidencia llave externa de Incidencia.  
+con el atributo CodigoPersonal llave externa de Personal NotNull.  
+- ReparaBicicleta(\underline{CodReparacionBicicleta,CodigoBicicleta,CodigoPersonal},NumeroTaller)  
+con el atributo CodigoBicicleta llave externa Bicicleta NotNull.  
+con el atributo CodigoPersonal llave externa Personal NotNull.  
+- Traslada(\underline{CodigoTraslado,CodigoBicicleta},CodigoPersonal, EstacionPocasBicicletas,EstacionMuchasBicicletas,NumeroBicicletas)  
+con el atributo CodigoBicicleta llave externa de BIcicleta.  
+con el atributo CodigoPersonal llave externa de Personal NotNull.  
+- Revisa(\underline{CodigoBicicleta,CodigoPersonal})
+con el atributo CodigoBicicleta llave externa Bicicleta.  
+con el atributo CodigoPersonal llave externa Personal.  
+- ReparaEstacion(\underline{CodigoPersonal,CodReparacionEstacion},MensajeReparacion,CodigoEstacion)  
+con el atributo CodigoEstacion llave externa de Estación.  
+con el atributo CodigoPersonal llave externa de Personal.  
+- Llega(\underline{DNI,CodigoBicleta,CodigoEstacion})  
+con el atributo DNI llave externa de Usuario.  
+con el atributo CodigoBicicleta llave externa de Bicicleta.  
+con el atributo CodigoEstacion llave externa de Estacion.  
+- Utiliza(\underline{DNI,CodigoBicleta},TiempoEmpleado)  
+con el atributo DNI llave externa de Usuario.  
+con el atributo CodigoBicicleta llave externa de Bicicleta.  
+- RecibePago(\underline{DNI},Entidad)  
+con el atributo DNI llave externa de Usuario.  
+con el atributo Entidad llave externa de Banco NotNull.  
+- Pone(\underline{CodigoReclamacion},DNI)  
+con el atributo CodigoReclamacion llave externa de Reclamacion.  
+con el atributo de DNI llave externa de Usuario NotNull.  
+
+## Normalización
+
+### Luis Balderas Ruiz
+
+#### Tabla Usuario
+Atributos: DNI, Nombre, Edad, NúmeroCuenta, Email, Tarifa, Teléfono, Contraseña, TiempoAsignado, Sancionado, KmRecorridos.  
+Clave: DNI.  
+F = {DNI->Nombre, DNI->Edad, DNI->NumeroCuenta, DNI-> Email, DNI->Tarifa, DNI->Telefono, DNI->Contraseña, DNI->TiempoAsignado, DNI->Sancionado, Tarifa->TiempoAsignado, DNI->KmsRecorridos}  
+
+- No está en FNBC porque Det={DNI, Tarifa}. Por tanto, genero dos tablas nuevas:  
+
+	* Usuario(DNI, Nombre, Edad, NúmeroCuenta, Email, Tarifa, Teléfono, Contraseña, Sancionado, KmRecorridos)  
+	* TarifasTiempo(Tarifa,TiempoAsignado)  
+
+Ambas tablas ya están en FNBC.  
+
+#### Tabla Bicicleta
+Atributos: CodigoBicicleta, Posicion, Estado.  
+Clave: CodigoBicicleta.  
+F={CodigoBicicleta -> Posicion, CodigoBicicleta ->Estado}  
+
+- 1FN: El dominio de cada atributo solo contiene valores atómicos.  
+
+- 2FN: CodigoBicicleta (atributo primo) determina de forma completa a Posicion y Estado.  
+
+- 3FN: No hay dependencias transitivas.  
+
+- FNBC: El determinante está formado únicamente por la clave primaria.  
+
+#### Tabla Utiliza
+Atributos: DNI, CodigoBicicleta, TiempoEmpleado.  
+Clave: DNI, CodigoBicicleta.  
+F = {DNI,CódigoBicicleta -> TiempoEmpleado}  
+
+Está en FNBC trivialmente.  
+
+#### Tabla Pone
+Atributos: CodigoReclamacion, DNI.   
+Clave: CodigoReclamacion.  
+F = {CodigoReclamacion->DNI}
+Está en FNBC trivialmente.
+
+
+### Ignacio Aguilera Martos
+
+#### Tabla Incidencia
+Atributos: CodigoIncidencia, Tipo, Descripción.  
+Clave: CodigoIncidencia.  
+F = {CodigoIncidencia->Tipo, CodigoIncidencia->Descripción}  
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: está claro que la tabla está en 2FN ya que el único atributo primo es CodigoIncidencia y este determina de forma completa a Tipo y Descripción.  
+
+- 3FN: está en tercera forma normal porque no tiene ninguna dependencia transitiva.  
+
+- FNBC: todas las relaciones tienen a la izquierda una clave candidata y además todos los atributos que aparecen a la derecha no están contenidos en la clave, por lo que está en FNBC.  
+
+#### Tabla ReparaEstacion
+Atributos: CodigoEstacion, CodigoPersonal, CodReparacionBicicleta, MensajeReparacion.  
+Clave: CodigoEstacion, CodigoPersonal, CodReparacionBicicleta.  
+F = {CodigoEstacion CodigoPersonal CodReparacionEstacion->MensajeReparacion}  
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: los atributos que forman la clave (los únicos primos) determinan de forma completa a MensajeReparacion, por lo que está en segunda forma normal.  
+
+- 3FN: no hay dependencias transitivas, luego está en 3FN.  
+
+- FNBC: sólo aparecen claves candidatas a la izquierda y además no hay ninguna clave candidata incluida en la parte derecha de la única dependencia que hay, por lo tanto está en FNBC.
+
+
+#### Tabla Estacion
+Atributos: Posición, Estado.  
+Clave: Posición.  
+F = {Posición->Estado}  
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: Posición determina de forma completa a Estado, luego está en 2FN.  
+
+- 3FN: no hay dependencias transitivas, luego está en 3FN.  
+
+- FNBC: sólo aparecen claves candidatas a la izquierda y además no hay ninguna clave candidata incluida en la parte derecha de la única dependencia que hay, por lo tanto está en FNBC.  
+
+#### Tabla Comunica  
+Atributos: CodigoIncidencia, CodigoPersonal.  
+Clave: CodigoIncidencia.  
+F = {CodigoIncidencia->CodigoPersonal}  
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: El único atibuto primo que hay es CodigoIncidencia y éste determina de forma completa a CodigoPersonal, luego está en 2FN.  
+
+- 3FN: No hay dependencias transitivas, por lo que está en 3FN.  
+
+- FNBC: Sólo aparecen claves candidatas a la izquierda y además en CodigoPersonal no está incluida ninguna clave candidata, por lo que está en FNBC.
+
+### Diego Asterio de Zaballa
+
+#### Tabla Reclamacion  
+Atributos: CodigoReclamacion, NombreArchivo, Fecha.
+Clave: CodigoReclamacion.
+F = {CodigoReclamacion->NombreArchivo, CodigoReclamacion->Fecha}
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: NombreArchivo y Fecha son atributos no primos y ninguno de ellos
+lo determina un subconjunto de la PK.
+
+- 3FN: Todos los atributos dependen de claves candidatas. No hay atributos que dependan de atributos no-primos.
+
+- FNBC: Para las dos relaciones funcionales la condicion CodigoReclamacion es superclave se verifica.
+
+
+#### Tabla ReparaBicicleta
+Atributos: CodReparacionEstacion, CodigoBicicleta, CodigoPersonal, NumeroTaller
+Clave: CodigoBicicletaCodigoPersonal
+F = {CodReparacionEstacionCodigoBicicletaCodigoPersonal -> NumeroTaller}
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: El unico atributo no-primo que hay es NumeroTaller y no hay ningun subconjunto de una clave candidata que lo determine.
+
+- 3FN: No hay dependencias transitivas y por tanto todos los atributos dependen directamente de claves candidatas.
+
+- FNBC: CodReparacionEstacionCodigoBicicletaCodigoPersonal es una superclave.
+
+#### Tabla Traslada
+Atributos: CodigoTraslado, CodigoBicicleta, CodigoPersonal, EstacionPocasBicicletas, EstacionMuchasBicicletas, NumeroBicicletas.
+Clave: CodigoTraslado, CodigoBicicleta
+F = {CodigoTrasladoCodigoBicicleta->EstacionMuchasBicicletas,CodigoTrasladoCodigoBicicleta->EstacionPocasBicicletas,CodigoTrasladoCodigoBicicleta->CodigoPersonal,CodigoTrasladoCodigoBicicleta->NumBicicletas}
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: Los atributos no-primos no dependen nunca de un subconjunto de alguna clave candidata
+
+- 3FN: No hay dependencias transitivas por lo que no hay ningun atributo que dependa de un atributo no-primo
+
+-FNBC: A la izquierda de cada relacion hay siempre una superclave.
+
+
+#### Tabla RecibePago
+Atributos: DNI, Entidad.
+Clave: DNI
+F = {DNI -> Entidad}
+
+- 1FN: El dominio de cada atributo contiene solo valores atomicos.
+
+- 2FN: El unico atributo no primo Entidad no depende de ningun subconjunto de una clave candidata.
+
+- 3FN: Todos los atributos de la tabla estan determinados por atributos de las claves candidatas.
+
+- FNBC: DNI es superclave de la relacion.
+
+
+## Disparadores
+
+Los disparadores realizados han sido implementados en la variante del lenguaje PL/SQL para MariaDB.  
+
+
+### Disparador del Subsistema Central
+
+El disparador comprueba que al insertar una nueva tupla el código de la bicicleta y el código de la estación están en el rango adecuado.  
+
+``` sql
+DELIMITER |
+
+CREATE OR REPLACE TRIGGER revisaInsertaLlegada
+BEFORE INSERT ON Llega
+FOR EACH ROW
+BEGIN
+    IF (NEW.CodigoBicicleta<0 OR NEW.CodigoBicicleta>199) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT='Código de bicicleta fuera de los límites [0,199]';
+    END IF;
+    IF (NEW.CodigoEstacion<0 OR NEW.CodigoEstacion>29) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT='Código de estacion fuera de los límites [0,29]';
+    END IF;
+END |
+
+DELIMITER ;
+```
+
+### Disparador del Subsistema de Usuarios
+
+El disparador comprueba que la edad del nuevo usuario sea mayor que 14, en caso contrario no se permite la inserción.
+
+``` sql
+DELIMITER |
+
+CREATE OR REPLACE TRIGGER edadMinima
+BEFORE INSERT ON Usuario
+FOR EACH ROW
+BEGIN
+  IF (NEW.Edad <= 14) THEN
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = "No se puede dar de alta un usuario menor de 15 años.";
+  END IF;
+END |
+
+DELIMITER ;
+```
+
+###  Disparador del Subsistema de Mantenimiento
+
+El disparador comprueba que el codigo de la bicicleta y la estación están en el rango adecuado.
+
+``` sql
+DELIMITER |
+
+CREATE OR REPLACE TRIGGER revisaReparaBicicletas
+BEFORE INSERT ON ReparaBicicleta
+FOR EACH ROW
+BEGIN
+    IF (NEW.CodigoBicicleta<0 OR NEW.CodigoBicicleta>199) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT='Código de bicicleta fuera de los límites [0,199]';
+    END IF;
+    IF (NEW.CodigoPersonal<0 OR NEW.CodigoPersonal>29) THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT='Código de personal fuera de los límites [0,29]';
+    END IF;
+END |
+
+DELIMITER ;
+```

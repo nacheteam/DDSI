@@ -54,6 +54,7 @@ def accesoPerfil(cursor,db_connection):
     passw=input("Introduzca contraseña.\n")
     while(True):
         cursor.execute("SELECT * FROM Usuario WHERE DNI=%s HAVING Contrasena=%s",(dni,passw))
+        db_connection.commit()
         if cursor.rowcount==0:
             print("Error: No existe ningún usuario con ese user o contraseña.\n")
             return None
@@ -99,8 +100,8 @@ def accesoPerfil(cursor,db_connection):
                 print("Email del usuario: " + str(it[4]))
                 print("Tarifa actual: " + str(it[5]))
                 print("Número de teléfono asociado: " + str(it[6]))
-                print("Tiempo asignado: " + str(it[8]))
-                print("¿Sancionado? (0==No, 1==Si) " + str(it[9]))
+                #print("Tiempo asignado: " + str(it[8]))
+                print("¿Sancionado? (0==No, 1==Si) " + str(it[8]))
                 print("Kms recorridos: " + str(random.randrange(1,100)))
         db_connection.commit()
 

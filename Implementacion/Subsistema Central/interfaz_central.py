@@ -7,8 +7,8 @@ class interfazCentral(cmd.Cmd):
 
     def __init__(self):
         cmd.Cmd.__init__(self)
-        self.miSistema = SistemaCentral('root','ddsi')
-    
+        self.miSistema = SistemaCentral('root','DDSI')
+
     # ----- Comandos basicos del modulo central -----
     def do_llegar(self,arg):
         'Controla la llegada de un usuario. USO: llega <DNI> <CodigoBicicleta> <CodigoEstacion> <TiempoEmpleado>'
